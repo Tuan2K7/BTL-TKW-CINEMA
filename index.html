@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cinema website">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Bui Tuan Anh">
+
+  <link rel="stylesheet" href="assets/css/card.css"> 
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="stylesheet" href="assets/css/menu.css">
+  <link rel="stylesheet" href="assets/css/slide.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css"> 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Cinema website</title>
+  <link rel="shortcut icon" href="./assets/img/logo.webp" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  
+  <link rel="stylesheet" href="assets/css/style.css">   <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+
+<body>
+  <div id="main">
+
+    <div id="header">
+
+      <div class="nav-logo">
+        <a href="./index.html">
+          <img src="./assets/img/logo.webp" alt="">
+        </a>
+        <div class="name">
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="nav-menu">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+      </div>
+      
+      <div class="nav-layout">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html" style="border-radius: 8px; color: black;">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="new.html">Tin tức</a>
+          </li>
+          <li>
+             <a class="nav-link " href="about.html" >Giới thiệu</a>
+          </li>
+        </ul>
+        <div>
+          <button class="btn-register js-register-btn">Đăng ký</button>
+          <button class="btn-login js-login-btn" style="color: black;">Đăng nhập</button>
+        </div>
+        <div class="login-user">
+            <!-- <i class="fa-regular fa-circle-user login-avt" ></i> -->
+            <p class="login-name"></p>
+            <button class="login-out js-login-out">Đăng xuất</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="login js-login">
+      <div class="login-container js-login-container">
+        <div class="login-header">
+          <h1>Đăng nhập</h1>
+          <div class="login-close js-login-close">
+            <i class="fa-solid fa-x"></i>
+          </div>
+        </div>
+        <div class="login-body">
+          <label for="email"> Email</label>
+          <input type="email" name="" placeholder="Email" id="email1">
+          <label for="password"> Mật khẩu</label>
+          <input type="password" name="" placeholder="Mật Khẩu" id="password1">
+          <p>Quên mật khẩu?</p>
+          <button class="btn js-login-btn">Đăng nhập</button>
+        </div>
+        <footer class="login-footer">
+          <p>Bạn chưa có tài khoản? <a href="#" class="trybtn">Đăng ký</a></p>
+        </footer>
+      </div>
+    </div>
+
+    
+
+    <div class="register js-register">
+      <div class="register-container js-register-container">
+        <div class="register-header">
+          <h1>Đăng ký</h1>
+          <div class="register-close js-register-close">
+            <i class="fa-solid fa-x"></i>
+          </div>
+        </div>
+        <div class="register-body">
+          <div class="register-card1">
+            <div class="column">
+              <label for="surname">Họ</label>
+              <input type="surname" name="" placeholder="Họ" id="surname">
+            </div>
+            <div class="column">
+              <label for="name">Tên</label>
+              <input type="name" name="" placeholder="Tên" id="name">
+            </div>
+          </div>
+          <div class="register-card2">
+            <div class="column">
+              <label for="accountName">Tên tài khoản</label>
+              <input type="accountName" name="" placeholder="Tên tài khoản" id="accountName">
+            </div>
+          </div>
+          <div class="register-card3">
+            <div class="column">
+              <label for="number">Số điện thoại</label>
+              <input type="text" placeholder="Số điện thoại" id="number">
+            </div>
+            <div class="column">
+              <label for="email">Email</label>
+              <input type="email" name="" placeholder="Email" id="email2">
+            </div>
+          </div>
+          <div class="register-card4">
+            <div class="column">
+              <label for="password1">Mật khẩu</label>
+              <input type="password1" name="" placeholder="Mật khẩu" id="password2">
+            </div>
+            <div class="column">
+              <label for="password2">Xác nhận mật khẩu</label>
+              <input type="password2" name="" placeholder="Xác nhận mật khẩu" id="confirmPassword">
+            </div>
+          </div>
+          <button class="btn js-register-btn">Đăng Ký</button>
+        </div>
+        <footer class="register-footer">
+          <p>Bạn đã có tài khoản? <a href="#" class="trybtn">Đăng nhập</a></p>
+        </footer>
+      </div>
+    </div>
+
+
+    <div id="slide">
+      <img class="img hidden" src="./assets/img/banner/chuthuathoichien_banner.webp" alt="">
+      <img class="img hidden" src="./assets/img/banner/quyantang3_banner.webp" alt="">
+      <img class="img hidden" src="./assets/img/banner/thanhguomdietquy_banner2.webp" alt="">
+      <img class="img hidden" src="./assets/img/banner/emxinhtinhquai_banner.webp" alt="">
+      <img class="img hidden" src="./assets/img/banner/thanhguomdietquy_banner2.webp" alt="">
+      <img class="img hidden" src="./assets/img/banner/chuthuathoichien_banner.webp" alt="">
+      <img class="img hidden" src="./assets/img/banner/thanhguomdietquy_banner.jpg" alt="">
+      <img class="img" src="./assets/img/banner/thanhguomdietquy_banner2.webp" alt="">
+      <i onclick="prev()" class="fa-solid fa-circle-chevron-left slide-btn slide-btn-left prev"></i>
+      <i onclick="next()" class="fa-solid fa-circle-chevron-right slide-btn slide-btn-right next"></i>
+    </div>
+    
+    <div class="container-fluid text-center section" id="container" >
+      <div class="row content">
+        <div class="col-sm-1 sidenav"></div>
+        <div class="col-sm-10">
+
+          <ul class="nav nav-pills nav-justified" id="movie-pills-nav" role="tablist" style="padding: 0.5rem 0; margin-bottom: 15px;">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-nowshowing-tab" data-bs-toggle="pill" data-bs-target="#pills-nowshowing" type="button" role="tab" aria-controls="nowshowing" aria-selected="true">Phim Đang Chiếu</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-comingsoon-tab" data-bs-toggle="pill" data-bs-target="#pills-comingsoon" type="button" role="tab" aria-controls="comingsoon" aria-selected="false">Phim Sắp Chiếu</button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="pills-tabContent"> 
+
+            <div class="tab-pane fade show active" id="pills-nowshowing" role="tabpanel" aria-labelledby="pills-nowshowing-tab">
+              <div class="row row-cols-auto list-container justify-content-center">
+
+                <a href="movie-detail.html?id=tro-choi-ao-giac" style="padding:0; text-decoration: none;">
+                  <div class="col">
+                    <div class="custom-movie-card">
+                      <div class="custom-card-image-container">
+                        <img src="./assets/img/banner_trochoiaogiac.jpg" alt="Trò Chơi Ảo Giác">
+                        <span class="custom-play-button">chi tiết</span>
+                      </div>
+                      <div class="custom-card-content">
+                    <h3>Trò Chơi Ảo Giác: Ares (Tron: Ares)</h3>
+                          <p><b>Thể loại:</b> Hành động, Khoa học viễn tưởng<br /><b>Thời lượng:</b> 118 phút<br /><b>Khởi chiếu:</b> 10/10/2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="movie-detail.html?id=quy-an-tang-3" style="padding:0; text-decoration: none;">
+                  <div class="col">
+                    <div class="custom-movie-card">
+                      <div class="custom-card-image-container">
+                        <img src="./assets/img/banner_teeyod3.jpg" alt="Quỷ Ăn Tạng 3">
+                        <span class="custom-play-button">chi tiết</span>
+                      </div>
+                      <div class="custom-card-content">
+                    <h3>Quỷ Ăn Tạng 3 (Tee Yod 3)</h3>
+                          <p><b>Thể loại:</b> Kinh dị<br /><b>Thời lượng:</b> 104 phút<br /><b>Khởi chiếu:</b> 10/10/2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="movie-detail.html?id=van-may" style="padding:0; text-decoration: none;">
+                  <div class="col">
+                    <div class="custom-movie-card">
+                      <div class="custom-card-image-container">
+                        <img src="./assets/img/banner_vanmay.jpg" alt="Vận May">
+                        <span class="custom-play-button">chi tiết</span>
+                      </div>
+                      <div class="custom-card-content">
+                    <h3>Vận May (Good Fortune)</h3>
+                          <p><b>Thể loại:</b> Hài, Hành động, Phiêu lưu<br /><b>Thời lượng:</b> 120 phút<br /><b>Khởi chiếu:</b> 17/10/2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="movie-detail.html?id=thanh-guom-diet-quy" style="padding:0; text-decoration: none;">
+                  <div class="col">
+                    <div class="custom-movie-card">
+                      <div class="custom-card-image-container">
+                        <img src="./assets/img/banner_thanhguomdietquy.jpg" alt="Thanh Gươm Diệt Quỷ">
+                        <span class="custom-play-button">chi tiết</span>
+                      </div>
+                      <div class="custom-card-content">
+                    <h3>Thanh Gươm Diệt Quỷ: Vô Hạn Thành </h3>
+                          <p><b>Thể loại:</b> Hoạt hình, Hành động, Kỳ ảo, Phiêu lưu<br /><b>Thời lượng:</b> 155 phút (dự kiến)<br /><b>Khởi chiếu:</b> 15/08/2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="movie-detail.html?id=chu-thuat-hoi-chien" style="padding:0; text-decoration: none;">
+                  <div class="col">
+                    <div class="custom-movie-card">
+                      <div class="custom-card-image-container">
+                        <img src="./assets/img/banner_thuatchu.jpg" alt="Chú Thuật Hồi Chiến">
+                        <span class="custom-play-button">chi tiết</span>
+                      </div>
+                      <div class="custom-card-content">
+                    <h3>Chú Thuật Hồi Chiến: Hoài Ngọc</h3>
+                          <p><b>Thể loại:</b> Hoạt hình, Hành động, Kỳ ảo<br /><b>Thời lượng:</b> 110 phút<br /><b>Khởi chiếu:</b> 10/10/2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="movie-detail.html?id=em-xinh-tinh-quai" style="padding:0; text-decoration: none;">
+                  <div class="col">
+                    <div class="custom-movie-card">
+                      <div class="custom-card-image-container">
+                        <img src="./assets/img/banner_emxinhtinhquai.jpg" alt="Em Xinh Tinh Quái">
+                        <span class="custom-play-button">chi tiết</span>
+                      </div>
+                      <div class="custom-card-content">
+                    <h3>Em Xinh Tinh Quái (Pretty Crazy)</h3>
+                          <p><b>Thể loại:</b> Hài, Lãng mạn<br /><b>Thời lượng:</b> 113 phút<br /><b>Khởi chiếu:</b> 05/09/2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="movie-detail.html?id=cau-be-ca-heo" style="padding:0; text-decoration: none;">
+                  <div class="col">
+                    <div class="custom-movie-card">
+                      <div class="custom-card-image-container">
+                        <img src="./assets/img/banner_caubecaheo.jpg" alt="Cầu Bé Cá Heo">
+                        <span class="custom-play-button">chi tiết</span>
+                      </div>
+                      <div class="custom-card-content">
+                    <h3>Cậu Bé Cá Heo Và Bí Mật 7 Đại Dương</h3>
+                          <p><b>Thể loại:</b> Hoạt hình<br /><b>Thời lượng:</b> 96 phút<br /><b>Khởi chiếu:</b> 03/10/2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="movie-detail.html?id=cuc-vang-cua-ngoai" style="padding:0; text-decoration: none;">
+                  <div class="col">
+                    <div class="custom-movie-card">
+                      <div class="custom-card-image-container">
+                        <img src="./assets/img/banner_cucvangcuangoai.jpg" alt="Cục Vàng Của Ngoại">
+                        <span class="custom-play-button">chi tiết</span>
+                      </div>
+                      <div class="custom-card-content">
+                    <h3>Cục Vàng Của Ngoại</h3>
+                          <p><b>Thể loại:</b> Gia đình, Tâm lý<br /><b>Thời lượng:</b> 119 phút<br /><b>Khởi chiếu:</b> 17/10/2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="movie-detail.html?id=chi-nga-em-nang" style="padding:0; text-decoration: none;">
+                  <div class="col">
+                    <div class="custom-movie-card">
+                      <div class="custom-card-image-container">
+                        <img src="./assets/img/banner_chingaemnang.jpg" alt="Chị Ngã Em Nâng">
+                        <span class="custom-play-button">chi tiết</span>
+                      </div>
+                      <div class="custom-card-content">
+                    <h3>Chị Ngã Em Nâng</h3>
+                          <p><b>Thể loại:</b> Gia đình, Hài, Tâm lý<br /><b>Thời lượng:</b> 122 phút<br /><b>Khởi chiếu:</b> 03/10/2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="movie-detail.html?id=tay-anh-giu-mot-vi-sao" style="padding:0; text-decoration: none;">
+                  <div class="col">
+                    <div class="custom-movie-card">
+                      <div class="custom-card-image-container">
+                        <img src="./assets/img/banner_tayanhgiuvisao.jpg" alt="Tay Anh Giữ Một Vì Sao">
+                        <span class="custom-play-button">chi tiết</span>
+                      </div>
+                      <div class="custom-card-content">
+                    <h3>Tay Anh Giữ Một Vì Sao</h3>
+                          <p><b>Thể loại:</b> Hài, Lãng mạn<br /><b>Thời lượng:</b> 117 phút<br /><b>Khởi chiếu:</b> 03/10/2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="movie-detail.html?id=tu-chien-tren-khong" style="padding:0; text-decoration: none;">
+                  <div class="col">
+                    <div class="custom-movie-card">
+                      <div class="custom-card-image-container">
+                        <img src="./assets/img/banner_tuchientrenkhong.jpg" alt="Từ Chiến Trên Không">
+                        <span class="custom-play-button">chi tiết</span>
+                      </div>
+                      <div class="custom-card-content">
+                    <h3>Tử Chiến Trên Không</h3>
+                          <p><b>Thể loại:</b> Tâm lý, Giật gân<br /><b>Thời lượng:</b> 118 phút<br /><b>Khởi chiếu:</b> 19/09/2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="movie-detail.html?id=lam-giau-voi-ma-2" style="padding:0; text-decoration: none;">
+                  <div class="col">
+                    <div class="custom-movie-card">
+                      <div class="custom-card-image-container">
+                        <img src="./assets/img/banner_lamgiauvoima.jpg" alt="Làm Giàu Với Ma 2">
+                        <span class="custom-play-button">chi tiết</span>
+                      </div>
+                      <div class="custom-card-content">
+                          <h3>Làm Giàu Với Ma 2: Cuộc Chiến Hột Xoàn</h3>
+                          <p><b>Thể loại:</b> Hài<br /><b>Thời lượng:</b> 133 phút<br /><b>Khởi chiếu:</b> 02/09/2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="movie-detail.html?id=to-quoc-trong-tim" style="padding:0; text-decoration: none;">
+                  <div class="col">
+                    <div class="custom-movie-card">
+                      <div class="custom-card-image-container">
+                        <img src="./assets/img/banner_toquoctrongtim.jpg" alt="Tổ Quốc Trong Tim">
+                        <span class="custom-play-button">chi tiết</span>
+                      </div>
+                      <div class="custom-card-content">
+                          <h3>Tổ Quốc Trong Tim: The Concert Film</h3>
+                          <p><b>Thể loại:</b> Phim tài liệu, Âm nhạc<br /><b>Thời lượng:</b> 120 phút<br /><b>Khởi chiếu:</b> 17/10/2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="movie-detail.html?id=nam-cua-anh-ngay-cua-em" style="padding:0; text-decoration: none;">
+                  <div class="col">
+                    <div class="custom-movie-card movie-selection">
+                      <div class="custom-card-image-container">
+                        <img src="./assets/img/banner_namcuaanh.jpg" alt="Năm Của Anh, Ngày Của Em">
+                        <span class="custom-play-button">chi tiết</span>
+                      </div>
+                      <div class="custom-card-content">
+                          <h3>Năm Của Anh, Ngày Của Em</h3>
+                          <p><b>Thể loại:</b> Tình cảm<br /><b>Thời lượng:</b> (Chưa có thông tin)<br /><b>Khởi chiếu:</b> 17/10/2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="movie-detail.html?id=zombie-cung-cua-ba" style="padding:0; text-decoration: none;">
+                  <div class="col">
+                    <div class="custom-movie-card">
+                      <div class="custom-card-image-container">
+                        <img src="./assets/img/banner_zombie.jpg" alt="Zombie Cùng Của Ba">
+                        <span class="custom-play-button">chi tiết</span>
+                      </div>
+                      <div class="custom-card-content">
+                  <h3>Zombie Cưng Của Ba (2025)</h3>
+                    <p><b>Thể loại:</b> Hài, gia đình<br /><b>Thời lượng:</b> 107 phút<br /><b>Khởi chiếu:</b> 08/08/2025</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-comingsoon" role="tabpanel" aria-labelledby="pills-comingsoon-tab">
+              <div class="row row-cols-auto list-container justify-content-center"> 
+
+                <div class="col">
+                  <div class="custom-movie-card">
+                    <div class="custom-card-image-container">
+                      <img src="./assets/img/Cai_Ma.jpg" alt="Cải Mả">
+                      <a href="movie-detail.html?id=cai-ma" class="custom-play-button">chi tiết</a>
+                    </div>
+                    <div class="custom-card-content">
+                      <h3>Cải Mả (2025)</h3>
+                      <p><b>Thể loại:</b> Kinh dị / Tâm linh<br /><b>Thời lượng:</b> Đang cập nhật<br /><b>Khởi chiếu:</b> 31/10/2025</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="custom-movie-card">
+                    <div class="custom-card-image-container">
+                      <img src="./assets/img/Xa_Thuat_Tieu_Tam.jpg" alt="Xà Thuật Tiểu Tam">
+                      <a href="movie-detail.html?id=xa-thuat-tieu-tam" class="custom-play-button">chi tiết</a>
+                    </div>
+                    <div class="custom-card-content">
+                      <h3>Xà Thuật Tiểu Tam (2025)</h3>
+                      <p><b>Thể loại:</b> Kinh dị<br /><b>Thời lượng:</b> 99 phút<br /><b>Khởi chiếu:</b> 24/10/2025</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="custom-movie-card">
+                    <div class="custom-card-image-container">
+                      <img src="./assets/img/Good_Boy_Cho_Cung_Dung_So.jpg" alt="Good Boy: Chó Cưng Đừng Sợ">
+                      <a href="movie-detail.html?id=good-boy" class="custom-play-button">chi tiết</a>
+                    </div>
+                    <div class="custom-card-content">
+                      <h3>Good Boy: Chó Cưng Đừng Sợ (2025)</h3>
+                      <p><b>Thể loại:</b> Kinh dị / Siêu nhiên<br /><b>Thời lượng:</b> 73 phút<br /><b>Khởi chiếu:</b> 03/10/2025</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="custom-movie-card">
+                    <div class="custom-card-image-container">
+                      <img src="./assets/img/Bit_Mat_Bat_Nai.jpg" alt="Bịt Mắt Bắt Nai">
+                      <a href="movie-detail.html?id=bit-mat-bat-nai" class="custom-play-button">chi tiết</a>
+                    </div>
+                    <div class="custom-card-content">
+                      <h3>Bịt Mắt Bắt Nai (2025)</h3>
+                      <p><b>Thể loại:</b> Chính kịch / Tâm lý / Tình cảm<br /><b>Thời lượng:</b> Đang cập nhật<br /><b>Khởi chiếu:</b> 31/10/2025</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="custom-movie-card">
+                    <div class="custom-card-image-container">
+                      <img src="./assets/img/Pha_Dam_Sinh_Nhat_Me.jpg" alt="Phá Đám: Sinh Nhật Mẹ">
+                      <a href="movie-detail.html?id=pha-dam-sinh-nhat-me" class="custom-play-button">chi tiết</a>
+                    </div>
+                    <div class="custom-card-content">
+                      <h3>Phá Đám: Sinh Nhật Mẹ (2025)</h3>
+                      <p><b>Thể loại:</b> Chính kịch / Gia đình / Hài kịch đen<br /><b>Thời lượng:</b> 98 phút<br /><b>Khởi chiếu:</b> 05/09/2025</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="custom-movie-card">
+                    <div class="custom-card-image-container">
+                      <img src="./assets/img/Phong_Tro_Ma_Bau.jpg" alt="Phòng Trọ Ma Bầu">
+                      <a href="movie-detail.html?id=phong-tro-ma-bau" class="custom-play-button">chi tiết</a>
+                    </div>
+                    <div class="custom-card-content">
+                      <h3>Phòng Trọ Ma Bầu (2025)</h3>
+                      <p><b>Thể loại:</b> Kinh dị / Hài<br /><b>Thời lượng:</b> Đang cập nhật<br /><b>Khởi chiếu:</b> 07/11/2025</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="custom-movie-card">
+                    <div class="custom-card-image-container">
+                      <img src="./assets/img/Tinh_Nguoi_Duyen_Ma_Nham_Mak_Yeu_Luon.jpg" alt="Tình Người Duyên Ma: Nhắm Mak Yêu Luôn">
+                      <a href="movie-detail.html?id=tinh-nguoi-duyen-ma" class="custom-play-button">chi tiết</a>
+                    </div>
+                    <div class="custom-card-content">
+                      <h3>Tình Người Duyên Ma: Nhắm Mak Yêu Luôn (2025)</h3>
+                      <p><b>Thể loại:</b> Tình cảm / Hài / Kinh dị<br /><b>Thời lượng:</b> 99 phút<br /><b>Khởi chiếu:</b> 07/11/2025</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="custom-movie-card">
+                    <div class="custom-card-image-container">
+                      <img src="./assets/img/Trai_Tim_Que_Quat.jpg" alt="Trái Tim Què Quặt">
+                      <a href="movie-detail.html?id=trai-tim-que-quat" class="custom-play-button">chi tiết</a>
+                    </div>
+                    <div class="custom-card-content">
+                      <h3>Trái Tim Què Quặt (2025)</h3>
+                      <p><b>Thể loại:</b> Tâm lý / Ly kỳ<br /><b>Thời lượng:</b> Đang cập nhật<br /><b>Khởi chiếu:</b> 07/11/2025</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="custom-movie-card">
+                    <div class="custom-card-image-container">
+                      <img src="./assets/img/Quai_Thu_Vo_Hinh_Vung_Dat_Chet_Choc.jpg" alt="Quái Thú Vô Hình: Vùng Đất Chết Chóc">
+                      <a href="movie-detail.html?id=quai-thu-vo-hinh" class="custom-play-button">chi tiết</a>
+                    </div>
+                    <div class="custom-card-content">
+                      <h3>Quái Thú Vô Hình: Vùng Đất Chết Chóc (2025)</h3>
+                      <p><b>Thể loại:</b> Hành động / Khoa học viễn tưởng<br /><b>Thời lượng:</b> Đang cập nhật<br /><b>Khởi chiếu:</b> 07/11/2025</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="custom-movie-card">
+                    <div class="custom-card-image-container">
+                      <img src="./assets/img/Tron_Chay_Tu_Than.jpg" alt="Trốn Chạy Tử Thần">
+                      <a href="movie-detail.html?id=tron-chay-tu-than" class="custom-play-button">chi tiết</a>
+                    </div>
+                    <div class="custom-card-content">
+                      <h3>Trốn Chạy Tử Thần (2025)</h3>
+                      <p><b>Thể loại:</b> Phiêu lưu / Khoa học viễn tưởng<br /><b>Thời lượng:</b> Khoảng 120 phút<br /><b>Khởi chiếu:</b> 07/11/2025</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="custom-movie-card">
+                    <div class="custom-card-image-container">
+                      <img src="./assets/img/Truy_Tim_Long_Dien_Huong.jpg" alt="Truy Tìm Long Diên Hương">
+                      <a href="movie-detail.html?id=truy-tim-long-dien-huong" class="custom-play-button">chi tiết</a>
+                    </div>
+                    <div class="custom-card-content">
+                      <h3>Truy Tìm Long Diên Hương (2025)</h3>
+                      <p><b>Thể loại:</b> Hành động / Hài<br /><b>Thời lượng:</b> Đang cập nhật<br /><b>Khởi chiếu:</b> 14/11/2025</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="custom-movie-card">
+                    <div class="custom-card-image-container">
+                      <img src="./assets/img/Avatar_Lua_Va_Tro_Tan.jpg" alt="Avatar: Lửa Và Tro Tàn">
+                      <a href="movie-detail.html?id=avatar-lua-va-tro-tan" class="custom-play-button">chi tiết</a>
+                    </div>
+                    <div class="custom-card-content">
+                      <h3>Avatar: Lửa Và Tro Tàn (2025)</h3>
+                      <p><b>Thể loại:</b> Khoa học viễn tưởng / Phiêu lưu<br /><b>Thời lượng:</b> Đang cập nhật<br /><b>Khởi chiếu:</b> 19/12/2025</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="custom-movie-card">
+                    <div class="custom-card-image-container">
+                      <img src="./assets/img/Nam_Dem_Kinh_Hoang_2.jpg" alt="Năm Đêm Kinh Hoàng 2">
+                      <a href="movie-detail.html?id=nam-dem-kinh-hoang-2" class="custom-play-button">chi tiết</a>
+                    </div>
+                    <div class="custom-card-content">
+                      <h3>Năm Đêm Kinh Hoàng 2 (2025)</h3>
+                      <p><b>Thể loại:</b> Kinh dị / Bí ẩn<br /><b>Thời lượng:</b> Đang cập nhật<br /><b>Khởi chiếu:</b> 05/12/2025</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="custom-movie-card">
+                    <div class="custom-card-image-container">
+                      <img src="./assets/img/Mortal_Kombat_Cuoc_Chien_Sinh_Tu.jpg" alt="Mortal Kombat: Cuộc Chiến Sinh Tử">
+                      <a href="movie-detail.html?id=mortal-kombat" class="custom-play-button">chi tiết</a>
+                    </div>
+                    <div class="custom-card-content">
+                      <h3>Mortal Kombat: Cuộc Chiến Sinh Tử</h3>
+                      <p><b>Thể loại:</b> Hành động / Võ thuật / Khoa học viễn tưởng<br /><b>Thời lượng:</b> 110 phút<br /><b>Khởi chiếu:</b> 23/04/2021</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="custom-movie-card">
+                    <div class="custom-card-image-container">
+                      <img src="./assets/img/Nha_Hai_Chu.jpg" alt="Nhà Hai Chủ">
+                      <a href="movie-detail.html?id=nha-hai-chu" class="custom-play-button">chi tiết</a>
+                    </div>
+                    <div class="custom-card-content">
+                      <h3>Nhà Hai Chủ (2025)</h3>
+                      <p><b>Thể loại:</b> Kinh dị / Tâm linh<br /><b>Thời lượng:</b> 110 phút<br /><b>Khởi chiếu:</b> 05/12/2025</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            
+          </div>   
+          </div>
+
+          <div class="col-sm-1 sidenav">
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container-fluid" style="padding: 50px 50px 30px 50px;">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <a href="./index.html"> 
+              <img src="./assets/img/logo.webp" alt="Logo" class="footer-logo-img">
+            </a>
+            <p class="footer-company-name">CÔNG TY CỔ PHẦN UTC CINEMA</p>
+            <p><i class="fa-solid fa-location-dot"></i> 66B Nguyễn Sỹ Sách,phường 15, quận Tân Bình, TP. Hồ Chí Minh</p>
+            <p><i class="fa-solid fa-phone"></i> Hotline: 0867 472 094</p>
+            <p><i class="fa-solid fa-envelope"></i> Email: anhtuan192007@gmail.com</p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h5>Giới thiệu</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link">Về chúng tôi</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link">Tuyển dụng</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link">Liên hệ quảng cáo</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5>Điều khoản</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link">Điều khoản chung</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link">Chính sách bảo mật</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link">Chính sách vé</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5>Hỗ trợ</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link">FAQ</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link">Góp ý</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link">Group Booking</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 mb-4">
+            <h5>Kết nối với chúng tôi</h5>
+            <div class="footer-social-icons">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <hr class="footer-divider">
+        
+        <div class="row footer-bottom-row">
+          <div class="col-md-6 mb-3">
+            <h5>Chấp nhận thanh toán</h5>
+            <div class="footer-payment-icons">
+              <span class="payment-icon">VISA</span>
+              <span class="payment-icon">MasterCard</span>
+              <span class="payment-icon">JCB</span>
+              <span class="payment-icon">MoMo</span>
+              <span class="payment-icon">ZaloPay</span>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3 text-md-end footer-copyright-text">
+            <p>
+              &copy; 66B Nguyễn Sỹ Sách, phường 15, quận Tân Bình, TP. Hồ Chí Minh.
+              <br>
+              Giấy chứng nhận ĐKKD số: 0123456789
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/slide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> -->
+</body>
+
+</html>

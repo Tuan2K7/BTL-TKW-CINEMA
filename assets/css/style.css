@@ -1,0 +1,453 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Fix thanh ngang */
+/* Đặt khối này ở đầu file, thay thế cho cả 2 khối body cũ */
+body {
+    overflow-x: hidden;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/*  */
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+.hidden {
+    display: none;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+/* form đăng kí */
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 10px 10px 0;
+}
+
+
+
+
+
+
+/* Design: Button register, login, out */
+.nav-layout button {
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    background-color: #10141B;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    
+}
+.nav-layout .btn-login {
+    /* background-color: #F75154; */
+    /* border: 1px solid #F75154; */
+    /* background-color:#FDA6C4 ; */
+    background-image: linear-gradient(#F9cadb,#FDA6C4);
+    border: 1px solid #FDA6C4;
+    transition: transform 0.3s;
+}
+.nav-layout button:hover {
+    cursor: pointer;
+    /* transform: translateY(-2px); */
+}
+
+/* LOGIN */
+@keyframes modelFadeIn {
+    from {
+        opacity: 1;
+        transform: translateX(-140px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+.btn-login.remove{
+    display: none;
+}
+.login.open {
+    display: flex;
+}
+.login {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.login-container {
+    background-color: #10141B;
+    width: 450px;
+    position: relative;
+    animation: modelFadeIn ease 0.5s;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.login-header {
+    color: #fff;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+.login-close {
+    cursor: pointer;
+}
+.login-body {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    flex: 2;
+}
+.login-body input {
+    height: 50px;
+    background-color: #10141B;
+    border: 1px solid #1E293B;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    color: #fff;
+}
+.login-body p {
+    display: flex;
+    margin: 15px 0;
+    /* color: #E54242; */
+    color: #FDA6C4;
+    justify-content: end;
+    cursor: pointer;
+}
+.login-body p:hover {
+    text-decoration: underline;
+}
+.login-body button {
+    /* background-image: linear-gradient(to right, #E6121D, #FB5F60); */
+    background-image: linear-gradient(#F9cadb,#FDA6C4);
+    height: 40px;
+    border-radius: 20px;
+    margin: 10px 0;
+    /* color: #fff; */
+    color: black;
+    cursor: pointer;
+}
+.login-footer {
+    color: #fff;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.login-footer a {
+    /* color: #E54242; */
+    color: #FDA6C4;
+    text-decoration: none;
+}
+
+/* Đăng kí */
+.btn-register.remove{
+    display: none;
+}
+.register.open {
+    display: flex;
+}
+
+.register {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+        /* làm cho đăng kí đăng nhập ko đè lên nhau */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.register-container {
+    background-color: #10141B;
+    width: 500px;
+    height: 600px;
+    position: relative;
+    animation: modelFadeIn ease 0.5s;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.register-header {
+    color: #fff;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+}
+
+.register-close {
+    cursor: pointer;
+}
+
+.register-body {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    flex: 2;
+}
+
+.register-body input {
+    height: 50px;
+    background-color: #10141B;
+    border: 1px solid #1E293B;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+}
+
+.register-body .register-card1 {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.register-body .register-card2 {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.register-body .register-card3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.register-body .register-card4 {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.register-body button {
+    /* background-image: linear-gradient(to right, #E6121D, #FB5F60); */
+    background-image: linear-gradient(#F9cadb,#FDA6C4);
+    height: 40px;
+    border-radius: 20px;
+    margin: 10px 0;
+    /* color: #fff; */
+    color: black;
+    cursor: pointer;
+}
+
+.register-footer {
+    color: #fff;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.register-footer a {
+    /* color: #E54242; */
+    color: #FDA6C4;
+    text-decoration: none;
+}
+
+/* login user */
+.login-user.open{
+    display: flex;
+}
+.login-user{
+    display: none;
+}
+
+.login-user .login-avt{
+    font-size: 30px;
+    color: #fff;
+}
+
+.login-user .login-name{
+    color: #fff;
+    font-size: 15px;
+    margin: 10px;
+}
+
+
+/* BODY */
+
+    
+.section {
+    /* background-color: #10141b; */
+    /* background-color: #fff; */
+    background-image: url("../background/troidem.jpg");
+        /* Màu nền card */
+    padding-top: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+}
+#container {
+    height: auto;
+}
+.col {
+    padding: 15px;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #10141B; /* Đồng bộ màu với header */
+    color: #bbb; /* Màu chữ chung, dễ đọc */
+    padding-top: 20px;
+    width: 100%;
+}
+
+.footer h5 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.footer-logo-img {
+    display: block; /* Để nó là 1 block riêng */
+    width: 300px; 
+    margin-bottom: 15px;
+}
+
+.footer-company-name {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Icon bên cạnh text (địa chỉ, phone) */
+.footer p i {
+    width: 20px;
+    color: #FDA6C4; /* Dùng màu hồng chủ đạo của web bạn */
+}
+
+/* Danh sách link */
+.footer .nav-link {
+    padding: 0 0 10px 0; /* Chỉ cần đệm dưới */
+    font-size: 0.9rem;
+    color: #bbb; /* Màu link mặc định */
+    background: none !important; /* Ghi đè bootstrap */
+    transition: color 0.2s ease;
+}
+
+.footer .nav-link:hover {
+    color: #fff; /* Hover sáng lên */
+}
+
+/* Icon mạng xã hội */
+.footer-social-icons a {
+    color: #bbb;
+    font-size: 1.5rem; /* Kích thước icon */
+    margin-right: 15px;
+    transition: color 0.2s ease;
+}
+
+.footer-social-icons a:hover {
+    color: #FDA6C4; /* Đổi màu khi hover */
+}
+
+/* Nút tải ứng dụng */
+.footer-app-buttons {
+    display: flex;
+    flex-direction: column; /* Xếp chồng 2 nút */
+    gap: 15px; /* Khoảng cách giữa 2 nút */
+}
+
+.footer-app-buttons .app-button {
+    display: flex;
+    align-items: center;
+    background-color: #2a2e35; /* Nền nút tối */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.footer-app-buttons .app-button:hover {
+    background-color: #444;
+}
+
+.footer-app-buttons .app-button i {
+    font-size: 2rem; /* Icon app to */
+    margin-right: 10px;
+}
+
+.footer-app-buttons .app-button span {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.footer-app-buttons .app-button span strong {
+    font-size: 1rem;
+}
+
+/* Đường kẻ ngang */
+.footer-divider {
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Hàng cuối (Thanh toán & Copyright) */
+.footer-bottom-row {
+    align-items: center;
+}
+
+.footer-payment-icons .payment-icon {
+    /* Đây là style tạm thời, bạn nên thay bằng <img> */
+    display: inline-block;
+    padding: 5px 10px;  
+    background-color: #fff;
+    color: #10141B;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.footer-copyright-text p {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.5;
+}

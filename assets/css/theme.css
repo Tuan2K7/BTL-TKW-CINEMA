@@ -1,0 +1,158 @@
+/* ===== THEME kiểu CGV / Beta Cinemas =====
+   Đổi màu chủ đạo chỉ cần sửa 3 biến dưới đây */
+:root{
+  --brand:#e71a0f;        /* đỏ CGV */
+  --brand-dark:#b81208;
+  --brand-soft:#fff1f0;
+  --ink:#222;
+  --bg:#f4f4f4;
+}
+
+/* ---------- Nền & font ---------- */
+body{ background:var(--bg) !important; color:var(--ink); font-family:"Roboto","Segoe UI",Arial,sans-serif; }
+.section{ background:var(--bg) !important; background-image:none !important; }
+
+/* ---------- Header trắng, viền đỏ ---------- */
+#header{
+  height:auto; min-height:64px; background:#fff !important; color:var(--ink);
+  border-bottom:3px solid var(--brand); box-shadow:0 2px 8px rgba(0,0,0,.08);
+  position:sticky; top:0; z-index:900; padding:6px 32px;
+}
+.nav-logo{ width:150px; margin:0; }
+.nav-logo img{ height:auto; max-height:52px; object-fit:contain; }
+.nav-menu{ color:var(--ink); }
+.nav-layout{ justify-content:flex-start; gap:12px; }
+.nav-layout a{ color:var(--ink); font-weight:700; font-size:.9rem; text-transform:uppercase; letter-spacing:.3px; }
+.nav-layout a:hover{ color:var(--brand); }
+.nav-layout .active,
+.nav-layout .nav-link.active{
+  background:none !important; color:var(--brand) !important;
+  border-radius:0 !important; border-bottom:3px solid var(--brand);
+}
+.nav-pills{ flex:1; }
+.nav-layout button{ width:auto; padding:0 18px; height:36px; border-radius:4px;
+  background:#fff; color:var(--brand); border:1px solid var(--brand); font-weight:700; }
+.nav-layout .btn-login{ background:var(--brand) !important; background-image:none !important;
+  color:#fff !important; border:1px solid var(--brand); }
+.nav-layout .btn-login:hover{ background:var(--brand-dark) !important; }
+.nav-layout .btn-register:hover{ background:var(--brand-soft); }
+.login-user .login-name{ color:var(--ink); }
+
+/* ---------- Banner ---------- */
+#slide{ margin:0 0 24px; background:#000; }
+#slide img{ width:100%; height:480px; border-radius:0; border:none; }
+#slide .slide-btn:hover{ background:var(--brand) !important; background-image:none !important; }
+
+/* ---------- Tab Phim đang chiếu / sắp chiếu ---------- */
+#movie-pills-nav{ background:transparent !important; border-radius:0; border-bottom:2px solid #ddd; }
+#movie-pills-nav::before{
+  background:none !important; border-bottom:3px solid var(--brand); border-radius:0;
+  height:calc(100% + 2px); top:0;
+}
+#movie-pills-nav .nav-link{ color:#777; font-weight:700; text-transform:uppercase; font-size:1.05rem; }
+#movie-pills-nav .nav-link.active{ color:var(--brand) !important; }
+#movie-pills-nav .nav-link:not(.active):hover{ color:var(--brand); }
+
+/* ---------- Thẻ phim ---------- */
+.custom-movie-card{ background:#fff; color:var(--ink); border-radius:4px; height:auto;
+  box-shadow:0 1px 6px rgba(0,0,0,.15); }
+.custom-movie-card:hover{ transform:translateY(-4px); box-shadow:0 8px 18px rgba(0,0,0,.25); }
+.custom-card-content{ text-align:left; padding:12px; }
+.custom-card-content h3{ font-size:1rem; font-weight:700; text-transform:uppercase; color:var(--ink);
+  min-height:2.6em; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.custom-card-content p{ color:#666; font-size:.82rem; }
+.custom-play-button{
+  top:auto; bottom:12px; transform:translateX(-50%); background:var(--brand) !important;
+  background-image:none !important; border-radius:4px; color:#fff; font-size:.85rem;
+}
+.custom-play-button:hover{ background:var(--brand-dark) !important; }
+a{ text-decoration:none; }
+
+/* ---------- Footer ---------- */
+.footer{ background:#231f20 !important; border-top:4px solid var(--brand); }
+.footer p i, .footer-social-icons a:hover{ color:var(--brand) !important; }
+
+/* ---------- Popup đăng nhập / đăng ký ---------- */
+.login-container, .register-container{ background:#fff; color:var(--ink); border-radius:6px; }
+.login-header, .register-header, .login-body, .register-body,
+.login-footer, .register-footer{ color:var(--ink); }
+.login-body input, .register-body input{ background:#fff; color:var(--ink); border:1px solid #ccc; border-radius:4px; }
+.login-body button, .register-body button{ background:var(--brand) !important; background-image:none !important;
+  color:#fff !important; border:none; border-radius:4px; font-weight:700; }
+.login-body p, .login-footer a, .register-footer a{ color:var(--brand) !important; }
+
+/* ---------- Trang Tin tức (new.html) ---------- */
+.pagination a, .page-link{ border-color:var(--brand); }
+
+/* ---------- Trang Giới thiệu (about.html) ---------- */
+:root{ --primary-color:var(--brand); }
+.about-container, [class*="about"]{ color:var(--ink); }
+
+/* ---------- Trang chi tiết phim & chọn ghế: giữ nền tối kiểu rạp,
+   chỉ đổi màu nhấn hồng -> đỏ ---------- */
+.movie-details-page .btn, .movie-details-page button,
+.seat-page button, .btn-continue, .btn-confirm, #confirm-btn{
+  background-image:none !important; background:var(--brand) !important; color:#fff !important;
+}
+
+/* ===== PHIÊN BẢN UTC CINEMA: navy + vàng gold (khớp logo) ===== */
+:root{
+  --navy:#01162e;
+  --navy-2:#0a1730;
+  --gold:#d4a52c;
+  --gold-dark:#b88a1a;
+  --brand:#d4a52c;
+  --brand-dark:#b88a1a;
+  --brand-soft:#fff8e1;
+  --bg:#eef1f6;
+}
+body{ background:var(--bg) !important; }
+.section{ background:var(--bg) !important; }
+
+/* Header navy */
+#header{ background:var(--navy) !important; border-bottom:3px solid var(--gold); min-height:84px; box-shadow:0 3px 12px rgba(0,0,0,.35); }
+.nav-logo{ width:auto; }
+.nav-logo img{ width:auto; height:70px; max-height:none; }
+.nav-menu{ color:#fff; }
+.nav-layout a{ color:#f3f3f3; }
+.nav-layout a:hover{ color:var(--gold); }
+.nav-layout .active, .nav-layout .nav-link.active{ color:var(--gold) !important; border-bottom:3px solid var(--gold); }
+.nav-layout button{ background:transparent; color:var(--gold); border:1px solid var(--gold); border-radius:30px; }
+.nav-layout .btn-register:hover{ background:rgba(212,165,44,.15); }
+.nav-layout .btn-login{ background:linear-gradient(#e8c15a,#c9971c) !important; color:var(--navy) !important; border:1px solid var(--gold); }
+.nav-layout .btn-login:hover{ background:var(--gold) !important; }
+.login-user .login-name{ color:#fff; }
+
+/* Banner bo góc nhẹ + viền vàng */
+#slide{ background:transparent; margin:20px 0 24px; }
+#slide img{ width:94%; height:460px; border-radius:14px; border:3px solid var(--gold); box-shadow:0 10px 30px rgba(10,23,48,.35); }
+#slide .slide-btn:hover{ background:var(--gold) !important; color:var(--navy); }
+
+/* Tab */
+#movie-pills-nav{ border-bottom:2px solid #cfd6e4; }
+#movie-pills-nav::before{ border-bottom:3px solid var(--gold); }
+#movie-pills-nav .nav-link{ color:#6b7690; }
+#movie-pills-nav .nav-link.active, #movie-pills-nav .nav-link:not(.active):hover{ color:var(--navy) !important; }
+
+/* Thẻ phim */
+.custom-movie-card{ border-radius:12px; border:1px solid #dde3ef; box-shadow:0 4px 14px rgba(10,23,48,.12); }
+.custom-card-content h3{ color:var(--navy); }
+.custom-play-button{ background:linear-gradient(#e8c15a,#c9971c) !important; color:var(--navy) !important; border-radius:30px; padding:9px 22px; }
+.custom-play-button:hover{ background:var(--gold) !important; }
+
+/* Footer */
+.footer{ background:var(--navy-2) !important; border-top:4px solid var(--gold); }
+.footer p i, .footer-social-icons a:hover{ color:var(--gold) !important; }
+.footer-logo-img{ width:170px; }
+
+/* Popup: navy + vàng */
+.login-container, .register-container{ background:var(--navy); color:#fff; border:1px solid var(--gold); border-radius:16px; }
+.login-header, .register-header, .login-body, .register-body, .login-footer, .register-footer{ color:#fff; }
+.login-body input, .register-body input{ background:var(--navy-2); color:#fff; border:1px solid #2c3b63; border-radius:10px; }
+.login-body button, .register-body button{ background:linear-gradient(#e8c15a,#c9971c) !important; color:var(--navy) !important; border-radius:30px; }
+.login-body p, .login-footer a, .register-footer a{ color:var(--gold) !important; }
+
+/* Nút ở trang chi tiết / chọn ghế */
+.movie-details-page .btn, .movie-details-page button, .seat-page button, .btn-continue, .btn-confirm, #confirm-btn{
+  background:linear-gradient(#e8c15a,#c9971c) !important; color:var(--navy) !important;
+}
