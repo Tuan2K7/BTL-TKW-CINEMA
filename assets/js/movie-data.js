@@ -1,18 +1,18 @@
 const ALL_MOVIES = [
     // === PHIM ĐANG CHIẾU ===
     {
-        id: "tro-choi-ao-giac",
-        title: "Trò Chơi Ảo Giác: Ares (Tron: Ares)",
-        poster: "./assets/img/banner_trochoiaogiac.jpg",
-        background_img: "./assets/img/banner/trochoiaogiac_banner.webp",
+        id: "an-mang-xem-hoan-hao",
+        title: "Án mạng xém hoàn hảo ",
+        poster: "./assets/img/movies/an-mang-xem-hoan-hao.webp",
+        background_img: "./assets/img/movies/an-mang-xem-hoan-hao.webp",
         age_tag: "13+",
         age_color: "#ff9800",
-        meta: "2025 • 118 phút",
+        meta: "2026 • 124 phút",
         rating_text: "Đang thịnh hành",
-        tagline: "Thể loại: Hành động, Khoa học viễn tưởng",
-        description: "Ares, một chương trình hư cấu, được gửi từ thế giới kỹ thuật số vào thế giới thực trong một nhiệm vụ nguy hiểm, đánh dấu cuộc gặp gỡ đầu tiên của loài người với trí tuệ nhân tạo.",
-        release_date: "10/10/2025",
-        trailer_link: "https://www.youtube.com/embed/EMl9KVH1b3Y",
+        tagline: "Thể loại: Hài",
+        description: "Trinh, cô nàng TikToker ngôn tình triệu view, tỉnh dậy giữa  phim trường lạnh lẽo với cái đầu đau như búa bổ, mất trí nhớ và phát hiện xác của Yến (diễn viên) – tình địch đang bị nghi ngờ có gì mờ ám với diễn viên Khang (chồng sắp cưới). Đại (thám tử) được Trinh thuê theo dõi vụ ngoại tình lẻn vào giúp thì vấp ngã để lại dấu vân tay lên tử thi và vô tình bị bảo vệ bắt quả tang. Kể từ đây, liên tiếp những tình huống oái oăm mà cặp đôi “đũa lệch” phải đối mặt: chạy trốn khỏi cảnh sát dí sát gót và sát thủ rình rập, vừa cãi nhau tóe khói vừa phá án. Song Song đó, cả hai vô tình lật tẩy bí mật động trời của showbiz.",
+        release_date: "09/10/2026",
+        trailer_link: "https://www.youtube.com/embed/6BDX2p1aNlE",
         schedules: [
             {
                 date: "20/10",
@@ -36,18 +36,18 @@ const ALL_MOVIES = [
         ]
     },
     {
-        id: "quy-an-tang-3",
-        title: "Quỷ Ăn Tạng 3 (Tee Yod 3)",
-        poster: "./assets/img/banner_teeyod3.jpg",
-        background_img: "./assets/img/banner/quyetang3_banner.webp",
-        age_tag: "18+",
-        age_color: "#f44336",
-        meta: "2025 • 104 phút",
+        id: "avenger",
+        title: "Avengers: Endgame",
+        poster: "./assets/img/movies/avenger.webp",
+        background_img: "./assets/img/movies/avenger.webp",
+        age_tag: "13+",
+        age_color: "#ff9800",
+        meta: "2026 • 181 phút",
         rating_text: "Đang sợ hãi",
-        tagline: "Thể loại: Kinh dị",
-        description: "Tiếp nối câu chuyện rùng rợn, phần 3 đi sâu vào nguồn gốc của quỷ Tee Yod và những bí mật đen tối của gia đình.",
-        release_date: "10/10/2025",
-        trailer_link: "https://www.youtube.com/embed/dhHvESRCNtI",
+        tagline: "Thể loại: Hành động, Giả tưởng, Siêu anh hùng",
+        description: "Khi Thanos quyết định nghỉ hưu, các siêu anh hùng một lần nữa đoàn kết lại để mang trở về những người đã mất từ sau trận chiến vô cực.",
+        release_date: "25/09/2026",
+        trailer_link: "https://www.youtube.com/embed/nt8a2HkNxrk",
         schedules: [
             {
                 date: "20/10",
@@ -72,10 +72,10 @@ const ALL_MOVIES = [
         ]
     },
     {
-        id: "van-may",
-        title: "Vận May (Good Fortune)",
-        poster: "./assets/img/banner_vanmay.jpg",
-        background_img: "./assets/img/banner/vanmay_banner.webp",
+        id: "bat-tien",
+        title: "Bát Tiên: Truy tìm lưu ly đăng",
+        poster: "./assets/img/movies/bat-tien.webp",
+        background_img: "./assets/img/movies/bat-tien.webp",
         age_tag: "16+",
         age_color: "#f44336",
         meta: "2025 • 120 phút",
