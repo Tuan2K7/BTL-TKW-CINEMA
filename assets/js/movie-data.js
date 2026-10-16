@@ -736,7 +736,7 @@ const ALL_MOVIES = [
         ]
     },
     {
-        id: "godzilla",
+        id: "godzilla-minus-zero",
         title: "Godzilla Minus Zero: Godzilla Trừ Không",
         poster: "./assets/img/coomingsoon/godzilla.webp",
         background_img: "./assets/img/coomingsoon/godzilla.webp",
@@ -836,8 +836,8 @@ const ALL_MOVIES = [
         ]
     },
     {
-        id: "shaun-sheep",
-        title: "Shaun the Sheep: \"Quái Lạ\" Ghé Nhà",
+        id: "shaun-the-sheep",
+        title: "Shaun the Sheep ",
         poster: "./assets/img/coomingsoon/shaun-sheep.webp",
         background_img: "./assets/img/coomingsoon/shaun-sheep.webp",
         age_tag: "P",
