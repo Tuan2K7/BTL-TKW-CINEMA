@@ -156,7 +156,7 @@ const ALL_MOVIES = [
         tagline: "Thể loại: Phim tài liệu",
         description: "Đằng sau ánh hào quang của một siêu sao toàn cầu là hành trình đi tìm chính mình. Always Lalisa đưa khán giả bước vào một năm đặc biệt trong cuộc đời LISA – khi cô tạm rời Blackpink để lần đầu tiên thực sự bước đi trên con đường solo, đối diện với những câu hỏi chưa từng có lời giải: Nếu không có Blackpink, LISA là ai? Và cô muốn trở thành ai? Từ những khoảnh khắc trong phòng thu khi cô tạo nên album solo đầu tay Alter Ego, đến bước ngoặt diễn xuất trong The White Lotus và màn trình diễn solo tại Coachella 2025, bộ phim hé lộ hành trình phía sau những sân khấu rực rỡ – nơi LISA phải đối mặt với áp lực, sự kỳ vọng và ánh nhìn không ngừng của thế giới.",
         release_date: "12/10/2026",
-        trailer_link: "https://www.youtube.com/embed/gc-TQtjnTIA",
+        trailer_link: "https://www.youtube.com/embed/wfGqzDYkHf8",
         schedules: [
             {
                 date: "20/10",
@@ -226,7 +226,7 @@ const ALL_MOVIES = [
         tagline: "Thể loại: Hành động, Hoạt hình, Hài",
         description: "Suốt nhiều thế hệ, gia tộc Chung Quỳ luôn giữ gìn hòa bình giữa loài người và yêu quái. Sau khi được vị thợ săn yêu huyền thoại cứu mạng và đưa xuống âm giới, cô gái phàm trần Sơ Cửu gặp gỡ những người bạn kỳ lạ: một vị thần có năng lực tâm linh, một bà chủ hiền hậu và hai hộ vệ ngốc nghếch. Quyết tâm bái vị thợ săn yêu làm sư phụ, cô kề vai chiến đấu cùng anh và dần nhận được sự công nhận. Thế nhưng, lũ yêu quái ngày càng trở nên nguy hiểm và đằng sau chúng là một âm mưu có thể phá hủy sự cân bằng giữa cả hai thế giới.",
         release_date: "02/10/2026",
-        trailer_link: "https://www.youtube.com/embed/mJ2pu6FazEA",
+        trailer_link: "https://www.youtube.com/embed/RIGtijmvtI4",
         schedules: [
             {
                 date: "20/10",
@@ -331,7 +331,7 @@ const ALL_MOVIES = [
         tagline: "Phiêu lưu, Hài, Hoạt hình",
         description: "Lấy bối cảnh mùa hè tại Akita, bộ phim theo chân Shin và gia đình Nohara trong chuyến về quê đầy háo hức. Tuy nhiên, một sự kiện kỳ lạ đã đưa cả gia đình lạc vào Xứ sở Yêu quái bí ẩn – nơi con người không được phép đặt chân tới. Tại đây, Shin và gia đình phải đối mặt với những thử thách chưa từng có, đồng thời gặp gỡ hàng loạt yêu quái độc đáo, hài hước và đáng yêu.",
         release_date: "21/08/2026",
-        trailer_link: "https://www.youtube.com/embed/9NuV3HRL8y0",
+        trailer_link: "https://www.youtube.com/embed/FVRcC7sR9KE",
         schedules: [
             {
                 date: "20/10",
@@ -366,7 +366,7 @@ const ALL_MOVIES = [
         tagline: "Chính kịch, Phiêu lưu, Giả tưởng, Hoạt hình",
         description: "Suzume, 17 tuổi, mồ côi mẹ từ nhỏ. Trên đường đến trường, cô gặp một chàng trai bí ẩn. Nhưng sự tò mò của cô ấy đã gây ra một tai họa gây nguy hiểm cho toàn bộ người dân Nhật Bản, vì vậy Suzume bắt đầu cuộc hành trình để giải quyết mọi việc.",
         release_date: "10/03/2023",
-        trailer_link: "https://www.youtube.com/embed/Lc2G-rdB0ug",
+        trailer_link: "https://www.youtube.com/embed/5pTcio2hTSw",
         schedules: [
             {
                 date: "20/10",
@@ -401,7 +401,7 @@ const ALL_MOVIES = [
         tagline: "Thể loại: Chính kịch, Phiêu lưu, Giả tưởng",
         description: "Câu chuyện theo chân Odysseus trong hành trình kéo dài 10 năm trở về nhà sau cuộc chiến thành Troy, nơi ông phải đối mặt với các vị thần, quái vật và vô vàn thử thách, đồng thời nỗ lực đoàn tụ với vợ và giành lại vương quốc của mình.",
         release_date: "17/07/2026",
-        trailer_link: "https://www.youtube.com/embed/UFx8AeaXsHQ",
+        trailer_link: "https://www.youtube.com/embed/R4CYAv3zHHQ",
         schedules: [
             {
                 date: "20/10",
@@ -530,7 +530,7 @@ const ALL_MOVIES = [
         ]
     },
 
-    // === PHIM SẮP CHIẾU (ĐÃ ĐỒNG BỘ THEO LINK ẢNH) ===
+    // === PHIM SẮP CHIẾU ===
     {
         id: "an-mang-karaoke",
         title: "Án Mạng Karaoke",
@@ -837,7 +837,7 @@ const ALL_MOVIES = [
     },
     {
         id: "shaun-the-sheep",
-        title: "Shaun the Sheep ",
+        title: "Shaun the Sheep: \"Quái Lạ\" Ghé Nhà",
         poster: "./assets/img/coomingsoon/shaun-sheep.webp",
         background_img: "./assets/img/coomingsoon/shaun-sheep.webp",
         age_tag: "P",
