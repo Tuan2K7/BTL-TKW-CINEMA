@@ -2,7 +2,7 @@ const ALL_MOVIES = [
     // === PHIM ĐANG CHIẾU ===
     {
         id: "an-mang-xem-hoan-hao",
-        title: "Án mạng xém hoàn hảo ",
+        title: "Án mạng xém hoàn hảo",
         poster: "./assets/img/movies/an-mang-xem-hoan-hao.webp",
         background_img: "./assets/img/movies/an-mang-xem-hoan-hao.webp",
         age_tag: "13+",
@@ -10,7 +10,7 @@ const ALL_MOVIES = [
         meta: "2026 • 124 phút",
         rating_text: "Đang thịnh hành",
         tagline: "Thể loại: Hài",
-        description: "Trinh, cô nàng TikToker ngôn tình triệu view, tỉnh dậy giữa  phim trường lạnh lẽo với cái đầu đau như búa bổ, mất trí nhớ và phát hiện xác của Yến (diễn viên) – tình địch đang bị nghi ngờ có gì mờ ám với diễn viên Khang (chồng sắp cưới). Đại (thám tử) được Trinh thuê theo dõi vụ ngoại tình lẻn vào giúp thì vấp ngã để lại dấu vân tay lên tử thi và vô tình bị bảo vệ bắt quả tang. Kể từ đây, liên tiếp những tình huống oái oăm mà cặp đôi “đũa lệch” phải đối mặt: chạy trốn khỏi cảnh sát dí sát gót và sát thủ rình rập, vừa cãi nhau tóe khói vừa phá án. Song Song đó, cả hai vô tình lật tẩy bí mật động trời của showbiz.",
+        description: "Trinh, cô nàng TikToker ngôn tình triệu view, tỉnh dậy giữa phim trường lạnh lẽo với cái đầu đau như búa bổ, mất trí nhớ và phát hiện xác của Yến (diễn viên) – tình địch đang bị nghi ngờ có gì mờ ám với diễn viên Khang (chồng sắp cưới). Đại (thám tử) được Trinh thuê theo dõi vụ ngoại tình lẻn vào giúp thì vấp ngã để lại dấu vân tay lên tử thi và vô tình bị bảo vệ bắt quả tang. Kể từ đây, liên tiếp những tình huống oái oăm mà cặp đôi “đũa lệch” phải đối mặt: chạy trốn khỏi cảnh sát dí sát gót và sát thủ rình rập, vừa cãi nhau tóe khói vừa phá án. Song song đó, cả hai vô tình lật tẩy bí mật động trời của showbiz.",
         release_date: "09/10/2026",
         trailer_link: "https://www.youtube.com/embed/YUESTe-oL1U",
         schedules: [
@@ -43,7 +43,7 @@ const ALL_MOVIES = [
         age_tag: "13+",
         age_color: "#ff9800",
         meta: "2026 • 181 phút",
-        rating_text: "Đang sợ hãi",
+        rating_text: "Bom tấn",
         tagline: "Thể loại: Hành động, Giả tưởng, Siêu anh hùng",
         description: "Khi Thanos quyết định nghỉ hưu, các siêu anh hùng một lần nữa đoàn kết lại để mang trở về những người đã mất từ sau trận chiến vô cực.",
         release_date: "25/09/2026",
@@ -81,7 +81,7 @@ const ALL_MOVIES = [
         meta: "2026 • 144 phút",
         rating_text: "Hài hước",
         tagline: "Thể loại: Hài, Hành động, Phiêu lưu",
-        description: "Lữ Động Tân và Chung Ly Quyền dẫn đầu, tập hợp Hà Tiên Cô, Thiết Quải Lý, Hàn Tương Tử, Tào Quốc Cữu, Lam Thái Hòa và Trương Quả Lão. Tám con người với thân phận khác nhau, vì những cơ duyên riêng mà vô tình tụ họp tại tiên cảnh Bồng Lai. Người thì nhất thời nổi hứng, người thì thấy lập hội là nhập cuộc ngay. Cả nhóm cùng mở một đạo quán, thỏa sức đóng vai  thần tiên.",
+        description: "Lữ Động Tân và Chung Ly Quyền dẫn đầu, tập hợp Hà Tiên Cô, Thiết Quải Lý, Hàn Tương Tử, Tào Quốc Cữu, Lam Thái Hòa và Trương Quả Lão. Tám con người với thân phận khác nhau, vì những cơ duyên riêng mà vô tình tụ họp tại tiên cảnh Bồng Lai. Người thì nhất thời nổi hứng, người thì thấy lập hội là nhập cuộc ngay. Cả nhóm cùng mở một đạo quán, thỏa sức đóng vai thần tiên.",
         release_date: "11/09/2026",
         trailer_link: "https://www.youtube.com/embed/5N8jvHVtlko",
         schedules: [
@@ -116,7 +116,8 @@ const ALL_MOVIES = [
         meta: "2026 • 128 phút",
         rating_text: "Rất được mong đợi",
         tagline: "Nhà sản xuất: Ufotable <br> Thể loại: Hành động, Kịch tính <br> Đạo diễn: Yūsuke Taki",
-        description: "Theo chân 300 cầu thủ bóng đá trung học tham gia những vòng tuyển chọn khắc nghiệt tại một cơ sở huấn luyện bí mật, nơi chỉ một người duy nhất có thể vươn lên trở thành tiền đạo xuất sắc nhất thế giới, còn những người bị loại sẽ bị cấm thi đấu cho Đội tuyển Quốc gia Nhật Bản.",        release_date: "15/08/2025",
+        description: "Theo chân 300 cầu thủ bóng đá trung học tham gia những vòng tuyển chọn khắc nghiệt tại một cơ sở huấn luyện bí mật, nơi chỉ một người duy nhất có thể vươn lên trở thành tiền đạo xuất sắc nhất thế giới, còn những người bị loại sẽ bị cấm thi đấu cho Đội tuyển Quốc gia Nhật Bản.",
+        release_date: "15/08/2025",
         trailer_link: "https://www.youtube.com/embed/8VMMDfAYi34",
         schedules: [
             {
@@ -152,10 +153,10 @@ const ALL_MOVIES = [
         age_color: "#ff9800",
         meta: "2026 • 98 phút",
         rating_text: "Rất được mong đợi",
-        tagline: "Thể loại: Phim tài liệu  ",
-        description: "Đằng sau ánh hào quang của một siêu sao toàn cầu là hành trình đi tìm chính mình. Always Lalisa đưa khán giả bước vào một năm đặc biệt trong cuộc đời LISA – khi cô tạm rời Blackpink để lần đầu tiên thực sự bước đi trên con đường solo, đối diện với những câu hỏi chưa từng có lời giải: Nếu không có Blackpink, LISA là ai? Và cô muốn trở thành ai? Từ những khoảnh khắc trong phòng thu khi cô tạo nên album solo đầu tay Alter Ego, đến bước ngoặt diễn xuất trong The White Lotus và màn trình diễn solo tại Coachella 2025, bộ phim hé lộ hành trình phía sau những sân khấu rực rỡ – nơi LISA phải đối mặt với áp lực, sự kỳ vọng và ánh nhìn không ngừng của thế giới. Sinh ra tại Thái Lan, rời quê nhà từ năm 14 tuổi để theo đuổi giấc mơ K-pop tại Hàn Quốc",
-        release_date: "10/10/2025",
-        trailer_link: "https://www.youtube.com/embed/jTlYZjafxRQ9-djo",
+        tagline: "Thể loại: Phim tài liệu",
+        description: "Đằng sau ánh hào quang của một siêu sao toàn cầu là hành trình đi tìm chính mình. Always Lalisa đưa khán giả bước vào một năm đặc biệt trong cuộc đời LISA – khi cô tạm rời Blackpink để lần đầu tiên thực sự bước đi trên con đường solo, đối diện với những câu hỏi chưa từng có lời giải: Nếu không có Blackpink, LISA là ai? Và cô muốn trở thành ai? Từ những khoảnh khắc trong phòng thu khi cô tạo nên album solo đầu tay Alter Ego, đến bước ngoặt diễn xuất trong The White Lotus và màn trình diễn solo tại Coachella 2025, bộ phim hé lộ hành trình phía sau những sân khấu rực rỡ – nơi LISA phải đối mặt với áp lực, sự kỳ vọng và ánh nhìn không ngừng của thế giới.",
+        release_date: "12/10/2026",
+        trailer_link: "https://www.youtube.com/embed/gc-TQtjnTIA",
         schedules: [
             {
                 date: "20/10",
@@ -186,9 +187,9 @@ const ALL_MOVIES = [
         age_tag: "13+",
         age_color: "#ff9800",
         meta: "2026 • 121 phút",
-        rating_text: "Hài ",
+        rating_text: "Hài",
         tagline: "Thể loại: Hài, Kịch tính, Gia đình",
-        description: "Lên Hương là bộ phim thuộc thể loại tâm lý - gia đình, xoay quanh cuộc sống của những con người lao động bình dị. Ẩn sâu trong lòng mỗi người đều có sự cố chấp, ý niệm riêng của bản thân. Tuy nhiên, tất cả đều xuất phát từ sự yêu thương và bám trụ, giữ gìn được nghề truyền thống mà cả gia đình vất vả gầy dựng. Trong guồng quay mưu sinh, mỗi nhân vật đều phải đối diện với những lựa chọn khó khăn, và cả những biến cố bất ngờ của số phận. Và bên cạnh  những tình huống đời thường đôi khi hài hước là hành trình trưởng thành của nhân vật khi đứng trước ranh giới mong manh giữa sự sống và cái chết. Chính trong những thời khắc đó, con người mới nhận ra giá trị của gia đình, của tình thân và đặc biệt là tình yêu vô điều kiện của người mẹ.",
+        description: "Lên Hương là bộ phim thuộc thể loại tâm lý - gia đình, xoay quanh cuộc sống của những con người lao động bình dị. Ẩn sâu trong lòng mỗi người đều có sự cố chấp, ý niệm riêng của bản thân. Tuy nhiên, tất cả đều xuất phát từ sự yêu thương và bám trụ, giữ gìn được nghề truyền thống mà cả gia đình vất vả gầy dựng. Trong guồng quay mưu sinh, mỗi nhân vật đều phải đối diện với những lựa chọn khó khăn, và cả những biến cố bất ngờ của số phận. Và bên cạnh những tình huống đời thường đôi khi hài hước là hành trình trưởng thành của nhân vật khi đứng trước ranh giới mong manh giữa sự sống và cái chết.",
         release_date: "18/09/2026",
         trailer_link: "https://www.youtube.com/embed/gdBx_SzNO8Q",
         schedules: [
@@ -225,7 +226,7 @@ const ALL_MOVIES = [
         tagline: "Thể loại: Hành động, Hoạt hình, Hài",
         description: "Suốt nhiều thế hệ, gia tộc Chung Quỳ luôn giữ gìn hòa bình giữa loài người và yêu quái. Sau khi được vị thợ săn yêu huyền thoại cứu mạng và đưa xuống âm giới, cô gái phàm trần Sơ Cửu gặp gỡ những người bạn kỳ lạ: một vị thần có năng lực tâm linh, một bà chủ hiền hậu và hai hộ vệ ngốc nghếch. Quyết tâm bái vị thợ săn yêu làm sư phụ, cô kề vai chiến đấu cùng anh và dần nhận được sự công nhận. Thế nhưng, lũ yêu quái ngày càng trở nên nguy hiểm và đằng sau chúng là một âm mưu có thể phá hủy sự cân bằng giữa cả hai thế giới.",
         release_date: "02/10/2026",
-        trailer_link: "https://www.youtube.com/embed/5lFSI9UENVy2USnU",
+        trailer_link: "https://www.youtube.com/embed/mJ2pu6FazEA",
         schedules: [
             {
                 date: "20/10",
@@ -258,7 +259,7 @@ const ALL_MOVIES = [
         meta: "2026 • 123 phút",
         rating_text: "Kinh dị",
         tagline: "Thể loại: Kinh dị",
-        description: "Bộ phim theo sau hành trình khám phá thế giới ngày càng u tối của cô bé Bela. Tại ngôi nhà của mình, Bela dần hình thành một mối liên kết kỳ lạ với một thực thể bí ẩn mang vẻ ngoài giống hệt mẹ cô bé đến đáng sợ. ",
+        description: "Bộ phim theo sau hành trình khám phá thế giới ngày càng u tối của cô bé Bela. Tại ngôi nhà của mình, Bela dần hình thành một mối liên kết kỳ lạ với một thực thể bí ẩn mang vẻ ngoài giống hệt mẹ cô bé đến đáng sợ.",
         release_date: "09/10/2026",
         trailer_link: "https://www.youtube.com/embed/YPCtgD0KnGk",
         schedules: [
@@ -328,9 +329,9 @@ const ALL_MOVIES = [
         meta: "2026 • 100 phút",
         rating_text: "Đáng xem",
         tagline: "Phiêu lưu, Hài, Hoạt hình",
-        description: "Lấy bối cảnh mùa hè tại Akita, bộ phim theo chân Shin và gia đình Nohara trong chuyến về quê đầy háo hức. Tuy nhiên, một sự kiện kỳ lạ đã đưa cả gia đình lạc vào Xứ sở Yêu quái bí ẩn – nơi con người không được phép đặt chân tới. Tại đây, Shin và gia đình phải đối mặt với những thử thách chưa từng có, đồng thời gặp gỡ hàng loạt yêu quái độc đáo, hài hước và đáng yêu. Với sự kết hợp giữa yếu tố phiêu lưu, kỳ ảo, hài hước đặc trưng của Shin-chan cùng những thông điệp gia đình ấm áp, bộ phim hứa hẹn mang đến một hành trình giải trí hấp dẫn cho khán giả ở mọi lứa tuổi trong mùa hè này",
+        description: "Lấy bối cảnh mùa hè tại Akita, bộ phim theo chân Shin và gia đình Nohara trong chuyến về quê đầy háo hức. Tuy nhiên, một sự kiện kỳ lạ đã đưa cả gia đình lạc vào Xứ sở Yêu quái bí ẩn – nơi con người không được phép đặt chân tới. Tại đây, Shin và gia đình phải đối mặt với những thử thách chưa từng có, đồng thời gặp gỡ hàng loạt yêu quái độc đáo, hài hước và đáng yêu.",
         release_date: "21/08/2026",
-        trailer_link: "https://www.youtube.com/embed/KG5nP9RcGZnP_01A",
+        trailer_link: "https://www.youtube.com/embed/9NuV3HRL8y0",
         schedules: [
             {
                 date: "20/10",
@@ -361,11 +362,11 @@ const ALL_MOVIES = [
         age_tag: "P",
         age_color: "#4CAF50",
         meta: "2026 • 121 phút",
-        rating_text: "Gỉa tưởng, Hoạt hình",
+        rating_text: "Giả tưởng, Hoạt hình",
         tagline: "Chính kịch, Phiêu lưu, Giả tưởng, Hoạt hình",
-        description: "Suzume, 17 tuổi, mồ côi mẹ từ nhỏ. Trên đường đến trường, cô gặp một chàng trai bí ẩn. Nhưng sự tò mò của cô ấy đã gây ra một tai họa gây nguy hiểm cho toàn bộ người dân Nhật Bản, vì vậy Suzume bắt đầu cuộc hành trình để giải quyết mọi việc",
+        description: "Suzume, 17 tuổi, mồ côi mẹ từ nhỏ. Trên đường đến trường, cô gặp một chàng trai bí ẩn. Nhưng sự tò mò của cô ấy đã gây ra một tai họa gây nguy hiểm cho toàn bộ người dân Nhật Bản, vì vậy Suzume bắt đầu cuộc hành trình để giải quyết mọi việc.",
         release_date: "10/03/2023",
-        trailer_link: "https://www.youtube.com/embed/w3ip64IQ2HWdUPND",
+        trailer_link: "https://www.youtube.com/embed/Lc2G-rdB0ug",
         schedules: [
             {
                 date: "20/10",
@@ -400,7 +401,7 @@ const ALL_MOVIES = [
         tagline: "Thể loại: Chính kịch, Phiêu lưu, Giả tưởng",
         description: "Câu chuyện theo chân Odysseus trong hành trình kéo dài 10 năm trở về nhà sau cuộc chiến thành Troy, nơi ông phải đối mặt với các vị thần, quái vật và vô vàn thử thách, đồng thời nỗ lực đoàn tụ với vợ và giành lại vương quốc của mình.",
         release_date: "17/07/2026",
-        trailer_link: "https://www.youtube.com/embed/JfEkevoAqD6whsRT",
+        trailer_link: "https://www.youtube.com/embed/UFx8AeaXsHQ",
         schedules: [
             {
                 date: "20/10",
@@ -468,9 +469,9 @@ const ALL_MOVIES = [
         meta: "2026 • 121 phút",
         rating_text: "Đáng xem",
         tagline: "Thể loại: Phiêu lưu, Hành động",
-        description: "Sau một vụ tai nạn máy bay kinh hoàng, sĩ quan Lực lượng Đặc nhiệm James Belmont (Brad Pitt) và chú chó chiến đấu Odin bị mắc kẹt giữa vùng hoang dã sâu thẳm của Alaska. Từ đó, họ buộc phải cùng nhau bước vào cuộc chiến sinh tồn khốc liệt trước thiên nhiên khắc nghiệt. Từ đạo diễn danh tiếng David Ayer, Trái Tim Quái Thú là một bộ phim phiêu lưu đầy căng thẳng, khai thác mối gắn kết không thể tách rời giữa một người đàn ông và người bạn thân thiết nhất của mình, khi cả hai phải đối mặt với trận chiến lớn nhất cuộc đời",
+        description: "Sau một vụ tai nạn máy bay kinh hoàng, sĩ quan Lực lượng Đặc nhiệm James Belmont (Brad Pitt) và chú chó chiến đấu Odin bị mắc kẹt giữa vùng hoang dã sâu thẳm của Alaska. Từ đó, họ buộc phải cùng nhau bước vào cuộc chiến sinh tồn khốc liệt trước thiên nhiên khắc nghiệt. Từ đạo diễn danh tiếng David Ayer, Trái Tim Quái Thú là một bộ phim phiêu lưu đầy căng thẳng, khai thác mối gắn kết không thể tách rời giữa một người đàn ông và người bạn thân thiết nhất của mình.",
         release_date: "02/10/2026",
-        trailer_link: "https://www.youtube.com/embed/Xz01xOgBjv00Ylua",
+        trailer_link: "https://www.youtube.com/embed/qZbmPbdTyo8",
         schedules: [
             {
                 date: "20/10",
@@ -529,7 +530,7 @@ const ALL_MOVIES = [
         ]
     },
 
-    // === PHIM SẮP CHIẾU ===
+    // === PHIM SẮP CHIẾU (ĐÃ ĐỒNG BỘ THEO LINK ẢNH) ===
     {
         id: "an-mang-karaoke",
         title: "Án Mạng Karaoke",
@@ -538,367 +539,350 @@ const ALL_MOVIES = [
         age_tag: "18+",
         age_color: "#f44336",
         meta: "2026 • 96 phút",
-        rating_text: "Hài",
+        rating_text: "Hài / Bí ẩn",
         tagline: "Thể loại: Bí ẩn, Gay cấn, Hài",
-        description: "Một người hàng xóm mê hát karaoke bất ngờ bị sát hại trong căn homestay thiền biệt lập trên núi, khiến chuyến hành hương của một xóm nhỏ bị biến thành trò chơi đầu trí bất đắc dĩ.",
+        description: "Một người hàng xóm mê hát karaoke đêm muộn bất ngờ bị sát hại trong căn homestay biệt lập trên núi với hung khí chính là chiếc micro, biến kỳ nghỉ của cả xóm nhỏ thành một cuộc đấu trí tìm hung thủ dở khóc dở cười.",
         release_date: "30/10/2026",
-        trailer_link: "https://www.youtube.com/embed/0u2rI3zBe_jcwmc4",
+        trailer_link: "https://www.youtube.com/embed/8QtlRSA8yWs",
         schedules: [
             {
-                date: "31/10",
+                date: "30/10",
                 day: "Thứ Sáu",
                 format: "2D Phụ đề",
                 times: [
-                    "18:00 ~ 20:00",
-                    "20:00 ~ 22:00",
-                    "22:00 ~ 24:00"
+                    "18:00 ~ 19:36",
+                    "20:00 ~ 21:36",
+                    "22:00 ~ 23:36"
                 ]
             }
         ]
     },
     {
-        id: "xa-thuat-tieu-tam",
-        title: "Xà Thuật Tiểu Tam (2025)",
+        id: "bambi",
+        title: "Bambi: Lãnh Địa Săn Mồi",
         poster: "./assets/img/coomingsoon/bambi.webp",
         background_img: "./assets/img/coomingsoon/bambi.webp",
         age_tag: "18+",
         age_color: "#f44336",
-        meta: "2025 • 99 phút",
+        meta: "2026 • 85 phút",
         rating_text: "Kinh dị",
-        tagline: "Thể loại: Kinh dị",
-        description: "Một người phụ nữ sử dụng tà thuật rắn (Xà Thuật) để giành lại người yêu từ tình địch, nhưng nghi lễ hắc ám đòi hỏi một cái giá kinh hoàng.",
-        release_date: "24/10/2025",
-        trailer_link: "https://www.youtube.com/embed/A5kDuGbTST4",
+        tagline: "Thể loại: Kinh dị, Sinh tồn",
+        description: "Khi màn đêm buông xuống, Bambi không còn là chú nai ngây thơ của tuổi thơ mà đã bị hắc hóa thành một quái thú đột biến khát máu với bản năng săn mồi tàn bạo, biến con người lạc vào rừng sâu trở thành con mồi trong cuộc săn đẫm máu.",
+        release_date: "23/10/2026",
+        trailer_link: "https://www.youtube.com/embed/Abk_DhHyqyg",
         schedules: [
             {
-                date: "24/10",
+                date: "23/10",
                 day: "Thứ Sáu",
                 format: "2D Phụ đề",
                 times: [
-                    "19:00 ~ 20:39",
-                    "21:00 ~ 22:39"
+                    "19:00 ~ 20:25",
+                    "21:00 ~ 22:25"
                 ]
             }
         ]
     },
     {
-        id: "good-boy",
-        title: "Good Boy: Chó Cưng Đừng Sợ (2025)",
+        id: "bo-sua-bay",
+        title: "Bò Sữa Bay",
         poster: "./assets/img/coomingsoon/bo-sua-bay.webp",
         background_img: "./assets/img/coomingsoon/bo-sua-bay.webp",
-        age_tag: "18+",
-        age_color: "#f44336",
-        meta: "2025 • 73 phút",
-        rating_text: "Kinh dị",
-        tagline: "Thể loại: Kinh dị / Siêu nhiên",
-        description: "Được kể từ góc nhìn của một chú chó, chứng kiến các sự kiện siêu nhiên kỳ lạ và đáng sợ trong ngôi nhà mới, cố gắng bảo vệ chủ nhân của mình khỏi một thế lực tà ác.",
-        release_date: "03/10/2025",
-        trailer_link: "https://www.youtube.com/embed/auPnAAkrEBA",
-        schedules: [
-            {
-                date: "20/10",
-                day: "Hôm nay",
-                format: "2D Phụ đề",
-                times: [
-                    "10:00 ~ 11:13",
-                    "13:00 ~ 14:13",
-                    "19:00 ~ 20:13"
-                ]
-            },
-            {
-                date: "21/10",
-                day: "Thứ Ba",
-                format: "2D Phụ đề",
-                times: [
-                    "14:00 ~ 15:13",
-                    "20:00 ~ 21:13"
-                ]
-            }
-        ]
-    },
-    {
-        id: "bit-mat-bat-nai",
-        title: "Bịt Mắt Bắt Nai (2025)",
-        poster: "./assets/img/coomingsoon/ca-voi-nuot.webp",
-        background_img: "./assets/img/coomingsoon/ca-voi-nuot.webp",
         age_tag: "13+",
         age_color: "#ff9800",
-        meta: "2025 • 105 phút",
-        rating_text: "Đang thịnh hành",
-        tagline: "Thể loại: Hài, Phiêu lưu",
-        description: "Một bí mật đen tối của người chồng bị che giấu. Khi người vợ bắt đầu nghi ngờ, cô dấn thân vào một cuộc điều tra nguy hiểm, giống như trò chơi 'bịt mắt bắt nai'.",
-        release_date: "31/10/2025",
-        trailer_link: "https://www.youtube.com/embed/enefvdfyYoo",
+        meta: "2026 • 112 phút",
+        rating_text: "Hài / Lãng mạn",
+        tagline: "Đạo diễn: Nguyễn Phạm Thành Đạt <br> Thể loại: Hài, Tâm lý, Gia đình",
+        description: "Lấy bối cảnh thập niên 80–90, bộ phim xoay quanh một trang trại bò sữa đang nghiên cứu công thức sữa độc quyền có khả năng chữa lành và trẻ hóa. Để thoát nghèo, một nhóm công nhân quyết định đánh cắp công thức bí mật ấy, nhưng kế hoạch dần đảo lộn khi Trâu – tên đầu sỏ – lại nảy sinh tình cảm đặc biệt với cô gái tạo ra công thức sữa.",
+        release_date: "06/11/2026",
+        trailer_link: "https://www.youtube.com/embed/3ypTdoBMKgg",
         schedules: [
             {
-                date: "25/10",
-                day: "Thứ Bảy",
-                format: "2D Lồng tiếng",
+                date: "06/11",
+                day: "Thứ Sáu",
+                format: "2D Phụ đề",
                 times: [
-                    "09:00 ~ 10:45",
-                    "11:00 ~ 12:45",
-                    "17:00 ~ 18:45"
+                    "10:00 ~ 11:52",
+                    "14:00 ~ 15:52",
+                    "19:30 ~ 21:22"
                 ]
             }
         ]
     },
     {
-        id: "pha-dam-sinh-nhat-me",
-        title: "Phá Đám: Sinh Nhật Mẹ (2025)",
-        poster: "./assets/img/coomingsoon/chang-meo-mang-mu.webp",
-        background_img: "./assets/img/coomingsoon/chang-meo-mang-mu.webp",
+        id: "ca-voi-nuot",
+        title: "Cá Voi Nuốt Chửng (Whalefall)",
+        poster: "./assets/img/coomingsoon/ca-voi-nuot.webp",
+        background_img: "./assets/img/coomingsoon/ca-voi-nuot.webp",
         age_tag: "16+",
         age_color: "#f44336",
-        meta: "2025 • 98 phút",
-        rating_text: "Hài kịch đen",
-        tagline: "Thể loại: Chính kịch / Gia đình / Hài kịch đen",
-        description: "Một gia đình không êm ấm tụ tập để mừng sinh nhật mẹ, nhưng những bí mật và bất bình sâu sắc bùng nổ, biến bữa tiệc thành hỗn loạn.",
-        release_date: "05/09/2025",
-        trailer_link: "https://www.youtube.com/embed/vl2hIjD5oTY",
+        meta: "2026 • 108 phút",
+        rating_text: "Sinh tồn / Gay cấn",
+        tagline: "Thể loại: Sinh tồn, Giật gân, Phiêu lưu",
+        description: "Trong lúc lặn xuống đáy đại dương để tìm kiếm hài cốt của người cha quá cố, một thợ lặn trẻ vô tình bị một con cá nhà táng khổng lồ nuốt chửng. Khi lượng dưỡng khí trong bình chỉ còn đủ dùng trong một giờ, anh phải chạy đua với tử thần để tìm đường thoát thân từ bên trong bụng quái vật biển sâu.",
+        release_date: "16/10/2026",
+        trailer_link: "https://www.youtube.com/embed/FTjdRGRq-9M",
         schedules: [
             {
                 date: "20/10",
                 day: "Hôm nay",
                 format: "2D Phụ đề",
                 times: [
-                    "10:00 ~ 11:38",
-                    "13:00 ~ 14:38",
-                    "19:00 ~ 20:38"
-                ]
-            },
-            {
-                date: "21/10",
-                day: "Thứ Ba",
-                format: "2D Phụ đề",
-                times: [
-                    "14:00 ~ 15:38",
-                    "20:00 ~ 21:38"
+                    "10:15 ~ 12:03",
+                    "15:00 ~ 16:48",
+                    "20:15 ~ 22:03"
                 ]
             }
         ]
     },
     {
-        id: "phong-tro-ma-bau",
-        title: "Phòng Trọ Ma Bầu (2025)",
+        id: "chang-meo-mang-mu",
+        title: "Chàng Mèo Mang Mũ (The Cat in the Hat)",
+        poster: "./assets/img/coomingsoon/chang-meo-mang-mu.webp",
+        background_img: "./assets/img/coomingsoon/chang-meo-mang-mu.webp",
+        age_tag: "P",
+        age_color: "#4CAF50",
+        meta: "2026 • 95 phút",
+        rating_text: "Hoạt hình / Gia đình",
+        tagline: "Thể loại: Hoạt hình, Hài hước, Phiêu lưu, Gia đình",
+        description: "Tiếp nối tinh thần kỳ diệu và đầy trí tưởng tượng từ tác phẩm kinh điển của Dr. Seuss, Chàng Mèo Mang Mũ mang chiếc mũ sọc đỏ trắng quen thuộc trở lại, kéo hai anh em nhỏ vào một thế giới phép thuật hỗn loạn vượt ngoài tầm kiểm soát cùng những sinh vật tí hon tinh nghịch.",
+        release_date: "06/11/2026",
+        trailer_link: "https://www.youtube.com/embed/gXdNytoxe88",
+        schedules: [
+            {
+                date: "06/11",
+                day: "Thứ Sáu",
+                format: "2D Lồng tiếng",
+                times: [
+                    "09:30 ~ 11:05",
+                    "14:30 ~ 16:05",
+                    "18:30 ~ 20:05"
+                ]
+            }
+        ]
+    },
+    {
+        id: "chi-chi-em-em-3",
+        title: "Chị Chị Em Em 3",
         poster: "./assets/img/coomingsoon/chi-chi-em-em-3.webp",
         background_img: "./assets/img/coomingsoon/chi-chi-em-em-3.webp",
         age_tag: "18+",
         age_color: "#f44336",
-        meta: "2025 • (chưa rõ) phút",
-        rating_text: "Kinh dị",
-        tagline: "Thể loại: Kinh dị / Hài",
-        description: "Hai người bạn thuê một phòng trọ giá rẻ, và bị ám ảnh bởi hồn ma của một phụ nữ mang thai ('ma bầu') đã chết ở đó, hé lộ một bí mật đen tối.",
-        release_date: "07/11/2025",
-        trailer_link: "https://www.youtube.com/embed/pGXfmnjTdsI",
+        meta: "2026 • 118 phút",
+        rating_text: "Kịch tính / Tâm lý",
+        tagline: "Đạo diễn: Nguyễn Hữu Hoàng <br> Thể loại: Tâm lý, Chính kịch",
+        description: "Với sự góp mặt của Ninh Dương Lan Ngọc, Chi Pu, Kỳ Duyên, Steven Nguyễn và Quốc Anh, bộ phim xoay quanh năm con người trong những mối quan hệ tình - tiền chồng chéo. Khi tình yêu đặt lên bàn cân cùng gia tộc và tham vọng riêng, những bí mật đen tối và màn đấu trí khốc liệt giữa các mỹ nhân chính thức bùng nổ.",
+        release_date: "30/10/2026",
+        trailer_link: "https://www.youtube.com/embed/hpLGi0dn3OA",
         schedules: [
             {
-                date: "07/11",
+                date: "30/10",
                 day: "Thứ Sáu",
                 format: "2D Phụ đề",
                 times: [
-                    "18:30 ~ 20:30",
-                    "20:30 ~ 22:30"
+                    "18:30 ~ 20:28",
+                    "20:45 ~ 22:43"
                 ]
             }
         ]
     },
     {
-        id: "tinh-nguoi-duyen-ma",
-        title: "Tình Người Duyên Ma: Nhắm Mak Yêu Luôn (2025)",
+        id: "clayface",
+        title: "Clayface",
         poster: "./assets/img/coomingsoon/clayface.webp",
         background_img: "./assets/img/coomingsoon/clayface.webp",
-        age_tag: "16+",
+        age_tag: "18+",
         age_color: "#f44336",
-        meta: "2025 • 99 phút",
-        rating_text: "Kinh dị / Hài",
-        tagline: "Thể loại: Tình cảm / Hài / Kinh dị",
-        description: "Phiên bản mới và hài hước của câu chuyện ma Thái kinh điển 'Pee Mak', kể về một người lính trở về nhà mà không biết vợ mình đã là ma.",
-        release_date: "07/11/2025",
-        trailer_link: "https://www.youtube.com/embed/V4AX5zBm-ag",
+        meta: "2026 • 115 phút",
+        rating_text: "Kinh dị / Siêu anh hùng",
+        tagline: "Thể loại: Kinh dị, Giật gân, Khoa học viễn tưởng (DC Studios)",
+        description: "Theo chân sự sa ngã đầy ám ảnh của một nam diễn viên đầy triển vọng tại thành phố Gotham. Sau khi sử dụng một hợp chất bí ẩn để níu giữ sự nghiệp, cơ thể anh dần biến đổi thành một khối đất sét sống có khả năng biến hình kỳ dị, đẩy anh vào ranh giới kinh hoàng giữa con người và ác quỷ.",
+        release_date: "30/10/2026",
+        trailer_link: "https://www.youtube.com/embed/qnCQ3dlH7_k",
         schedules: [
             {
-                date: "07/11",
+                date: "30/10",
                 day: "Thứ Sáu",
                 format: "2D Phụ đề",
                 times: [
-                    "19:15 ~ 20:54",
-                    "21:15 ~ 22:54"
+                    "19:15 ~ 21:10",
+                    "21:30 ~ 23:25"
                 ]
             }
         ]
     },
     {
-        id: "trai-tim-que-quat",
-        title: "Trái Tim Què Quặt (2025)",
+        id: "coi-nguyen",
+        title: "Cõi Nguyền",
         poster: "./assets/img/coomingsoon/coi-nguyen.webp",
         background_img: "./assets/img/coomingsoon/coi-nguyen.webp",
-        age_tag: "16+",
+        age_tag: "18+",
         age_color: "#f44336",
-        meta: "2025 • (chưa rõ) phút",
-        rating_text: "Ly kỳ",
-        tagline: "Thể loại: Tâm lý / Ly kỳ",
-        description: "Một bộ phim tâm lý ly kỳ về một người phụ nữ, sau khi được cấy ghép tim, bắt đầu mang những đặc điểm tính cách và ký ức đen tối của người hiến tạng.",
-        release_date: "07/11/2025",
-        trailer_link: "https://www.youtube.com/embed/TBkDA7WjKZE",
+        meta: "2026 • 104 phút",
+        rating_text: "Top 1 Kinh dị Nhật",
+        tagline: "Thể loại: Kinh dị, Tâm linh",
+        description: "Dựa trên loạt truyền thuyết đô thị gây chấn động Nhật Bản, Cõi Nguyền bắt nguồn từ lời nguyền tà ác của một người phụ nữ kỳ bí đeo bám cô gái trẻ tên Riko. Mỗi đêm trôi qua, những hiện tượng siêu nhiên rùng rợn liên tiếp ập đến thông qua chiếc điện thoại, kéo cô vào cõi u minh không lối thoát.",
+        release_date: "23/10/2026",
+        trailer_link: "https://www.youtube.com/embed/p6-SIpVJass",
         schedules: [
             {
-                date: "07/11",
+                date: "23/10",
                 day: "Thứ Sáu",
                 format: "2D Phụ đề",
                 times: [
-                    "19:30 ~ 21:30",
-                    "21:30 ~ 23:30"
+                    "19:30 ~ 21:14",
+                    "21:45 ~ 23:29"
                 ]
             }
         ]
     },
     {
-        id: "quai-thu-vo-hinh",
-        title: "Quái Thú Vô Hình: Vùng Đất Chết Chóc (2025)",
+        id: "godzilla",
+        title: "Godzilla Minus Zero: Godzilla Trừ Không",
         poster: "./assets/img/coomingsoon/godzilla.webp",
         background_img: "./assets/img/coomingsoon/godzilla.webp",
         age_tag: "16+",
         age_color: "#f44336",
-        meta: "2025 • (chưa rõ) phút",
-        rating_text: "Hành động",
-        tagline: "Thể loại: Hành động / Khoa học viễn tưởng",
-        description: "Một nhóm lính trên một hành tinh xa xôi bị săn đuổi bởi một quái thú săn mồi vô hình coi họ là con mồi.",
-        release_date: "07/11/2025",
-        trailer_link: "https://www.youtube.com/embed/4ORg9D6zNn4",
+        meta: "2026 • 130 phút",
+        rating_text: "Bom tấn IMAX",
+        tagline: "Đạo diễn: Takashi Yamazaki <br> Thể loại: Hành động, Quái vật, Viễn tưởng",
+        description: "Tiếp nối kiệt tác từng đoạt giải Oscar 'Godzilla Minus One', đạo diễn Takashi Yamazaki cùng bộ đôi diễn viên Ryunosuke Kamiki và Minami Hamabe chính thức trở lại. Khi tội lỗi và hình phạt của nhân loại không thể trở về con số 0, sự trỗi dậy kinh hoàng của Godzilla đẩy nước Nhật vào cuộc chiến sinh tồn tàn khốc hơn bao giờ hết.",
+        release_date: "06/11/2026",
+        trailer_link: "https://www.youtube.com/embed/SVoCkVazmtU",
         schedules: [
             {
-                date: "07/11",
+                date: "06/11",
                 day: "Thứ Sáu",
-                format: "2D Phụ đề",
+                format: "IMAX 2D Phụ đề",
                 times: [
-                    "18:45 ~ 20:45",
-                    "20:45 ~ 22:45"
+                    "18:45 ~ 20:55",
+                    "21:15 ~ 23:25"
                 ]
             }
         ]
     },
     {
-        id: "tron-chay-tu-than",
-        title: "Trốn Chạy Tử Thần (2025)",
+        id: "ngay-con-con-me",
+        title: "Ngày Con Còn Mẹ",
         poster: "./assets/img/coomingsoon/ngay-con-con-me.webp",
         background_img: "./assets/img/coomingsoon/ngay-con-con-me.webp",
-        age_tag: "16+",
-        age_color: "#f44336",
-        meta: "2025 • 120 phút",
-        rating_text: "Hành động",
-        tagline: "Thể loại: Phiêu lưu / Khoa học viễn tưởng",
-        description: "Trong một tương lai loạn lạc, một người đàn ông tuyệt vọng cần tiền cứu con gái đã tham gia một chương trình thực tế chết người, nơi anh phải trốn chạy khỏi các sát thủ trong 30 ngày.",
-        release_date: "07/11/2025",
-        trailer_link: "https://www.youtube.com/embed/CpgFJshfY-k",
+        age_tag: "13+",
+        age_color: "#ff9800",
+        meta: "2026 • 115 phút",
+        rating_text: "Cảm động",
+        tagline: "Thể loại: Gia đình, Tâm lý, Tình cảm",
+        description: "Đánh dấu màn tái hợp của nghệ sĩ Hồng Đào (bà Tím) và Phương Anh Đào (Mây), bộ phim khai thác góc nhìn chân thật và đầy xúc động về những tổn thương âm ỉ trong gia đình từ sự thiên vị. Đằng sau những cuộc cãi vã và lời trách móc là khát khao được thấu hiểu, nhắc nhở mỗi người học cách tha thứ và yêu thương khi còn có mẹ.",
+        release_date: "11/11/2026",
+        trailer_link: "https://www.youtube.com/embed/gihuep9BNSg",
         schedules: [
             {
-                date: "07/11",
-                day: "Thứ Sáu",
+                date: "11/11",
+                day: "Thứ Tư",
                 format: "2D Phụ đề",
                 times: [
-                    "18:00 ~ 20:00",
-                    "21:00 ~ 23:00"
+                    "18:00 ~ 19:55",
+                    "20:30 ~ 22:25"
                 ]
             }
         ]
     },
     {
-        id: "truy-tim-long-dien-huong",
-        title: "Truy Tìm Long Diên Hương (2025)",
+        id: "quy-an-tang-4",
+        title: "Quỷ Ăn Tạng 4: Hổ Tinh (Death Whisperer 4)",
         poster: "./assets/img/coomingsoon/quy-an-tang-4.webp",
         background_img: "./assets/img/coomingsoon/quy-an-tang-4.webp",
-        age_tag: "13+",
-        age_color: "#ff9800",
-        meta: "2025 • (chưa rõ) phút",
-        rating_text: "Hài / Hành động",
-        tagline: "Thể loại: Hành động / Hài",
-        description: "Một kho báu quý giá (Long Diên Hương) bị đánh cắp, dẫn đến một cuộc rượt đuổi hỗn loạn và đầy hành động giữa các băng đảng và một ngư dân vô tình bị lôi kéo vào.",
-        release_date: "14/11/2025",
-        trailer_link: "https://www.youtube.com/embed/i-THQhaT7ts",
-        schedules: [
-            {
-                date: "14/11",
-                day: "Thứ Sáu",
-                format: "2D Phụ đề",
-                times: [
-                    "18:00 ~ 20:00",
-                    "20:15 ~ 22:15"
-                ]
-            }
-        ]
-    },
-    {
-        id: "avatar-lua-va-tro-tan",
-        title: "Avatar: Lửa Và Tro Tàn (2025)",
-        poster: "./assets/img/coomingsoon/ramayana.webp",
-        background_img: "./assets/img/coomingsoon/ramayana.webp",
-        age_tag: "13+",
-        age_color: "#ff9800",
-        meta: "2025 • (chưa rõ) phút",
-        rating_text: "Bom tấn",
-        tagline: "Thể loại: Khoa học viễn tưởng / Phiêu lưu",
-        description: "Jake Sully phải lãnh đạo người Na'vi chống lại một mối đe dọa mới, khi một ngọn núi lửa đe dọa phá hủy Pandora. Anh gặp gỡ 'Tộc Người Tro Tàn', một bộ lạc Na'vi của lửa.",
-        release_date: "19/12/2025",
-        trailer_link: "https://www.youtube.com/embed/gqBFTGmDClQ",
-        schedules: [
-            {
-                date: "19/12",
-                day: "Thứ Sáu",
-                format: "3D Phụ đề",
-                times: [
-                    "18:00 ~ 21:00",
-                    "20:00 ~ 23:00"
-                ]
-            }
-        ]
-    },
-    {
-        id: "nam-dem-kinh-hoang-2",
-        title: "Năm Đêm Kinh Hoàng 2 (2025)",
-        poster: "./assets/img/coomingsoon/shaun-sheep.webp",
-        background_img: "./assets/img/coomingsoon/shaun-sheep.webp",
         age_tag: "18+",
         age_color: "#f44336",
-        meta: "2025 • (chưa rõ) phút",
-        rating_text: "Kinh dị",
-        tagline: "Thể loại: Kinh dị / Bí ẩn",
-        description: "Tiếp nối các sự kiện kinh hoàng tại Freddy Fazbear's Pizza, câu chuyện đào sâu hơn vào lịch sử đen tối của các linh vật máy và vụ án trẻ em mất tích.",
-        release_date: "05/12/2025",
-        trailer_link: "https://www.youtube.com/embed/yQ6tmH7WNdY",
-        schedules: [
-            {
-                date: "05/12",
-                day: "Thứ Sáu",
-                format: "2D Phụ đề",
-                times: [
-                    "19:00 ~ 21:00",
-                    "21:30 ~ 23:30"
-                ]
-            }
-        ]
-    },
-    {
-        id: "mortal-kombat",
-        title: "Mortal Kombat: Cuộc Chiến Sinh Tử",
-        poster: "./assets/img/coomingsoon/street-fighter.webp",
-        background_img: "./assets/img/coomingsoon/street-fighter.webp",
-        age_tag: "18+",
-        age_color: "#f44336",
-        meta: "2021 • 110 phút",
-        rating_text: "Hành động / Võ thuật",
-        tagline: "Thể loại: Hành động / Võ thuật / Khoa học viễn tưởng",
-        description: "Võ sĩ MMA Cole Young bị Sub-Zero săn đuổi. Anh tìm nơi ẩn náu với các chiến binh được chọn để bảo vệ Earthrealm trong một trận chiến sinh tử giành vũ trụ.",
-        release_date: "23/04/2021",
-        trailer_link: "https://www.youtube.com/embed/3JPgwgMoMZE",
+        meta: "2026 • 118 phút",
+        rating_text: "Kinh dị / Hành động",
+        tagline: "Thể loại: Kinh dị, Hành động, Tâm linh",
+        description: "Một thế lực tà ác mới lại trỗi dậy giữa khu rừng sâu bí ẩn. Trong phần thứ 4 của thương hiệu kinh dị ăn khách Thái Lan, Yak cùng những người đồng đội phải đối đầu trực diện với Hổ Tinh (Saming The Werebeast) – một sinh vật biến hình khát máu ẩn mình trong rừng thiêng cùng hàng loạt hiện tượng ma quái nghẹt thở.",
+        release_date: "16/10/2026",
+        trailer_link: "https://www.youtube.com/embed/cJj-9PAE9xM",
         schedules: [
             {
                 date: "20/10",
                 day: "Hôm nay",
                 format: "2D Phụ đề",
                 times: [
-                    "10:00 ~ 11:50",
-                    "13:00 ~ 14:50",
-                    "19:00 ~ 20:50"
+                    "18:00 ~ 19:58",
+                    "20:15 ~ 22:13"
+                ]
+            }
+        ]
+    },
+    {
+        id: "ramayana",
+        title: "Sử Thi Ramayana: Khởi Nguồn Một Huyền Thoại",
+        poster: "./assets/img/coomingsoon/ramayana.webp",
+        background_img: "./assets/img/coomingsoon/ramayana.webp",
+        age_tag: "13+",
+        age_color: "#ff9800",
+        meta: "2026 • 165 phút",
+        rating_text: "Bom tấn sử thi",
+        tagline: "Thể loại: Hành động, Sử thi, Thần thoại, Phiêu lưu",
+        description: "Tái hiện một trong những thiên sử thi vĩ đại nhất phương Đông, bộ phim theo chân hoàng tử Rama trong hành trình vượt đại dương đầy hiểm nguy để giải cứu người vợ Sita khỏi tay quỷ vương Ravana, mở ra cuộc đại chiến long trời lở đất giữa ánh sáng và bóng tối.",
+        release_date: "06/11/2026",
+        trailer_link: "https://www.youtube.com/embed/XFGk3h1k3do",
+        schedules: [
+            {
+                date: "06/11",
+                day: "Thứ Sáu",
+                format: "3D Phụ đề",
+                times: [
+                    "18:00 ~ 20:45",
+                    "20:30 ~ 23:15"
+                ]
+            }
+        ]
+    },
+    {
+        id: "shaun-sheep",
+        title: "Shaun the Sheep: \"Quái Lạ\" Ghé Nhà",
+        poster: "./assets/img/coomingsoon/shaun-sheep.webp",
+        background_img: "./assets/img/coomingsoon/shaun-sheep.webp",
+        age_tag: "P",
+        age_color: "#4CAF50",
+        meta: "2026 • 88 phút",
+        rating_text: "Hoạt hình / Vui nhộn",
+        tagline: "Thể loại: Hoạt hình, Hài hước, Gia đình",
+        description: "Câu chuyện bắt đầu với sự cố Ông chủ vô tình phá hỏng vườn bí ngô mà đàn cừu đang chuẩn bị cho lễ hội Halloween. Để cứu vãn tình hình, chú cừu Shaun trổ tài làm 'nhà khoa học' trong phòng thí nghiệm tự chế, nhưng thí nghiệm lại kéo theo sự xuất hiện của một sinh vật quái lạ cùng hàng loạt rắc rối cười ra nước mắt.",
+        release_date: "16/10/2026",
+        trailer_link: "https://www.youtube.com/embed/8q6XZq8a0iA",
+        schedules: [
+            {
+                date: "20/10",
+                day: "Hôm nay",
+                format: "2D Lồng tiếng",
+                times: [
+                    "09:30 ~ 10:58",
+                    "14:00 ~ 15:28",
+                    "17:30 ~ 18:58"
+                ]
+            }
+        ]
+    },
+    {
+        id: "street-fighter",
+        title: "Street Fighter",
+        poster: "./assets/img/coomingsoon/street-fighter.webp",
+        background_img: "./assets/img/coomingsoon/street-fighter.webp",
+        age_tag: "16+",
+        age_color: "#f44336",
+        meta: "2026 • 115 phút",
+        rating_text: "Hành động / Võ thuật",
+        tagline: "Thể loại: Hành động, Võ thuật, Phiêu lưu",
+        description: "Chuyển thể từ tượng đài game đối kháng huyền thoại, bộ phim quy tụ những võ sĩ đường phố xuất sắc nhất thế giới như Ryu, Ken, Chun-Li và Guile. Họ buộc phải bước vào giải đấu sinh tử World Warrior để ngăn chặn âm mưu thống trị toàn cầu của tổ chức tội ác Shadaloo do M. Bison cầm đầu.",
+        release_date: "16/10/2026",
+        trailer_link: "https://www.youtube.com/embed/j7h5bqu4roI",
+        schedules: [
+            {
+                date: "20/10",
+                day: "Hôm nay",
+                format: "2D Phụ đề",
+                times: [
+                    "10:00 ~ 11:55",
+                    "13:00 ~ 14:55",
+                    "19:00 ~ 20:55"
                 ]
             },
             {
@@ -906,33 +890,33 @@ const ALL_MOVIES = [
                 day: "Thứ Ba",
                 format: "2D Phụ đề",
                 times: [
-                    "14:00 ~ 15:50",
-                    "20:00 ~ 21:50"
+                    "14:00 ~ 15:55",
+                    "20:00 ~ 21:55"
                 ]
             }
         ]
     },
     {
-        id: "nha-hai-chu",
-        title: "Nhà Hai Chủ (2025)",
+        id: "verity",
+        title: "Verity: Bí Mật Bị Chôn Vùi",
         poster: "./assets/img/coomingsoon/verity.webp",
         background_img: "./assets/img/coomingsoon/verity.webp",
         age_tag: "18+",
         age_color: "#f44336",
-        meta: "2025 • 110 phút",
-        rating_text: "Kinh dị",
-        tagline: "Thể loại: Kinh dị / Tâm linh",
-        description: "Một cặp vợ chồng trẻ mua nhà vào nhầm ngày Tam Nương và sớm bị ám ảnh bởi những người chủ trước, những người không muốn họ ở đó.",
-        release_date: "05/12/2025",
-        trailer_link: "https://www.youtube.com/embed/ZZZUfZzX0ZU",
+        meta: "2026 • 122 phút",
+        rating_text: "Tâm lý / Giật gân",
+        tagline: "Thể loại: Tâm lý, Giật gân, Bí ẩn",
+        description: "Chuyển thể từ tiểu thuyết ăn khách toàn cầu của Colleen Hoover, bộ phim xoay quanh nữ nhà văn trẻ Lowen (Dakota Johnson) được thuê hoàn thành nốt bộ sách của nữ tác giả nổi tiếng Verity Crawford (Anne Hathaway) sau một tai nạn thảm khốc. Tại căn biệt thự của gia đình Crawford, Lowen vô tình tìm thấy bản tự truyện chưa từng công bố chứa đựng những bí mật gia đình đen tối đến rợn người.",
+        release_date: "16/10/2026",
+        trailer_link: "https://www.youtube.com/embed/J82paKIlUZw",
         schedules: [
             {
-                date: "05/12",
-                day: "Thứ Sáu",
+                date: "20/10",
+                day: "Hôm nay",
                 format: "2D Phụ đề",
                 times: [
-                    "19:30 ~ 21:20",
-                    "21:45 ~ 23:35"
+                    "19:30 ~ 21:32",
+                    "21:45 ~ 23:47"
                 ]
             }
         ]
