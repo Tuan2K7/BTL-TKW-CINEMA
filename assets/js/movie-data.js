@@ -12,7 +12,7 @@ const ALL_MOVIES = [
         tagline: "Thể loại: Hài",
         description: "Trinh, cô nàng TikToker ngôn tình triệu view, tỉnh dậy giữa  phim trường lạnh lẽo với cái đầu đau như búa bổ, mất trí nhớ và phát hiện xác của Yến (diễn viên) – tình địch đang bị nghi ngờ có gì mờ ám với diễn viên Khang (chồng sắp cưới). Đại (thám tử) được Trinh thuê theo dõi vụ ngoại tình lẻn vào giúp thì vấp ngã để lại dấu vân tay lên tử thi và vô tình bị bảo vệ bắt quả tang. Kể từ đây, liên tiếp những tình huống oái oăm mà cặp đôi “đũa lệch” phải đối mặt: chạy trốn khỏi cảnh sát dí sát gót và sát thủ rình rập, vừa cãi nhau tóe khói vừa phá án. Song Song đó, cả hai vô tình lật tẩy bí mật động trời của showbiz.",
         release_date: "09/10/2026",
-        trailer_link: "https://www.youtube.com/embed/6BDX2p1aNlE",
+        trailer_link: "https://www.youtube.com/embed/YUESTe-oL1U",
         schedules: [
             {
                 date: "20/10",
@@ -47,7 +47,7 @@ const ALL_MOVIES = [
         tagline: "Thể loại: Hành động, Giả tưởng, Siêu anh hùng",
         description: "Khi Thanos quyết định nghỉ hưu, các siêu anh hùng một lần nữa đoàn kết lại để mang trở về những người đã mất từ sau trận chiến vô cực.",
         release_date: "25/09/2026",
-        trailer_link: "https://www.youtube.com/embed/nt8a2HkNxrk",
+        trailer_link: "https://www.youtube.com/embed/_XvulZckXLQ",
         schedules: [
             {
                 date: "20/10",
@@ -76,14 +76,14 @@ const ALL_MOVIES = [
         title: "Bát Tiên: Truy tìm lưu ly đăng",
         poster: "./assets/img/movies/bat-tien.webp",
         background_img: "./assets/img/movies/bat-tien.webp",
-        age_tag: "16+",
+        age_tag: "13+",
         age_color: "#f44336",
-        meta: "2025 • 120 phút",
+        meta: "2026 • 144 phút",
         rating_text: "Hài hước",
         tagline: "Thể loại: Hài, Hành động, Phiêu lưu",
-        description: "Một thiên thần hộ mệnh (Keanu Reeves) vụng về nhưng có ý tốt, cố gắng giúp đỡ một anh chàng làm nghề tài xế (Aziz Ansari) bằng cách tráo đổi cuộc đời anh ta với một nhà đầu tư mạo hiểm giàu có (Seth Rogen).",
-        release_date: "17/10/2025",
-        trailer_link: "https://www.youtube.com/embed/m4HyVF5R51U",
+        description: "Lữ Động Tân và Chung Ly Quyền dẫn đầu, tập hợp Hà Tiên Cô, Thiết Quải Lý, Hàn Tương Tử, Tào Quốc Cữu, Lam Thái Hòa và Trương Quả Lão. Tám con người với thân phận khác nhau, vì những cơ duyên riêng mà vô tình tụ họp tại tiên cảnh Bồng Lai. Người thì nhất thời nổi hứng, người thì thấy lập hội là nhập cuộc ngay. Cả nhóm cùng mở một đạo quán, thỏa sức đóng vai  thần tiên.",
+        release_date: "11/09/2026",
+        trailer_link: "https://www.youtube.com/embed/5N8jvHVtlko",
         schedules: [
             {
                 date: "20/10",
