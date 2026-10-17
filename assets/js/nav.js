@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 const navPills = document.querySelector('#movie-pills-nav');
+if (!navPills) return; 
 const navLinks = navPills.querySelectorAll('.nav-link');
 const activeLink = navPills.querySelector('.nav-link.active');
 
