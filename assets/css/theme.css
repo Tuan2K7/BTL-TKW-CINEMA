@@ -56,7 +56,7 @@ body{ background:var(--bg) !important; color:var(--ink); font-family:"Roboto","S
 /* ---------- Thẻ phim ---------- */
 .custom-movie-card{ background:#fff; color:var(--ink); border-radius:4px; height:auto;
   box-shadow:0 1px 6px rgba(0,0,0,.15); }
-.custom-movie-card:hover{ transform:translateY(-4px); box-shadow:0 8px 18px rgba(0,0,0,.25); }
+.custom-movie-card:hover{ box-shadow:0 8px 18px rgba(0,0,0,.25); }
 .custom-card-content{ text-align:left; padding:12px; }
 .custom-card-content h3{ font-size:1rem; font-weight:700; text-transform:uppercase; color:var(--ink);
   min-height:2.6em; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
@@ -191,4 +191,3 @@ body{ background:var(--bg) !important; }
   #cinemaAdminDialog h2 { font-size:21px; }
   #cinemaAdminTools { left:12px; right:12px; bottom:10px; justify-content:center; }
 }
-

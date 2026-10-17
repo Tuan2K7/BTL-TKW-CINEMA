@@ -15,13 +15,7 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     color: white;
-    transition: transform 0.3s ease; /* Hiệu ứng nảy lên nhẹ khi hover */
     margin-bottom: 20px; /* Thêm khoảng cách dưới cho mỗi card */
-}
-
-/* Hiệu ứng khi di chuột vào card */
-.custom-movie-card:hover {
-    transform: scale(1.03); /* Phóng to nhẹ toàn bộ card */
 }
 
 /* --- Container chứa ảnh và nút Đặt Vé --- */
@@ -37,12 +31,6 @@ body {
     height: 100%; 
     object-fit: cover; 
     display: block; 
-    transition: transform 0.4s ease;
-}
-
-/* Khi hover vào card, ảnh bên trong sẽ phóng to lên */
-.custom-movie-card:hover .custom-card-image-container img {
-    transform: scale(1.15); /* Phóng to ảnh lên 115% */
 }
 
 /* --- Nút "Đặt vé" (Custom Play Button) --- */
