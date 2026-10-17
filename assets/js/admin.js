@@ -28,3 +28,60 @@
     pairs.forEach(([id,name]) => select.add(new Option(name,id)));
     if (pairs.some(([id]) => id === old)) select.value = old;
   }
+    function refreshOptions() {
+    const rows = CinemaStore.orders().filter(o => o.status === 'paid');
+    options($('caMovie'), [...new Map(rows.map(o => [o.movieId,o.movieTitle]))], 'Tất cả phim');
+    const shows = rows.filter(o => !$('caMovie').value || o.movieId === $('caMovie').value);
+    options($('caShow'), [...new Map(shows.map(o => [showKey(o),`${o.movieTitle} · ${o.showDate} · ${o.showTime}`]))], 'Tất cả suất chiếu');
+  }
+  function clearResult() {
+    $('caRows').replaceChildren(); $('caTickets').textContent = '—'; $('caRevenue').textContent = '—'; $('caOrders').textContent = '—'; $('caEmpty').hidden = true;
+  }
+  function render() {
+    if (CinemaStore.currentUser()?.role !== 'admin') { syncAccess(); return; }
+    $('caError').hidden = true;
+    try {
+      refreshOptions();
+      const data = CinemaStore.statistics($('caDay').value,$('caMovie').value,$('caShow').value);
+      $('caTickets').textContent = data.tickets.toLocaleString('vi-VN');
+      $('caRevenue').textContent = money(data.revenue); $('caOrders').textContent = data.rows.length;
+      $('caEmpty').hidden = data.rows.length > 0;
+      const groups = new Map();
+      data.rows.forEach(o => {
+        const key = showKey(o);const g = groups.get(key) || { title:o.movieTitle,date:o.showDate,time:o.showTime,tickets:0,revenue:0 };
+        g.tickets += o.seats.length;g.revenue += o.total;groups.set(key,g);
+      });
+      $('caRows').replaceChildren();
+      [...groups.values()].sort((a,b) => a.title.localeCompare(b.title,'vi') || a.time.localeCompare(b.time)).forEach(g => {
+        const tr = document.createElement('tr');
+        [g.title,g.date,g.time,mode === 'tickets' ? g.tickets : money(g.revenue)].forEach(v => {
+          const td = document.createElement('td');td.textContent = v;tr.append(td);
+        });$('caRows').append(tr);
+      });
+    } catch(e) { clearResult();$('caError').textContent = e.message; $('caError').hidden = false; }
+  }
+  function setMode(next) {
+    mode = next === 'revenue' ? 'revenue' : 'tickets';
+    $('cinemaAdminTitle').textContent = mode === 'tickets' ? 'Thống kê vé trong ngày' : 'Thống kê doanh thu';
+    $('caTableTitle').textContent = mode === 'tickets' ? 'Số vé theo phim và suất chiếu' : 'Doanh thu theo phim và suất chiếu';
+    $('caMetric').textContent = mode === 'tickets' ? 'Số vé' : 'Doanh thu';
+    dialog.querySelectorAll('[data-mode]').forEach(btn => { btn.classList.toggle('ca-active',btn.dataset.mode === mode);btn.setAttribute('aria-pressed',String(btn.dataset.mode === mode)); });
+  }
+  function syncAccess() {
+    const allowed = CinemaStore.currentUser()?.role === 'admin'; tools.hidden = !allowed;
+    if (!allowed) {if(dialog.open) dialog.close();clearResult();$('caError').hidden = true;}
+  }
+  tools.querySelectorAll('[data-mode]').forEach(btn => btn.addEventListener('click', () => {
+    if(CinemaStore.currentUser()?.role !== 'admin') return syncAccess();
+    setMode(btn.dataset.mode);$('caDay').value = CinemaStore.vietnamDate();
+    render();if(!dialog.open) dialog.showModal();
+  }));
+  dialog.querySelectorAll('[data-mode]').forEach(btn => btn.addEventListener('click', () => {setMode(btn.dataset.mode);render();}));
+  $('caClose').addEventListener('click', () => dialog.close());
+  $('cinemaAdminLogout').addEventListener('click', () => CinemaStore.logout());
+  $('caFilters').addEventListener('submit', e => {e.preventDefault();render();});
+  ['caDay','caMovie','caShow'].forEach(id => $(id).addEventListener('change',render));
+  window.addEventListener('cinema:auth',syncAccess);
+  window.addEventListener('cinema:orders', () => {if(dialog.open) render();});
+  syncAccess();
+})();
