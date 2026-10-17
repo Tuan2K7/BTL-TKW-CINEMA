@@ -156,3 +156,39 @@ body{ background:var(--bg) !important; }
 .movie-details-page .btn, .movie-details-page button, .seat-page button, .btn-continue, .btn-confirm, #confirm-btn{
   background:linear-gradient(#e8c15a,#c9971c) !important; color:var(--navy) !important;
 }
+/* NOTE ADMIN 04: Chỉ định dạng hộp quản lý. Tái sử dụng màu --brand của giao diện cũ. */
+#cinemaAdminTools[hidden], #cinemaAdminDialog [hidden] { display:none !important; }
+#cinemaAdminTools { position:fixed; right:16px; bottom:16px; z-index:1000; display:flex; flex-wrap:wrap; align-items:center; gap:8px; padding:12px; max-width:calc(100vw - 32px); background:#fff; border:1px solid #ddd; border-top:3px solid var(--brand); border-radius:8px; box-shadow:0 3px 20px #0002; }
+#cinemaAdminTools span { color:var(--brand); font-size:12px; font-weight:700; }
+#cinemaAdminTools button, #cinemaAdminDialog button { cursor:pointer; border:1px solid var(--brand); background:white; color:var(--brand); border-radius:5px; padding:9px 12px; font:inherit; font-size:14px; line-height:1.4; width:auto; height:auto; }
+#cinemaAdminTools button:hover, #cinemaAdminDialog button:hover { background:var(--brand-soft); }
+#cinemaAdminDialog { margin:auto; width:min(1080px,calc(100vw - 32px)); max-width:none; max-height:90vh; padding:26px; border:0; border-radius:12px; color:#222; background:#fff; overflow:auto; box-sizing:border-box; }
+#cinemaAdminDialog::backdrop { background:#0009; }
+#cinemaAdminDialog .ca-heading { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; }
+#cinemaAdminDialog h2 { margin:8px 0; font-size:25px; color:#222; }
+#cinemaAdminDialog h3 { margin:20px 0 12px; font-size:19px; }
+#cinemaAdminDialog small { color:var(--brand); font-weight:700; }
+#cinemaAdminDialog .ca-note { font-size:13px; line-height:1.6; color:#666; margin:12px 0; }
+#cinemaAdminDialog .ca-tabs { display:flex; flex-wrap:wrap; gap:10px; margin:20px 0; }
+#cinemaAdminDialog button.ca-active, #cinemaAdminDialog button[type=submit] { background:var(--brand); color:white; }
+#caFilters { display:grid; grid-template-columns:180px 1fr 1fr auto; gap:12px; align-items:end; }
+#caFilters label { display:flex; flex-direction:column; gap:6px; font-size:14px; min-width:0; color:#222; }
+#caFilters input, #caFilters select { width:100%; min-width:0; height:42px; border:1px solid #bbb; border-radius:5px; padding:7px; color:#222; background:white; font-size:14px; box-sizing:border-box; }
+#cinemaAdminDialog .ca-totals { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:20px 0; }
+#cinemaAdminDialog .ca-totals div { padding:18px; border-radius:6px; background:var(--brand-soft); }
+#cinemaAdminDialog .ca-totals span { display:block; font-size:14px; }
+#cinemaAdminDialog .ca-totals strong { display:block; font-size:25px; margin-top:8px; color:var(--brand); }
+#cinemaAdminDialog .ca-table-wrap { overflow:auto; }
+#cinemaAdminDialog table { border-collapse:collapse; width:100%; min-width:600px; font-size:14px; }
+#cinemaAdminDialog th, #cinemaAdminDialog td { padding:12px; border-bottom:1px solid #ddd; text-align:left; }
+#cinemaAdminDialog th { background:#f5f5f5; }
+#caError { background:#fff1f0; color:#a00; padding:12px; }
+#caEmpty { color:#666; padding:18px 0; }
+@media(max-width:700px) {
+  #cinemaAdminDialog { padding:16px; }
+  #caFilters { grid-template-columns:1fr; }
+  #cinemaAdminDialog .ca-totals { grid-template-columns:1fr; }
+  #cinemaAdminDialog h2 { font-size:21px; }
+  #cinemaAdminTools { left:12px; right:12px; bottom:10px; justify-content:center; }
+}
+
