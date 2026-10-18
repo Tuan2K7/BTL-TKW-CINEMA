@@ -1,3 +1,8 @@
+// Danh sách dữ liệu phim được các trang danh sách, chi tiết và đặt vé dùng chung.
+// Mỗi object mô tả một phim: id dùng tra cứu; title/meta/description là nội dung hiển thị;
+// poster/background_img/trailer_link là đường dẫn tài nguyên; age_tag/age_color là nhãn tuổi;
+// release_date là ngày khởi chiếu; schedules chứa ngày, định dạng và các suất chiếu.
+// Đây là dữ liệu tĩnh mẫu, không phải cơ sở dữ liệu máy chủ.
 const ALL_MOVIES = [
     // === PHIM ĐANG CHIẾU ===
     {

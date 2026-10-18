@@ -1,11 +1,11 @@
 * {
+    /* Xóa khoảng cách trình duyệt mặc định và chuẩn hóa cách tính kích thước. */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* Fix thanh ngang */
-/* Đặt khối này ở đầu file, thay thế cho cả 2 khối body cũ */
+/* Chặn cuộn ngang ngoài ý muốn và đặt kiểu chữ/nền mặc định toàn trang. */
 body {
     overflow-x: hidden;
     width: 100%;
@@ -16,19 +16,21 @@ body {
     background-size: cover;
 }
 
-/*  */
+/* Cuộn đến liên kết neo bằng chuyển động mượt thay vì nhảy tức thì. */
 html {
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
 .hidden {
+    /* Lớp trạng thái dùng trong HTML/JavaScript để ẩn phần tử hoàn toàn. */
     display: none;
 }
 .row {
+    /* Các phần tử con xếp trên cùng một hàng ngang. */
     display: flex;
     flex-direction: row;
 }
-/* form đăng kí */
+/* Cột trong biểu mẫu đăng ký xếp dọc và chiếm hết chiều rộng vùng chứa. */
 .column {
     display: flex;
     flex-direction: column;
@@ -41,7 +43,7 @@ html {
 
 
 
-/* Design: Button register, login, out */
+/* Kích thước và giao diện mặc định của các nút trên thanh điều hướng. */
 .nav-layout button {
     width: 100px;
     height: 40px;
@@ -52,6 +54,7 @@ html {
     
 }
 .nav-layout .btn-login {
+    /* Nút đăng nhập dùng màu gradient và chuyển động nhẹ khi thay đổi kiểu. */
     /* background-color: #F75154; */
     /* border: 1px solid #F75154; */
     /* background-color:#FDA6C4 ; */
@@ -60,11 +63,12 @@ html {
     transition: transform 0.3s;
 }
 .nav-layout button:hover {
+    /* Hiển thị con trỏ bàn tay để báo đây là vùng có thể bấm. */
     cursor: pointer;
     /* transform: translateY(-2px); */
 }
 
-/* LOGIN */
+/* Keyframes dùng để hộp đăng nhập trượt vào vị trí đồng thời hiện ra. */
 @keyframes modelFadeIn {
     from {
         opacity: 1;
@@ -76,12 +80,15 @@ html {
     }
 }
 .btn-login.remove{
+    /* JavaScript thêm remove để ẩn nút đăng nhập sau khi đăng nhập thành công. */
     display: none;
 }
 .login.open {
+    /* Lớp open bật popup đăng nhập vốn đang bị ẩn. */
     display: flex;
 }
 .login {
+    /* Lớp nền phủ toàn màn hình và căn popup vào chính giữa. */
     position: fixed;
     top: 0;
     bottom: 0;
@@ -95,6 +102,7 @@ html {
     background-color: rgba(0, 0, 0, 0.4);
 }
 .login-container {
+    /* Khung đăng nhập nằm trên lớp phủ và dùng animation khi xuất hiện. */
     background-color: #10141B;
     width: 450px;
     position: relative;
@@ -106,6 +114,7 @@ html {
     justify-content: space-between;
 }
 .login-header {
+    /* Tiêu đề và nút đóng nằm ở hai đầu phần đầu popup. */
     color: #fff;
     float: right;
     display: flex;
@@ -113,9 +122,11 @@ html {
     flex: 1;
 }
 .login-close {
+    /* Biểu thị nút đóng có thể được bấm. */
     cursor: pointer;
 }
 .login-body {
+    /* Xếp nhãn, ô nhập và nút đăng nhập theo chiều dọc. */
     margin: 20px 0;
     display: flex;
     flex-direction: column;
@@ -124,6 +135,7 @@ html {
     flex: 2;
 }
 .login-body input {
+    /* Ô nhập tối đồng bộ với popup và có khoảng trống cho nội dung. */
     height: 50px;
     background-color: #10141B;
     border: 1px solid #1E293B;
@@ -133,6 +145,7 @@ html {
     color: #fff;
 }
 .login-body p {
+    /* Liên kết phụ căn về bên phải, thường dùng cho quên mật khẩu. */
     display: flex;
     margin: 15px 0;
     /* color: #E54242; */
@@ -141,9 +154,11 @@ html {
     cursor: pointer;
 }
 .login-body p:hover {
+    /* Gạch chân nội dung phụ khi rê chuột để báo tương tác. */
     text-decoration: underline;
 }
 .login-body button {
+    /* Nút gửi thông tin đăng nhập. */
     /* background-image: linear-gradient(to right, #E6121D, #FB5F60); */
     background-image: linear-gradient(#F9cadb,#FDA6C4);
     height: 40px;
@@ -154,6 +169,7 @@ html {
     cursor: pointer;
 }
 .login-footer {
+    /* Căn nội dung chân popup ra giữa. */
     color: #fff;
     flex: 2;
     display: flex;
@@ -161,12 +177,13 @@ html {
 }
 
 .login-footer a {
+    /* Tô màu liên kết chuyển từ đăng nhập sang đăng ký. */
     /* color: #E54242; */
     color: #FDA6C4;
     text-decoration: none;
 }
 
-/* Đăng kí */
+/* Các quy tắc dưới đây điều khiển popup đăng ký và các trường biểu mẫu. */
 .btn-register.remove{
     display: none;
 }
@@ -190,6 +207,7 @@ html {
 }
 
 .register-container {
+    /* Khung đăng ký cao hơn để chứa đủ các trường thông tin. */
     background-color: #10141B;
     width: 500px;
     height: 600px;
@@ -222,6 +240,7 @@ html {
 }
 
 .register-body input {
+    /* Kiểu chung của ô nhập trong form đăng ký. */
     height: 50px;
     background-color: #10141B;
     border: 1px solid #1E293B;
@@ -232,6 +251,7 @@ html {
 }
 
 .register-body .register-card1 {
+    /* Các nhóm thông tin liên quan xếp ngang thành từng hàng. */
     display: flex;
     flex-direction: row;
 
@@ -255,6 +275,7 @@ html {
 
 
 .register-body button {
+    /* Nút gửi biểu mẫu đăng ký. */
     /* background-image: linear-gradient(to right, #E6121D, #FB5F60); */
     background-image: linear-gradient(#F9cadb,#FDA6C4);
     height: 40px;
@@ -266,6 +287,7 @@ html {
 }
 
 .register-footer {
+    /* Căn lời nhắc và liên kết đăng nhập ở chân popup. */
     color: #fff;
     flex: 2;
     display: flex;
@@ -278,7 +300,7 @@ html {
     text-decoration: none;
 }
 
-/* login user */
+/* Khu vực hiển thị thông tin tài khoản sau khi người dùng đăng nhập. */
 .login-user.open{
     display: flex;
 }
@@ -298,10 +320,11 @@ html {
 }
 
 
-/* BODY */
+/* Nội dung chính và các quy tắc bố cục dùng trên trang. */
 
     
 .section {
+    /* Nền ảnh cho các phần nội dung có class section. */
     /* background-color: #10141b; */
     /* background-color: #fff; */
     background-image: url("../background/abt.avif");
@@ -313,13 +336,14 @@ html {
     
 }
 #container {
+    /* Chiều cao tự theo nội dung để tránh cắt phần tử con. */
     height: auto;
 }
 .col {
     padding: 15px;
 }
 
-/* Footer */
+/* Chân trang: màu nền tối, logo, liên kết, nút tải ứng dụng và bản quyền. */
 
 .footer {
     background-color: #10141B; /* Đồng bộ màu với header */
@@ -329,10 +353,12 @@ html {
 }
 
 .footer-content {
+    /* Khoảng đệm bên trong footer tạo khoảng thở quanh các cột. */
     padding: 50px 50px 30px;
 }
 
 .footer h5 {
+    /* Tiêu đề cột footer được làm sáng và đậm hơn nội dung thường. */
     color: #fff;
     font-weight: 600;
     font-size: 1.1rem;
@@ -340,12 +366,14 @@ html {
 }
 
 .footer-logo-img {
+    /* Logo nằm thành một dòng riêng phía trên tên công ty. */
     display: block; /* Để nó là 1 block riêng */
     width: 300px; 
     margin-bottom: 15px;
 }
 
 .footer-company-name {
+    /* Làm nổi bật tên đơn vị trong phần giới thiệu footer. */
     color: #fff;
     font-weight: bold;
     font-size: 1rem;
@@ -353,18 +381,21 @@ html {
 }
 
 .footer p {
+    /* Cỡ chữ nhỏ hơn cho thông tin chi tiết ở chân trang. */
     font-size: 0.9rem;
     margin-bottom: 10px;
 }
 
 /* Icon bên cạnh text (địa chỉ, phone) */
 .footer p i {
+    /* Giữ biểu tượng địa chỉ/điện thoại có chiều rộng thống nhất. */
     width: 20px;
     color: #FDA6C4; /* Dùng màu hồng chủ đạo của web bạn */
 }
 
 /* Danh sách link */
 .footer .nav-link {
+    /* Liên kết footer bỏ nền mặc định và chỉ đổi màu khi tương tác. */
     padding: 0 0 10px 0; /* Chỉ cần đệm dưới */
     font-size: 0.9rem;
     color: #bbb; /* Màu link mặc định */
@@ -378,6 +409,7 @@ html {
 
 /* Icon mạng xã hội */
 .footer-social-icons a {
+    /* Tăng kích thước biểu tượng mạng xã hội và tạo khoảng cách ngang. */
     color: #bbb;
     font-size: 1.5rem; /* Kích thước icon */
     margin-right: 15px;
@@ -390,12 +422,14 @@ html {
 
 /* Nút tải ứng dụng */
 .footer-app-buttons {
+    /* Hai nút tải ứng dụng xếp dọc, cách nhau một khoảng cố định. */
     display: flex;
     flex-direction: column; /* Xếp chồng 2 nút */
     gap: 15px; /* Khoảng cách giữa 2 nút */
 }
 
 .footer-app-buttons .app-button {
+    /* Nút tải ứng dụng căn icon và chữ thành một hàng. */
     display: flex;
     align-items: center;
     background-color: #2a2e35; /* Nền nút tối */
@@ -411,11 +445,13 @@ html {
 }
 
 .footer-app-buttons .app-button i {
+    /* Icon ứng dụng lớn hơn chữ và cách chữ một khoảng nhỏ. */
     font-size: 2rem; /* Icon app to */
     margin-right: 10px;
 }
 
 .footer-app-buttons .app-button span {
+    /* Chữ trong nút tải app nhỏ, căn trái, dòng gần nhau. */
     font-size: 0.8rem;
     line-height: 1.2;
     text-align: left;
@@ -425,19 +461,20 @@ html {
     font-size: 1rem;
 }
 
-/* Đường kẻ ngang */
+/* Đường phân cách giữa nhóm nội dung footer và hàng cuối. */
 .footer-divider {
     border-top: 1px solid #333;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-/* Hàng cuối (Thanh toán & Copyright) */
+/* Căn các nội dung thanh toán và bản quyền theo chiều dọc ở cuối footer. */
 .footer-bottom-row {
     align-items: center;
 }
 
 .footer-payment-icons .payment-icon {
+    /* Kiểu chữ giả lập logo phương thức thanh toán bằng nhãn văn bản. */
     /* Đây là style tạm thời, bạn nên thay bằng <img> */
     display: inline-block;
     padding: 5px 10px;  
@@ -450,6 +487,7 @@ html {
 }
 
 .footer-copyright-text p {
+    /* Nội dung bản quyền nhỏ, màu xám và có khoảng cách dòng dễ đọc. */
     font-size: 0.8rem;
     color: #888;
     margin: 0;

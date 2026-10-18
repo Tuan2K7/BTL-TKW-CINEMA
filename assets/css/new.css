@@ -1,4 +1,4 @@
-/* --- General Styling --- */
+/* Kiểu chữ và màu nền chung của trang tin tức. */
 body {
     font-family: Arial, sans-serif;
     background-color: #333;
@@ -7,7 +7,7 @@ body {
     
 }
 
-/* --- Promotions Section --- */
+/* Giới hạn chiều rộng nội dung và căn khu vực tin tức vào giữa trang. */
 .promotions-section {
     max-width: 1320px;
     padding: 5px 24px;
@@ -16,6 +16,7 @@ body {
 }
 
 .section-title {
+    /* Tiêu đề khu vực được căn giữa và tô màu hồng nhận diện. */
     text-align: center;
     font-size: 2.5rem;
     color: #e83e8c; 
@@ -25,7 +26,7 @@ body {
     padding-top: 20px;
 }
 
-/* --- Grid Layout for Cards --- */
+/* Lưới 4 cột trên màn hình lớn; khoảng cách tách rõ từng tin. */
 .promotions-grid {
    display: grid;
    grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -33,16 +34,18 @@ body {
    justify-content: center;
 }
 
-/* --- Individual Card Styling --- */
+/* Viền đơn giản giúp nhận biết từng tin, không dùng bóng hay hiệu ứng nổi. */
 .promo-card {
     border: 1px solid #ccc;
 }
 
 .promo-card:hover {
+    /* Đổi màu chữ khi rê chuột để báo hiệu tin đang được trỏ tới. */
     color: #e83e8c;
 }
 
 .promo-image {
+    /* Ảnh lấp đầy chiều ngang; cover cắt phần thừa mà không làm méo ảnh. */
     width: 100%;
     height: 160px;
     display: block;
@@ -50,6 +53,7 @@ body {
 }
 
 .promo-content {
+    /* Tạo khoảng đệm cho chữ và xếp phần nội dung theo chiều dọc. */
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -57,6 +61,7 @@ body {
 }
 
 .promo-title {
+    /* Tiêu đề in đậm; flex-grow đẩy ngày xuống cuối phần nội dung. */
     font-size: 1rem;
     font-weight: bold;
     margin: 0 0 0.5rem 0;
@@ -64,18 +69,20 @@ body {
 }
 
 .promo-date {
+    /* Ngày dùng màu dịu hơn để không cạnh tranh với tiêu đề. */
     font-size: 0.875rem;
     color: #6c757d;
     margin: 0;
 }
 
-/* --- "View More" Button --- */
+/* Căn nút xem thêm vào giữa và tạo khoảng cách với danh sách tin. */
 .view-more-container {
     text-align: center;
     margin: 2.5rem;
 }
 
 .view-more-btn {
+    /* Nút nền trong có viền hồng; con trỏ bàn tay báo hiệu nút có thể bấm. */
     background-color: transparent;
     border: 2px solid #e83e8c; 
         /* Pink border */
@@ -90,19 +97,19 @@ body {
 }
 
 .view-more-btn:hover {
+    /* Đảo màu nền và chữ khi rê chuột để thể hiện trạng thái tương tác. */
     background-color: #e83e8c;
     color: #fff;
 }
 
-/* --- Responsive Design --- */
-/* For tablets: 2 columns */
+/* Tablet thu lưới còn hai cột để mỗi tin vẫn đủ rộng. */
 @media (max-width: 992px) {
     .promotions-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* For mobile phones: 1 column */
+/* Điện thoại dùng một cột và giảm cỡ tiêu đề cho màn hình nhỏ. */
 @media (max-width: 576px) {
     .promotions-grid {
         grid-template-columns: 1fr;

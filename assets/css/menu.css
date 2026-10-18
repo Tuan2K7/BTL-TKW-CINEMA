@@ -20,6 +20,7 @@
     height: 100%;
 }
 /* --- Style chung --- */
+/* Thanh điều hướng chính: Flexbox đẩy logo và các mục về hai đầu. */
 #header {
     display: flex;
     justify-content: space-between;
@@ -28,10 +29,12 @@
     color: white;
 }
 
+/* Xóa dấu đầu dòng mặc định trên danh sách liên kết điều hướng. */
 .nav-layout li {
     list-style-type: none;
 }
 
+/* Biến mỗi liên kết thành vùng bấm có khoảng đệm, bỏ gạch chân mặc định. */
 .nav-layout a {
     text-decoration: none;
     color: #fff;
@@ -42,6 +45,7 @@
 }
 
 /* --- CSS cho màn hình lớn (Desktop) --- */
+/* Các mục điều hướng xếp theo hàng và phân bố đều theo chiều ngang. */
 .nav-layout {
     display: flex;
     align-items: center;
@@ -50,6 +54,7 @@
     justify-content: space-between;
 }
 
+/* Các tab điều hướng cùng nằm trên một hàng và có khoảng cách nhỏ. */
 .nav-pills {
     display: flex;
     align-items: center;

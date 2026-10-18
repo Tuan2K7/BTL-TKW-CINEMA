@@ -1,8 +1,10 @@
+/* Khối cha làm mốc định vị cho vạch trượt phía sau tab đang chọn. */
 #movie-pills-nav {
   position: relative;
 }
 
 #movie-pills-nav::before {
+  /* Phần tử giả vẽ nền trượt; vị trí và chiều rộng nhận giá trị từ JavaScript. */
   content: "";
   position: absolute;
   top: 0;
@@ -15,6 +17,7 @@
 }
 
 #movie-pills-nav .nav-link {
+  /* Đặt chữ tab phía trên vạch nền và giữ màu chữ chuyển đổi mượt. */
   background: none;
   border: none;
   position: relative;

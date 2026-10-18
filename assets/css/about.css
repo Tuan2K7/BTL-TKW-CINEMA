@@ -1,5 +1,6 @@
 
 #about-page-content {
+  /* Các biến này gom màu, kích thước và bóng để tái sử dụng trong trang Giới thiệu. */
   --primary-color: #d90000;
   --button-bg: #ffe5e9;
   --button-text: #c02a4e;
@@ -9,10 +10,11 @@
   --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
   --shadow-dark: 0 6px 16px rgba(0, 0, 0, 0.15);
 
+  /* Chỉ đặt phông chữ trong phần nội dung Giới thiệu, không ảnh hưởng toàn trang. */
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* --- Phần Hero --- */
+/* Khối ảnh mở đầu trang; Flexbox căn nội dung vào chính giữa theo hai chiều. */
 #about-page-content .hero-section {
   height: 800px;
   min-height: 300px;
@@ -35,12 +37,13 @@
   letter-spacing: 1px;
 }
 
-/* --- Dải thông tin chung --- */
+/* Dải thông tin có khoảng thở quanh nội dung; phần tràn ra ngoài bị ẩn. */
 #about-page-content .info-section-strip {
   padding: 80px 20px;
   overflow: hidden;
 }
 
+/* Giới hạn bề rộng và đặt ảnh cạnh văn bản trên màn hình lớn. */
 #about-page-content .info-container {
   max-width: var(--container-width);
   margin: 0 auto;
@@ -49,13 +52,14 @@
   gap: 60px;
 }
 
-/* --- Hộp Văn bản & Hình ảnh --- */
+/* Chia đều không gian ngang cho cột ảnh và cột văn bản. */
 #about-page-content .info-image-placeholder,
 #about-page-content .info-text-box {
   flex: 1;
 }
 
 #about-page-content .info-image-placeholder img {
+  /* Ảnh lấp đầy cột mà không méo; bo góc và đổ bóng tạo chiều sâu. */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -70,12 +74,12 @@
   color: var(--primary-color);
 }
 
-/* --- Bố cục Đảo ngược --- */
+/* Đổi thứ tự hai cột để các dải nội dung có thể xen kẽ ảnh trái/phải. */
 #about-page-content .reverse-layout .info-container {
   flex-direction: row-reverse;
 }
 
-/* --- Nút Bấm --- */
+/* Nút dùng chung màu thương hiệu; transition làm đổi màu/vị trí mượt khi rê chuột. */
 #about-page-content .primary-button {
   display: inline-block;
   background-color: var(--button-bg);
@@ -96,7 +100,7 @@
   transform: translateY(-3px);
 }
 
-/* --- Tùy chỉnh Màu nền --- */
+/* Các lớp màu nền để HTML có thể chọn màu riêng cho từng dải thông tin. */
 #about-page-content .light-pink-bg {
   background-color: #fdf2f2;
 }
@@ -114,7 +118,7 @@
 }
 
 
-/* --- Responsive cho Di động --- */
+/* Màn hình hẹp chuyển bố cục hai cột thành một cột để dễ đọc trên điện thoại. */
 @media (max-width: 768px) {
   #about-page-content .hero-section {
     height: 50vh;

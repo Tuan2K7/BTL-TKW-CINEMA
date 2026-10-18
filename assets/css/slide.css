@@ -1,4 +1,5 @@
 
+/* Khu vực trình chiếu căn ảnh vào giữa và cắt phần tràn ra ngoài. */
 #slide {
     
     display: flex;
@@ -11,6 +12,7 @@
 }
 
 #slide img {
+    /* Ảnh chiếm phần lớn chiều ngang, giữ tỉ lệ bằng cách cắt thay vì méo. */
     width: 90%;
     height: 700px;
     object-fit: cover;
@@ -20,6 +22,7 @@
 }
 
 @keyframes fadeInSlideshow {
+    /* Ảnh bắt đầu hơi trong suốt rồi hiện rõ khi được thay trong slideshow. */
     from {
         opacity: 0.7;
     }
@@ -30,12 +33,14 @@
 }
 
 #slide .slide-btn:hover {
+    /* Đổi nền nút sang màu thương hiệu khi con trỏ đi vào. */
     /* background-color: #F75154; */
    background-image: linear-gradient(#F9cadb,#FDA6C4);
 
 }
 
 #slide .slide-btn-left {
+    /* Nút chuyển ảnh trước đặt giữa cạnh trái của khu vực slideshow. */
     position: absolute;
     top: 50%;
     left: 0;
@@ -48,6 +53,7 @@
 }
 
 #slide .slide-btn-right {
+    /* Nút chuyển ảnh tiếp theo đặt giữa cạnh phải của khu vực slideshow. */
     position: absolute;
     top: 50%;
     right: 0;

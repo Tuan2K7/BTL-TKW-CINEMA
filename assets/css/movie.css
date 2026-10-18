@@ -1,5 +1,5 @@
 
-
+/* Ảnh nền phủ kín cửa sổ, làm mờ và tối để chữ phía trước dễ đọc. */
 .movie-details-page .background {
   position: fixed;
   top: 0;
@@ -19,6 +19,7 @@
 }
 
 .movie-details-page .overlay {
+  /* Lớp phủ tối giúp nội dung phim nổi bật trên ảnh nền. */
   position: fixed;
   top: 0;
   left: 0;
@@ -58,11 +59,13 @@
 }
 
 .movie-details-page .movie-info {
+  /* Phần thông tin nhận toàn bộ khoảng ngang còn lại. */
   flex: 1;
   max-width: 1800px;
 }
 
 .movie-details-page .age-tag {
+  /* Nhãn phân loại độ tuổi nằm gọn theo nội dung bên trong. */
   color: #fff;
   font-weight: bold;
   padding: 6px 12px;
@@ -73,6 +76,7 @@
 }
 
 .movie-details-page .movie-title {
+  /* Tiêu đề chính cần cỡ chữ lớn và tương phản cao trên nền tối. */
   font-size: 45px;
   margin: 5px 0;
   font-weight: 700;
@@ -80,6 +84,7 @@
 }
 
 .movie-details-page .movie-meta {
+  /* Thông tin phụ dùng màu xám để phân cấp với tiêu đề. */
   color: #bbb;
   font-size: 17px;
   margin-bottom: 12px;
@@ -91,6 +96,7 @@
 }
 
 .movie-details-page .tagline {
+  /* Dòng giới thiệu dùng chữ nghiêng và khoảng cách dòng thoáng. */
   font-style: italic;
   color: #ffebee;
   line-height: 1.6;
@@ -105,6 +111,7 @@
 }
 
 .movie-details-page .movie-desc p {
+  /* Căn đều hai lề cho phần mô tả dài. */
   color: #ddd;
   font-size: 18px;
   line-height: 1.6;
@@ -127,6 +134,7 @@
   (Lưu ý: nút .review-btn và .date đã có class riêng nên không cần sửa)
 */
 .movie-details-page .actions .trailer-btn {
+  /* Chỉ tạo kiểu cho nút trailer trong khu vực thao tác, tránh ảnh hưởng nút khác. */
   border: none;
   padding: 12px 22px;
   border-radius: 8px;
@@ -145,6 +153,7 @@
 
 /* Style cho nút review (nếu có) */
 .movie-details-page .review-btn {
+  /* Nút đánh giá có màu riêng để phân biệt với nút trailer. */
   background-color: #ffeb3b;
   color: #000;
   /* Thêm các thuộc tính chung từ 'button' cũ vào đây nếu cần */
@@ -164,6 +173,7 @@
 
 /* Popup trailer */
 .movie-details-page .trailer-popup {
+  /* Popup phủ toàn màn hình; nội dung được căn giữa và ẩn mặc định. */
   position: fixed;
   top: 0;
   left: 0;
@@ -178,6 +188,7 @@
 }
 
 .movie-details-page .trailer-content {
+  /* Khung video màu đen để tạo nền cho iframe trailer. */
   position: relative;
   background: #000;
   padding: 10px;
@@ -190,6 +201,7 @@
 }
 
 .movie-details-page .close-btn {
+  /* Nút đóng được đặt nổi ở góc trên bên phải của khung trailer. */
   position: absolute;
   top: -40px;
   right: 0;
@@ -205,6 +217,7 @@
 
 /* Lịch chiếu */
 .movie-details-page .schedule {
+  /* Gom các ngày và suất chiếu vào một vùng riêng trên nền tối. */
   margin-top: 40px;
   background: rgba(255, 255, 255, 0.05);
   padding: 20px;
@@ -219,12 +232,14 @@
 }
 
 .movie-details-page .date-selector {
+  /* Các ngày chiếu xếp thành hàng, có khoảng cách giữa các nút. */
   display: flex;
   gap: 10px;
   margin-bottom: 25px;
 }
 
 .movie-details-page .date {
+  /* Nút ngày có cùng kích thước để lịch không xô lệch khi đổi ngày. */
   background: #f1f1f1;
   border: none;
   padding: 8px 15px;
@@ -255,12 +270,14 @@
 }
 
 .movie-details-page .time-slots {
+  /* Các suất chiếu tự xuống dòng nếu không đủ chỗ trên một hàng. */
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
 .movie-details-page .time-slots button {
+  /* Nút giờ có viền xanh và nền trong để tách khỏi vùng lịch. */
   background: transparent;
   border: 2px solid #42a5f5;
   color: #42a5f5;
@@ -278,7 +295,7 @@
   color: #fff;
 }
 
-/* Animation */
+/* Nội dung xuất hiện từ dưới lên, đồng thời tăng dần độ rõ khi tải trang. */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -289,3 +306,6 @@
     transform: translateY(0);
   }
 }
+  /* Tăng nhẹ kích thước để mép ảnh không lộ ra sau khi làm mờ. */
+  /* Nội dung poster và thông tin phim xếp cạnh nhau trên desktop. */
+  /* Phóng poster nhẹ khi rê chuột; transition làm hiệu ứng không bị giật. */
