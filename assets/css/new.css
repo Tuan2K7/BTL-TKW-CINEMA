@@ -38,19 +38,15 @@ body {
 .promo-card {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden; 
         /* Ensures image stays within rounded corners */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     color: #5c5c5c;
 }
 
 .promo-card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     color: #e83e8c; 
-    transform: translateY(-2px);
 }
 
 .promo-image {

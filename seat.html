@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Phim bom tấn 2026!!!</title>
+  <title>Đặt vé</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" /> 
@@ -26,10 +26,6 @@
         </div>
       </div>
 
-      <div class="nav-menu">
-        <i class="fa-solid fa-bars" id="menu-icon"></i>
-      </div>
-
       <div class="nav-layout">
         <ul class="nav nav-pills">
           <li class="nav-item">
@@ -37,7 +33,6 @@
               class="nav-link active"
               aria-current="page"
               href="index.html"
-              style="border-radius: 8px; color: black"
               >Trang chủ</a
             >
           </li>
@@ -57,7 +52,7 @@
       <main class="layout">
         <aside class="sidebar">
           <div class="poster">
-            <img src="./assets/img/logo.webp" alt="Poster" />
+            <img src="./assets/img/logocinemasuperultraprovipmaxplus.webp" alt="Poster" />
           </div>
           
           <h2>Tên phim</h2> 
@@ -84,24 +79,6 @@
           </div>
 
           <div id="seatMap" class="seat-map">
-            <script>
-              const rows = "ABCDEFGHIJK".split("");
-              for (const row of rows) {
-                document.write(`<div class='row'>`);
-                for (let i = 1; i <= 14; i++) {
-                  // VIP toàn bộ hình chữ nhật D5→H10
-                  const vipRows = ["D", "E", "F", "G", "H"];
-                  const vipCols = [5, 6, 7, 8, 9, 10];
-                  const isVip = vipRows.includes(row) && vipCols.includes(i);
-
-                  const cls = isVip ? "seat vip" : "seat normal";
-                  document.write(
-                    `<div class='${cls}' data-id='${row + i}'>${row + i}</div>`
-                  );
-                }
-                document.write(`</div>`);
-              }
-            </script>
           </div>
         </section>
       </main>
