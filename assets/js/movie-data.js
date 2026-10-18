@@ -15,7 +15,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/YUESTe-oL1U",
         schedules: [
             {
-                date: "20/10",
+                date: "21/10",
                 day: "Hôm nay",
                 format: "2D Phụ đề",
                 times: [
@@ -25,8 +25,8 @@ const ALL_MOVIES = [
                 ]
             },
             {
-                date: "21/10",
-                day: "Thứ Ba",
+                date: "22/10",
+                day: "Thứ Năm",
                 format: "2D Phụ đề",
                 times: [
                     "14:00 ~ 15:58",
@@ -50,7 +50,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/_XvulZckXLQ",
         schedules: [
             {
-                date: "20/10",
+                date: "21/10",
                 day: "Hôm nay",
                 format: "2D Phụ đề",
                 times: [
@@ -61,8 +61,8 @@ const ALL_MOVIES = [
                 ]
             },
             {
-                date: "21/10",
-                day: "Thứ Ba",
+                date: "22/10",
+                day: "Thứ Năm",
                 format: "2D Phụ đề",
                 times: [
                     "15:00 ~ 16:44",
@@ -86,7 +86,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/5N8jvHVtlko",
         schedules: [
             {
-                date: "20/10",
+                date: "21/10",
                 day: "Hôm nay",
                 format: "2D Phụ đề",
                 times: [
@@ -96,8 +96,8 @@ const ALL_MOVIES = [
                 ]
             },
             {
-                date: "21/10",
-                day: "Thứ Ba",
+                date: "22/10",
+                day: "Thứ Năm",
                 format: "2D Phụ đề",
                 times: [
                     "14:15 ~ 16:15",
@@ -121,7 +121,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/8VMMDfAYi34",
         schedules: [
             {
-                date: "20/10",
+                date: "21/10",
                 day: "Hôm nay",
                 format: "2D Phụ đề",
                 times: [
@@ -133,8 +133,8 @@ const ALL_MOVIES = [
                 ]
             },
             {
-                date: "21/10",
-                day: "Thứ Ba",
+                date: "22/10",
+                day: "Thứ Năm",
                 format: "2D Phụ đề",
                 times: [
                     "10:00 ~ 12:18",
@@ -159,7 +159,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/wfGqzDYkHf8",
         schedules: [
             {
-                date: "20/10",
+                date: "21/10",
                 day: "Hôm nay",
                 format: "2D Phụ đề",
                 times: [
@@ -169,8 +169,8 @@ const ALL_MOVIES = [
                 ]
             },
             {
-                date: "21/10",
-                day: "Thứ Ba",
+                date: "22/10",
+                day: "Thứ Năm",
                 format: "2D Phụ đề",
                 times: [
                     "14:30 ~ 16:20",
@@ -194,7 +194,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/gdBx_SzNO8Q",
         schedules: [
             {
-                date: "20/10",
+                date: "21/10",
                 day: "Hôm nay",
                 format: "2D Phụ đề",
                 times: [
@@ -204,8 +204,8 @@ const ALL_MOVIES = [
                 ]
             },
             {
-                date: "21/10",
-                day: "Thứ Ba",
+                date: "22/10",
+                day: "Thứ Năm",
                 format: "2D Phụ đề",
                 times: [
                     "14:00 ~ 15:53",
@@ -229,7 +229,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/RIGtijmvtI4",
         schedules: [
             {
-                date: "20/10",
+                date: "21/10",
                 day: "Hôm nay",
                 format: "2D Lồng tiếng",
                 times: [
@@ -239,8 +239,8 @@ const ALL_MOVIES = [
                 ]
             },
             {
-                date: "21/10",
-                day: "Thứ Ba",
+                date: "22/10",
+                day: "Thứ Năm",
                 format: "2D Lồng tiếng",
                 times: [
                     "10:00 ~ 11:36",
@@ -264,7 +264,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/YPCtgD0KnGk",
         schedules: [
             {
-                date: "20/10",
+                date: "21/10",
                 day: "Hôm nay",
                 format: "2D Lồng tiếng",
                 times: [
@@ -274,8 +274,8 @@ const ALL_MOVIES = [
                 ]
             },
             {
-                date: "21/10",
-                day: "Thứ Ba",
+                date: "22/10",
+                day: "Thứ Năm",
                 format: "2D Lồng tiếng",
                 times: [
                     "10:30 ~ 12:29",
@@ -299,7 +299,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/B6z2QdwrJ8A",
         schedules: [
             {
-                date: "20/10",
+                date: "21/10",
                 day: "Hôm nay",
                 format: "2D Lồng tiếng",
                 times: [
@@ -309,8 +309,8 @@ const ALL_MOVIES = [
                 ]
             },
             {
-                date: "21/10",
-                day: "Thứ Ba",
+                date: "22/10",
+                day: "Thứ Năm",
                 format: "2D Lồng tiếng",
                 times: [
                     "10:45 ~ 12:47",
@@ -334,7 +334,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/FVRcC7sR9KE",
         schedules: [
             {
-                date: "20/10",
+                date: "21/10",
                 day: "Hôm nay",
                 format: "2D Phụ đề",
                 times: [
@@ -344,8 +344,8 @@ const ALL_MOVIES = [
                 ]
             },
             {
-                date: "21/10",
-                day: "Thứ Ba",
+                date: "22/10",
+                day: "Thứ Năm",
                 format: "2D Phụ đề",
                 times: [
                     "14:00 ~ 15:57",
@@ -369,7 +369,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/5pTcio2hTSw",
         schedules: [
             {
-                date: "20/10",
+                date: "21/10",
                 day: "Hôm nay",
                 format: "2D Phụ đề",
                 times: [
@@ -379,8 +379,8 @@ const ALL_MOVIES = [
                 ]
             },
             {
-                date: "21/10",
-                day: "Thứ Ba",
+                date: "22/10",
+                day: "Thứ Năm",
                 format: "2D Phụ đề",
                 times: [
                     "14:00 ~ 15:58",
@@ -404,7 +404,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/R4CYAv3zHHQ",
         schedules: [
             {
-                date: "20/10",
+                date: "21/10",
                 day: "Hôm nay",
                 format: "2D Phụ đề",
                 times: [
@@ -414,8 +414,8 @@ const ALL_MOVIES = [
                 ]
             },
             {
-                date: "21/10",
-                day: "Thứ Ba",
+                date: "22/10",
+                day: "Thứ Năm",
                 format: "2D Phụ đề",
                 times: [
                     "14:30 ~ 16:43",
@@ -439,7 +439,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/TUzx32ejTlY",
         schedules: [
             {
-                date: "20/10",
+                date: "21/10",
                 day: "Hôm nay",
                 format: "2D Lồng tiếng",
                 times: [
@@ -449,8 +449,8 @@ const ALL_MOVIES = [
                 ]
             },
             {
-                date: "21/10",
-                day: "Thứ Ba",
+                date: "22/10",
+                day: "Thứ Năm",
                 format: "2D Lồng tiếng",
                 times: [
                     "10:15 ~ 12:15",
@@ -474,7 +474,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/qZbmPbdTyo8",
         schedules: [
             {
-                date: "20/10",
+                date: "21/10",
                 day: "Hôm nay",
                 format: "2D Phụ đề",
                 times: [
@@ -484,8 +484,8 @@ const ALL_MOVIES = [
                 ]
             },
             {
-                date: "21/10",
-                day: "Thứ Ba",
+                date: "22/10",
+                day: "Thứ Năm",
                 format: "2D Phụ đề",
                 times: [
                     "14:00 ~ 16:00",
@@ -509,7 +509,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/BPnZ0DdbMjI",
         schedules: [
             {
-                date: "20/10",
+                date: "21/10",
                 day: "Hôm nay",
                 format: "2D Phụ đề",
                 times: [
@@ -519,8 +519,8 @@ const ALL_MOVIES = [
                 ]
             },
             {
-                date: "21/10",
-                day: "Thứ Ba",
+                date: "22/10",
+                day: "Thứ Năm",
                 format: "2D Phụ đề",
                 times: [
                     "14:45 ~ 16:32",
@@ -546,7 +546,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/8QtlRSA8yWs",
         schedules: [
             {
-                date: "30/10",
+                date: "30/11",
                 day: "Thứ Sáu",
                 format: "2D Phụ đề",
                 times: [
@@ -572,7 +572,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/Abk_DhHyqyg",
         schedules: [
             {
-                date: "23/10",
+                date: "23/12",
                 day: "Thứ Sáu",
                 format: "2D Phụ đề",
                 times: [
@@ -623,7 +623,7 @@ const ALL_MOVIES = [
         trailer_link: "https://www.youtube.com/embed/FTjdRGRq-9M",
         schedules: [
             {
-                date: "20/10",
+                date: "22/12",
                 day: "Hôm nay",
                 format: "2D Phụ đề",
                 times: [
