@@ -1,192 +1,474 @@
-/* ===== THEME kiểu CGV / Beta Cinemas =====
-   Đổi màu chủ đạo chỉ cần sửa 3 biến dưới đây */
-:root{
-  --brand:#e71a0f;        /* đỏ CGV */
-  --brand-dark:#b81208;
-  --brand-soft:#fff1f0;
-  --ink:#222;
-  --bg:#f4f4f4;
+:root {
+  --navy: #01162e;
+  --navy-2: #0a1730;
+  --gold: #d4a52c;
+  --brand: var(--gold);
+  --brand-soft: #fff8e1;
+  --bg: #eef1f6;
+  --text: #222;
 }
 
-/* ---------- Nền & font ---------- */
-body{ background:var(--bg) !important; color:var(--ink); font-family:"Roboto","Segoe UI",Arial,sans-serif; }
-.section{ background:var(--bg) !important; background-image:none !important; }
-
-/* ---------- Header trắng, viền đỏ ---------- */
-#header{
-  height:auto; min-height:64px; background:#fff !important; color:var(--ink);
-  border-bottom:3px solid var(--brand); box-shadow:0 2px 8px rgba(0,0,0,.08);
-  position:sticky; top:0; z-index:900; padding:6px 32px;
-}
-.nav-logo{ width:150px; margin:0; }
-.nav-logo img{ height:auto; max-height:52px; object-fit:contain; }
-.nav-menu{ color:var(--ink); }
-.nav-layout{ justify-content:flex-start; gap:12px; }
-.nav-layout a{ color:var(--ink); font-weight:700; font-size:.9rem; text-transform:uppercase; letter-spacing:.3px; }
-.nav-layout a:hover{ color:var(--brand); }
-.nav-layout .active,
-.nav-layout .nav-link.active{
-  background:none !important; color:var(--brand) !important;
-  border-radius:0 !important; border-bottom:3px solid var(--brand);
-}
-.nav-pills{ flex:1; }
-.nav-layout button{ width:auto; padding:0 18px; height:36px; border-radius:4px;
-  background:#fff; color:var(--brand); border:1px solid var(--brand); font-weight:700; }
-.nav-layout .btn-login{ background:var(--brand) !important; background-image:none !important;
-  color:#fff; border:1px solid var(--brand); }
-.nav-layout .btn-login:hover{ background:var(--brand-dark) !important; }
-.nav-layout .btn-register:hover{ background:var(--brand-soft); }
-.login-user .login-name{ color:var(--ink); }
-
-/* ---------- Banner ---------- */
-#slide{ margin:0 0 24px; background:#000; }
-#slide img{ width:100%; height:480px; border-radius:0; border:none; }
-#slide .slide-btn:hover{ background:var(--brand) !important; background-image:none !important; }
-
-/* ---------- Tab Phim đang chiếu / sắp chiếu ---------- */
-#movie-pills-nav{ background:transparent !important; border-radius:0; border-bottom:2px solid #ddd; }
-#movie-pills-nav::before{
-  background:none !important; border-bottom:3px solid var(--brand); border-radius:0;
-  height:calc(100% + 2px); top:0;
-}
-#movie-pills-nav .nav-link{ color:#777; font-weight:700; text-transform:uppercase; font-size:1.05rem; }
-#movie-pills-nav .nav-link.active{ color:var(--brand) !important; }
-#movie-pills-nav .nav-link:not(.active):hover{ color:var(--brand); }
-
-/* ---------- Thẻ phim ---------- */
-.custom-movie-card{ background:#fff; color:var(--ink); border-radius:4px; height:auto;
-  box-shadow:none; }
-.custom-card-content{ text-align:left; padding:12px; }
-.custom-card-content h3{ font-size:1rem; font-weight:700; text-transform:uppercase; color:var(--ink);
-  min-height:2.6em; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-.custom-card-content p{ color:#666; font-size:.82rem; }
-.custom-play-button{
-  top:auto; bottom:12px; transform:translateX(-50%); background:var(--brand) !important;
-  background-image:none !important; border-radius:4px; color:#fff; font-size:.85rem;
-}
-.custom-play-button:hover{ background:var(--brand-dark) !important; }
-a{ text-decoration:none; }
-
-/* ---------- Footer ---------- */
-.footer{ background:#231f20 !important; border-top:4px solid var(--brand); }
-.footer p i, .footer-social-icons a:hover{ color:var(--brand) !important; }
-
-/* ---------- Popup đăng nhập / đăng ký ---------- */
-.login-container, .register-container{ background:#fff; color:var(--ink); border-radius:6px; }
-.login-header, .register-header, .login-body, .register-body,
-.login-footer, .register-footer{ color:var(--ink); }
-.login-body input, .register-body input{ background:#fff; color:var(--ink); border:1px solid #ccc; border-radius:4px; }
-.login-body button, .register-body button{ background:var(--brand) !important; background-image:none !important;
-  color:#fff !important; border:none; border-radius:4px; font-weight:700; }
-.login-body p, .login-footer a, .register-footer a{ color:var(--brand) !important; }
-
-/* ---------- Trang Tin tức (new.html) ---------- */
-.pagination a, .page-link{ border-color:var(--brand); }
-
-/* ---------- Trang Giới thiệu (about.html) ---------- */
-:root{ --primary-color:var(--brand); }
-.about-container, [class*="about"]{ color:var(--ink); }
-
-/* ---------- Trang chi tiết phim & chọn ghế: giữ nền tối kiểu rạp,
-   chỉ đổi màu nhấn hồng -> đỏ ---------- */
-.movie-details-page .btn, .movie-details-page button,
-.seat-page button, .btn-continue, .btn-confirm, #confirm-btn{
-  background-image:none !important; background:var(--brand) !important; color:#fff !important;
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Roboto", "Segoe UI", Arial, sans-serif;
 }
 
-/* ===== PHIÊN BẢN UTC CINEMA: navy + vàng gold (khớp logo) ===== */
-:root{
-  --navy:#01162e;
-  --navy-2:#0a1730;
-  --gold:#d4a52c;
-  --gold-dark:#b88a1a;
-  --brand:#d4a52c;
-  --brand-dark:#b88a1a;
-  --brand-soft:#fff8e1;
-  --bg:#eef1f6;
+.section {
+  background: var(--bg);
 }
-body{ background:var(--bg) !important; }
-.section{ background:var(--bg) !important; }
 
-/* Header navy */
-#header{ background:var(--navy) !important; border-bottom:3px solid var(--gold); min-height:84px; box-shadow:0 3px 12px rgba(0,0,0,.35); }
-.nav-logo{ width:auto; }
-.nav-logo img{ width:auto; height:70px; max-height:none; }
-.nav-menu{ color:#fff; }
-.nav-layout a{ color:#f3f3f3; }
-.nav-layout a:hover{ color:var(--gold); }
-.nav-layout .active, .nav-layout .nav-link.active{ color:var(--gold) !important; border-bottom:3px solid var(--gold); }
-.nav-layout button{ background:transparent; color:var(--gold); border:1px solid var(--gold); border-radius:30px; }
-.nav-layout .btn-register:hover{ background:rgba(212,165,44,.15); }
-.nav-layout .btn-login{ background:linear-gradient(#e8c15a,#c9971c) !important; color:var(--navy); border:1px solid var(--gold); }
-.nav-layout .btn-login:hover{ background:var(--gold) !important; }
-.login-user .login-name{ color:#fff; }
-
-/* Banner bo góc nhẹ + viền vàng */
-#slide{ background:transparent; margin:20px 0 24px; }
-#slide img{ width:94%; height:460px; border-radius:14px; border:3px solid var(--gold); box-shadow:0 10px 30px rgba(10,23,48,.35); }
-#slide .slide-btn:hover{ background:var(--gold) !important; color:var(--navy); }
-
-/* Tab */
-#movie-pills-nav{ border-bottom:2px solid #cfd6e4; }
-#movie-pills-nav::before{ border-bottom:3px solid var(--gold); }
-#movie-pills-nav .nav-link{ color:#6b7690; }
-#movie-pills-nav .nav-link.active, #movie-pills-nav .nav-link:not(.active):hover{ color:var(--navy) !important; }
-
-/* Thẻ phim */
-.custom-movie-card{ border-radius:12px; border:1px solid #dde3ef; box-shadow:none; }
-.custom-card-content h3{ color:var(--navy); }
-.custom-play-button{ background:linear-gradient(#e8c15a,#c9971c) !important; color:var(--navy) !important; border-radius:30px; padding:9px 22px; }
-.custom-play-button:hover{ background:var(--gold) !important; }
-
-/* Footer */
-.footer{ background:var(--navy-2) !important; border-top:4px solid var(--gold); }
-.footer p i, .footer-social-icons a:hover{ color:var(--gold) !important; }
-.footer-logo-img{ width:170px; }
-
-/* Popup: navy + vàng */
-.login-container, .register-container{ background:var(--navy); color:#fff; border:1px solid var(--gold); border-radius:16px; }
-.login-header, .register-header, .login-body, .register-body, .login-footer, .register-footer{ color:#fff; }
-.login-body input, .register-body input{ background:var(--navy-2); color:#fff; border:1px solid #2c3b63; border-radius:10px; }
-.login-body button, .register-body button{ background:linear-gradient(#e8c15a,#c9971c) !important; color:var(--navy) !important; border-radius:30px; }
-.login-body p, .login-footer a, .register-footer a{ color:var(--gold) !important; }
-
-/* Nút ở trang chi tiết / chọn ghế */
-.movie-details-page .btn, .movie-details-page button, .seat-page button, .btn-continue, .btn-confirm, #confirm-btn{
-  background:linear-gradient(#e8c15a,#c9971c) !important; color:var(--navy) !important;
+#header {
+  min-height: 84px;
+  height: auto;
+  padding: 6px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  color: var(--text);
+  background: var(--navy);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
 }
-/* NOTE ADMIN 04: Chỉ định dạng hộp quản lý. Tái sử dụng màu --brand của giao diện cũ. */
-#cinemaAdminTools[hidden], #cinemaAdminDialog [hidden] { display:none !important; }
-#cinemaAdminTools { position:fixed; right:16px; bottom:16px; z-index:1000; display:flex; flex-wrap:wrap; align-items:center; gap:8px; padding:12px; max-width:calc(100vw - 32px); background:#fff; border:1px solid #ddd; border-top:3px solid var(--brand); border-radius:8px; box-shadow:0 3px 20px #0002; }
-#cinemaAdminTools span { color:var(--brand); font-size:12px; font-weight:700; }
-#cinemaAdminTools button, #cinemaAdminDialog button { cursor:pointer; border:1px solid var(--brand); background:white; color:var(--brand); border-radius:5px; padding:9px 12px; font:inherit; font-size:14px; line-height:1.4; width:auto; height:auto; }
-#cinemaAdminTools button:hover, #cinemaAdminDialog button:hover { background:var(--brand-soft); }
-#cinemaAdminDialog { margin:auto; width:min(1080px,calc(100vw - 32px)); max-width:none; max-height:90vh; padding:26px; border:0; border-radius:12px; color:#222; background:#fff; overflow:auto; box-sizing:border-box; }
-#cinemaAdminDialog::backdrop { background:#0009; }
-#cinemaAdminDialog .ca-heading { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; }
-#cinemaAdminDialog h2 { margin:8px 0; font-size:25px; color:#222; }
-#cinemaAdminDialog h3 { margin:20px 0 12px; font-size:19px; }
-#cinemaAdminDialog small { color:var(--brand); font-weight:700; }
-#cinemaAdminDialog .ca-note { font-size:13px; line-height:1.6; color:#666; margin:12px 0; }
-#cinemaAdminDialog .ca-tabs { display:flex; flex-wrap:wrap; gap:10px; margin:20px 0; }
-#cinemaAdminDialog button.ca-active, #cinemaAdminDialog button[type=submit] { background:var(--brand); color:white; }
-#caFilters { display:grid; grid-template-columns:180px 1fr 1fr auto; gap:12px; align-items:end; }
-#caFilters label { display:flex; flex-direction:column; gap:6px; font-size:14px; min-width:0; color:#222; }
-#caFilters input, #caFilters select { width:100%; min-width:0; height:42px; border:1px solid #bbb; border-radius:5px; padding:7px; color:#222; background:white; font-size:14px; box-sizing:border-box; }
-#cinemaAdminDialog .ca-totals { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:20px 0; }
-#cinemaAdminDialog .ca-totals div { padding:18px; border-radius:6px; background:var(--brand-soft); }
-#cinemaAdminDialog .ca-totals span { display:block; font-size:14px; }
-#cinemaAdminDialog .ca-totals strong { display:block; font-size:25px; margin-top:8px; color:var(--brand); }
-#cinemaAdminDialog .ca-table-wrap { overflow:auto; }
-#cinemaAdminDialog table { border-collapse:collapse; width:100%; min-width:600px; font-size:14px; }
-#cinemaAdminDialog th, #cinemaAdminDialog td { padding:12px; border-bottom:1px solid #ddd; text-align:left; }
-#cinemaAdminDialog th { background:#f5f5f5; }
-#caError { background:#fff1f0; color:#a00; padding:12px; }
-#caEmpty { color:#666; padding:18px 0; }
-@media(max-width:700px) {
-  #cinemaAdminDialog { padding:16px; }
-  #caFilters { grid-template-columns:1fr; }
-  #cinemaAdminDialog .ca-totals { grid-template-columns:1fr; }
-  #cinemaAdminDialog h2 { font-size:21px; }
-  #cinemaAdminTools { left:12px; right:12px; bottom:10px; justify-content:center; }
+
+.nav-logo {
+  width: auto;
+  margin: 0;
+}
+
+.nav-logo img {
+  width: auto;
+  height: 70px;
+  max-height: none;
+}
+
+.nav-layout {
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.nav-layout a {
+  color: #f3f3f3;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.nav-layout a:hover {
+  color: var(--gold);
+}
+
+.nav-layout .nav-link.active {
+  color: var(--gold);
+  background: transparent;
+  border-radius: 0;
+  border-bottom: 3px solid var(--gold);
+}
+
+.nav-pills {
+  flex: 1;
+}
+
+.nav-layout button {
+  width: auto;
+  height: 36px;
+  padding: 0 18px;
+  color: var(--gold);
+  background: transparent;
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+.nav-layout .btn-login {
+  color: var(--navy);
+  background: linear-gradient(#e8c15a, #c9971c);
+}
+
+.nav-layout .btn-login:hover {
+  background: var(--gold);
+}
+
+.nav-layout .btn-register:hover {
+  background: rgba(212, 165, 44, 0.15);
+}
+
+.login-user .login-name {
+  color: #fff;
+}
+
+#slide {
+  margin: 20px 0 24px;
+  background: transparent;
+}
+
+#slide img {
+  width: 94%;
+  height: 460px;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(10, 23, 48, 0.35);
+}
+
+#slide .slide-btn:hover {
+  color: var(--navy);
+  background: var(--gold);
+}
+
+#movie-pills-nav {
+  padding: 0.5rem 0;
+  margin-bottom: 15px;
+  background: transparent;
+  border-bottom: 2px solid #cfd6e4;
+}
+
+#movie-pills-nav::before {
+  background: transparent;
+  border-bottom: 3px solid var(--gold);
+  border-radius: 0;
+  height: calc(100% + 2px);
+  top: 0;
+}
+
+#movie-pills-nav .nav-link {
+  color: #6b7690;
+}
+
+#movie-pills-nav .nav-link.active,
+#movie-pills-nav .nav-link:not(.active):hover {
+  color: var(--navy);
+}
+
+.custom-movie-card {
+  height: auto;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid #dde3ef;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.custom-card-content {
+  padding: 12px;
+  text-align: left;
+}
+
+.custom-card-content h3 {
+  min-height: 2.6em;
+  overflow: hidden;
+  color: var(--navy);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.custom-card-content p {
+  color: #666;
+  font-size: 0.82rem;
+}
+
+.custom-play-button {
+  top: auto;
+  bottom: 12px;
+  transform: translateX(-50%);
+  padding: 9px 22px;
+  color: var(--navy);
+  background: linear-gradient(#e8c15a, #c9971c);
+  border-radius: 30px;
+  font-size: 0.85rem;
+}
+
+.custom-play-button:hover {
+  background: var(--gold);
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer {
+  background: var(--navy-2);
+}
+
+.footer p i,
+.footer-social-icons a:hover {
+  color: var(--gold);
+}
+
+.footer-logo-img {
+  width: 170px;
+}
+
+.login-container,
+.register-container {
+  color: #fff;
+  background: var(--navy);
+  border: 1px solid var(--gold);
+  border-radius: 16px;
+}
+
+.login-header,
+.register-header,
+.login-body,
+.register-body,
+.login-footer,
+.register-footer {
+  color: #fff;
+}
+
+.login-body input,
+.register-body input {
+  color: #fff;
+  background: var(--navy-2);
+  border: 1px solid #2c3b63;
+  border-radius: 10px;
+}
+
+.login-body button,
+.register-body button {
+  color: var(--navy);
+  background: linear-gradient(#e8c15a, #c9971c);
+  border-radius: 30px;
+}
+
+.login-body p,
+.login-footer a,
+.register-footer a {
+  color: var(--gold);
+}
+
+.movie-details-page .btn,
+.movie-details-page button,
+.seat-page button,
+.btn-continue,
+.btn-confirm,
+#confirm-btn {
+  color: var(--navy);
+  background: linear-gradient(#e8c15a, #c9971c);
+}
+
+#cinemaAdminTools[hidden],
+#cinemaAdminDialog [hidden] {
+  display: none !important;
+}
+
+#cinemaAdminTools {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  max-width: calc(100vw - 32px);
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: 3px solid var(--brand);
+  border-radius: 8px;
+  box-shadow: 0 3px 20px #0002;
+}
+
+#cinemaAdminTools span {
+  color: var(--brand);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#cinemaAdminTools button,
+#cinemaAdminDialog button {
+  width: auto;
+  height: auto;
+  padding: 9px 12px;
+  color: var(--brand);
+  background: #fff;
+  border: 1px solid var(--brand);
+  border-radius: 5px;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+#cinemaAdminTools button:hover,
+#cinemaAdminDialog button:hover {
+  background: var(--brand-soft);
+}
+
+#cinemaAdminDialog {
+  width: min(1080px, calc(100vw - 32px));
+  max-width: none;
+  max-height: 90vh;
+  margin: auto;
+  padding: 26px;
+  overflow: auto;
+  color: var(--text);
+  background: #fff;
+  border: 0;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+#cinemaAdminDialog::backdrop {
+  background: #0009;
+}
+
+#cinemaAdminDialog .ca-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+#cinemaAdminDialog h2 {
+  margin: 8px 0;
+  color: var(--text);
+  font-size: 25px;
+}
+
+#cinemaAdminDialog h3 {
+  margin: 20px 0 12px;
+  font-size: 19px;
+}
+
+#cinemaAdminDialog small {
+  color: var(--brand);
+  font-weight: 700;
+}
+
+#cinemaAdminDialog .ca-note {
+  margin: 12px 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+#cinemaAdminDialog .ca-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+#cinemaAdminDialog button.ca-active,
+#cinemaAdminDialog button[type="submit"] {
+  color: #fff;
+  background: var(--brand);
+}
+
+#caFilters {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr auto;
+  align-items: end;
+  gap: 12px;
+}
+
+#caFilters label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  color: var(--text);
+  font-size: 14px;
+}
+
+#caFilters input,
+#caFilters select {
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+  padding: 7px;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+#cinemaAdminDialog .ca-totals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+#cinemaAdminDialog .ca-totals div {
+  padding: 18px;
+  background: var(--brand-soft);
+  border-radius: 6px;
+}
+
+#cinemaAdminDialog .ca-totals span,
+#cinemaAdminDialog .ca-totals strong {
+  display: block;
+}
+
+#cinemaAdminDialog .ca-totals span {
+  font-size: 14px;
+}
+
+#cinemaAdminDialog .ca-totals strong {
+  margin-top: 8px;
+  color: var(--brand);
+  font-size: 25px;
+}
+
+#cinemaAdminDialog .ca-table-wrap {
+  overflow: auto;
+}
+
+#cinemaAdminDialog table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+#cinemaAdminDialog th,
+#cinemaAdminDialog td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+#cinemaAdminDialog th {
+  background: #f5f5f5;
+}
+
+#caError {
+  padding: 12px;
+  color: #a00;
+  background: #fff1f0;
+}
+
+#caEmpty {
+  padding: 18px 0;
+  color: #666;
+}
+
+@media (max-width: 700px) {
+  #cinemaAdminDialog {
+    padding: 16px;
+  }
+
+  #caFilters,
+  #cinemaAdminDialog .ca-totals {
+    grid-template-columns: 1fr;
+  }
+
+  #cinemaAdminDialog h2 {
+    font-size: 21px;
+  }
+
+  #cinemaAdminTools {
+    right: 12px;
+    bottom: 10px;
+    left: 12px;
+    justify-content: center;
+  }
 }

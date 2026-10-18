@@ -1,69 +1,200 @@
-/* NOTE ADMIN 05: Lưu giao dịch trước khi báo thành công; thống kê lấy từ giao dịch này. */
 document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(location.search);
-  const movieId = params.get('id'), date = params.get('date'), time = params.get('time');
-  const movie = typeof ALL_MOVIES !== 'undefined' && ALL_MOVIES.find(m => m.id === movieId);
-  if (!movie || !movie.schedules?.some(s => s.date === date && s.times.includes(time))) {
-    alert('Không tìm thấy phim hoặc suất chiếu hợp lệ.');location.href = 'index.html';return;
+  const movieId = params.get('id');
+  const showDate = params.get('date');
+  const showTime = params.get('time');
+  const movie = ALL_MOVIES.find(item => item.id === movieId);
+
+  const isValidShow = movie?.schedules.some(schedule =>
+    schedule.date === showDate && schedule.times.includes(showTime)
+  );
+
+  if (!isValidShow) {
+    alert('Không tìm thấy phim hoặc suất chiếu hợp lệ.');
+    location.href = 'index.html';
+    return;
   }
-  document.querySelector('.sidebar h2').textContent = movie.title;
-  document.querySelector('.sidebar .poster img').src = movie.poster;
-  document.title = `Đặt vé: ${movie.title}`;
-  const info = document.querySelectorAll('.sidebar p');
-  info[0].textContent = `Ngày chiếu: ${date}`;info[1].textContent = `Suất chiếu: ${time}`;
-  const $ = id => document.getElementById(id);
-  const seatMap = $('seatMap'), overlay = $('overlay'), payBtn = $('payBtn'), confirm = $('confirmPay');
-  let selected = new Set(), checkoutId = null, saving = false, storageOK = true;
-  const seatElements = [...seatMap.querySelectorAll('.seat[data-id]')];
-  const price = seat => seat.classList.contains('vip') ? 100000 : 50000;
-  const total = () => seatElements.filter(s => selected.has(s.dataset.id)).reduce((n,s) => n+price(s),0);
-  const money = n => n.toLocaleString('vi-VN')+'₫';
-  function update() {
-    $('count').textContent = selected.size;$('total').textContent = money(total());
-    payBtn.disabled = !selected.size || saving || !storageOK;
+
+  const getElement = id => document.getElementById(id);
+  const seatMap = getElement('seatMap');
+  const paymentOverlay = getElement('overlay');
+  const payButton = getElement('payBtn');
+  const confirmButton = getElement('confirmPay');
+  const seatRows = 'ABCDEFGHIJK';
+  const vipRows = 'DEFGH';
+  const seatPrice = { normal: 50000, vip: 100000 };
+
+  let selectedSeats = new Set();
+  let checkoutId = null;
+  let isSaving = false;
+  let storageAvailable = true;
+
+  function createSeatMap() {
+    for (const rowLetter of seatRows) {
+      const row = document.createElement('div');
+      row.className = 'row';
+
+      for (let number = 1; number <= 14; number++) {
+        const isVip = vipRows.includes(rowLetter) && number >= 5 && number <= 10;
+        const seat = document.createElement('div');
+        seat.className = `seat ${isVip ? 'vip' : 'normal'}`;
+        seat.dataset.id = `${rowLetter}${number}`;
+        seat.textContent = seat.dataset.id;
+        row.append(seat);
+      }
+
+      seatMap.append(row);
+    }
   }
-  function syncSeats() {
+
+  createSeatMap();
+  const seats = [...seatMap.querySelectorAll('.seat[data-id]')];
+
+  function priceOf(seat) {
+    return seatPrice[seat.classList.contains('vip') ? 'vip' : 'normal'];
+  }
+
+  function selectedTotal() {
+    return seats
+      .filter(seat => selectedSeats.has(seat.dataset.id))
+      .reduce((total, seat) => total + priceOf(seat), 0);
+  }
+
+  function formatMoney(amount) {
+    return `${amount.toLocaleString('vi-VN')}₫`;
+  }
+
+  function updateSummary() {
+    getElement('count').textContent = selectedSeats.size;
+    getElement('total').textContent = formatMoney(selectedTotal());
+    payButton.disabled = !selectedSeats.size || isSaving || !storageAvailable;
+  }
+
+  function syncBookedSeats() {
     try {
-      const booked = CinemaStore.booked(movieId,date,time);storageOK = true;
-      seatElements.forEach(el => {
-        const taken = booked.has(el.dataset.id);el.classList.toggle('booked',taken);
-        if(taken) selected.delete(el.dataset.id);
-        el.classList.toggle('selected',selected.has(el.dataset.id));
+      const bookedSeats = CinemaStore.booked(movieId, showDate, showTime);
+      storageAvailable = true;
+
+      seats.forEach(seat => {
+        const isBooked = bookedSeats.has(seat.dataset.id);
+
+        seat.classList.toggle('booked', isBooked);
+        if (isBooked) selectedSeats.delete(seat.dataset.id);
+        seat.classList.toggle('selected', selectedSeats.has(seat.dataset.id));
       });
-    } catch(e) {storageOK = false;alert(e.message);}
-    update();
+    } catch (error) {
+      storageAvailable = false;
+      alert(error.message);
+    }
+
+    updateSummary();
   }
-  seatMap.addEventListener('click', e => {
-    if(saving || !overlay.classList.contains('hidden') || !storageOK) return;
-    const seat = e.target.closest('.seat[data-id]');if(!seat || seat.classList.contains('booked')) return;
-    const id = seat.dataset.id;
-    selected.has(id) ? selected.delete(id) : selected.add(id);
-    seat.classList.toggle('selected',selected.has(id));update();
+
+  function showSelectedSeats() {
+    const list = getElement('selectedList');
+    const items = [...selectedSeats].map(seatId => {
+      const item = document.createElement('li');
+      item.textContent = seatId;
+      return item;
+    });
+
+    list.replaceChildren(...items);
+    getElement('payTotal').textContent = formatMoney(selectedTotal());
+    paymentOverlay.classList.remove('hidden');
+  }
+
+  function closePayment() {
+    paymentOverlay.classList.add('hidden');
+    checkoutId = null;
+  }
+
+  function createCheckoutId() {
+    return typeof crypto.randomUUID === 'function'
+      ? crypto.randomUUID()
+      : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  }
+
+  function showMovieInfo() {
+    document.querySelector('.sidebar h2').textContent = movie.title;
+    document.querySelector('.sidebar .poster img').src = movie.poster;
+    document.querySelectorAll('.sidebar p')[0].textContent = `Ngày chiếu: ${showDate}`;
+    document.querySelectorAll('.sidebar p')[1].textContent = `Suất chiếu: ${showTime}`;
+    document.title = `Đặt vé: ${movie.title}`;
+  }
+
+  showMovieInfo();
+
+  seatMap.addEventListener('click', event => {
+    if (isSaving || !paymentOverlay.classList.contains('hidden') || !storageAvailable) return;
+
+    const seat = event.target.closest('.seat[data-id]');
+    if (!seat || seat.classList.contains('booked')) return;
+
+    if (selectedSeats.has(seat.dataset.id)) {
+      selectedSeats.delete(seat.dataset.id);
+    } else {
+      selectedSeats.add(seat.dataset.id);
+    }
+
+    seat.classList.toggle('selected', selectedSeats.has(seat.dataset.id));
+    updateSummary();
   });
-  payBtn.addEventListener('click', () => {
-    syncSeats();if(!storageOK || !selected.size) return;
-    checkoutId = typeof crypto.randomUUID === 'function' ? crypto.randomUUID() : Date.now()+'-'+Math.random().toString(36).slice(2);
-    $('selectedList').replaceChildren();selected.forEach(id => {const li=document.createElement('li');li.textContent=id;$('selectedList').append(li);});
-    $('payTotal').textContent = money(total());$('qrImage').src='./assets/img/qr.png';
-    overlay.classList.remove('hidden');
+
+  payButton.addEventListener('click', () => {
+    syncBookedSeats();
+    if (!storageAvailable || !selectedSeats.size) return;
+
+    checkoutId = createCheckoutId();
+    getElement('qrImage').src = './assets/img/qr.png';
+    showSelectedSeats();
   });
-  $('closePay').addEventListener('click', () => {if(!saving) {overlay.classList.add('hidden');checkoutId=null;}});
-  confirm.addEventListener('click', async () => {
-    if(saving || !checkoutId || !selected.size || overlay.classList.contains('hidden')) return;
-    saving=true;confirm.disabled=true;update();
+
+  getElement('closePay').addEventListener('click', () => {
+    if (!isSaving) closePayment();
+  });
+
+  confirmButton.addEventListener('click', async () => {
+    if (isSaving || !checkoutId || !selectedSeats.size || paymentOverlay.classList.contains('hidden')) return;
+
+    isSaving = true;
+    confirmButton.disabled = true;
+    updateSummary();
+
     try {
-      const seats=seatElements.filter(s => selected.has(s.dataset.id)).map(s => ({id:s.dataset.id,price:price(s)}));
-      const order=await CinemaStore.recordPayment({id:checkoutId,movieId,movieTitle:movie.title,showDate:date,showTime:time,seats});
-      selected.clear();checkoutId=null;overlay.classList.add('hidden');
-      alert(`Thanh toán mô phỏng thành công! Đã lưu ${order.seats.length} vé, tổng ${money(order.total)}.`);
-    } catch(e) {alert(e.message);checkoutId=null;overlay.classList.add('hidden');}
-    finally {saving=false;confirm.disabled=false;syncSeats();}
-  });
-  // Đồng bộ ghế giữa các tab; đóng bản xác nhận cũ nếu giao dịch ở tab khác thay đổi dữ liệu.
-  window.addEventListener('storage', e => {
-    if(e.key === CinemaStore.KEYS.orders || e.key === null) {
-      if(!saving) {overlay.classList.add('hidden');checkoutId=null;syncSeats();}
+      const orderSeats = seats
+        .filter(seat => selectedSeats.has(seat.dataset.id))
+        .map(seat => ({ id: seat.dataset.id, price: priceOf(seat) }));
+
+      const order = await CinemaStore.recordPayment({
+        id: checkoutId,
+        movieId,
+        movieTitle: movie.title,
+        showDate,
+        showTime,
+        seats: orderSeats
+      });
+
+      selectedSeats.clear();
+      closePayment();
+      alert(`Thanh toán mô phỏng thành công! Đã lưu ${order.seats.length} vé, tổng ${formatMoney(order.total)}.`);
+    } catch (error) {
+      alert(error.message);
+      closePayment();
+    } finally {
+      isSaving = false;
+      confirmButton.disabled = false;
+      syncBookedSeats();
     }
   });
-  syncSeats();
+
+  window.addEventListener('storage', event => {
+    if (event.key !== CinemaStore.KEYS.orders && event.key !== null) return;
+
+    if (!isSaving) {
+      closePayment();
+      syncBookedSeats();
+    }
+  });
+
+  syncBookedSeats();
 });

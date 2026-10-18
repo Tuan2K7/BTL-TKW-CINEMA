@@ -1,7 +1,7 @@
 const images = document.getElementsByClassName('img');
 let index = 0;
 let timeoutId;
-
+// hàm hiển thị hình ảnh
 function showImage(){ 
     if (!images.length) return;
     for(let i = 0; i < images.length; i++){
@@ -20,7 +20,7 @@ function next(){
     }
     showImage();
 }
-
+// đệ quy 
 function prev(){
     clearTimeout(timeoutId);
     index--;   

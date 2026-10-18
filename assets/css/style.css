@@ -328,6 +328,10 @@ html {
     width: 100%;
 }
 
+.footer-content {
+    padding: 50px 50px 30px;
+}
+
 .footer h5 {
     color: #fff;
     font-weight: 600;
@@ -364,7 +368,7 @@ html {
     padding: 0 0 10px 0; /* Chỉ cần đệm dưới */
     font-size: 0.9rem;
     color: #bbb; /* Màu link mặc định */
-    background: none !important; /* Ghi đè bootstrap */
+    background: none;
     transition: color 0.2s ease;
 }
 
