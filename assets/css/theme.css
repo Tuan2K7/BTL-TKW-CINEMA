@@ -33,7 +33,7 @@ body{ background:var(--bg) !important; color:var(--ink); font-family:"Roboto","S
 .nav-layout button{ width:auto; padding:0 18px; height:36px; border-radius:4px;
   background:#fff; color:var(--brand); border:1px solid var(--brand); font-weight:700; }
 .nav-layout .btn-login{ background:var(--brand) !important; background-image:none !important;
-  color:#fff !important; border:1px solid var(--brand); }
+  color:#fff; border:1px solid var(--brand); }
 .nav-layout .btn-login:hover{ background:var(--brand-dark) !important; }
 .nav-layout .btn-register:hover{ background:var(--brand-soft); }
 .login-user .login-name{ color:var(--ink); }
@@ -55,8 +55,7 @@ body{ background:var(--bg) !important; color:var(--ink); font-family:"Roboto","S
 
 /* ---------- Thẻ phim ---------- */
 .custom-movie-card{ background:#fff; color:var(--ink); border-radius:4px; height:auto;
-  box-shadow:0 1px 6px rgba(0,0,0,.15); }
-.custom-movie-card:hover{ box-shadow:0 8px 18px rgba(0,0,0,.25); }
+  box-shadow:none; }
 .custom-card-content{ text-align:left; padding:12px; }
 .custom-card-content h3{ font-size:1rem; font-weight:700; text-transform:uppercase; color:var(--ink);
   min-height:2.6em; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
@@ -119,7 +118,7 @@ body{ background:var(--bg) !important; }
 .nav-layout .active, .nav-layout .nav-link.active{ color:var(--gold) !important; border-bottom:3px solid var(--gold); }
 .nav-layout button{ background:transparent; color:var(--gold); border:1px solid var(--gold); border-radius:30px; }
 .nav-layout .btn-register:hover{ background:rgba(212,165,44,.15); }
-.nav-layout .btn-login{ background:linear-gradient(#e8c15a,#c9971c) !important; color:var(--navy) !important; border:1px solid var(--gold); }
+.nav-layout .btn-login{ background:linear-gradient(#e8c15a,#c9971c) !important; color:var(--navy); border:1px solid var(--gold); }
 .nav-layout .btn-login:hover{ background:var(--gold) !important; }
 .login-user .login-name{ color:#fff; }
 
@@ -135,7 +134,7 @@ body{ background:var(--bg) !important; }
 #movie-pills-nav .nav-link.active, #movie-pills-nav .nav-link:not(.active):hover{ color:var(--navy) !important; }
 
 /* Thẻ phim */
-.custom-movie-card{ border-radius:12px; border:1px solid #dde3ef; box-shadow:0 4px 14px rgba(10,23,48,.12); }
+.custom-movie-card{ border-radius:12px; border:1px solid #dde3ef; box-shadow:none; }
 .custom-card-content h3{ color:var(--navy); }
 .custom-play-button{ background:linear-gradient(#e8c15a,#c9971c) !important; color:var(--navy) !important; border-radius:30px; padding:9px 22px; }
 .custom-play-button:hover{ background:var(--gold) !important; }
