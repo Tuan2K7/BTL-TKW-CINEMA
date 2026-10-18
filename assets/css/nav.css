@@ -1,44 +1,23 @@
-/* --- Hiệu ứng trượt cho Nav Pills --- */
-
-/* 1. Chuẩn bị container cha */
 #movie-pills-nav {
-  position: relative; /* Rất quan trọng: làm gốc để định vị "lớp nền trượt" */
-  background-color: #2a2a2a; /* Thêm màu nền nhẹ cho thanh nav */
-  border-radius: 15px; /* Bo tròn toàn bộ thanh nav */
+  position: relative;
 }
 
-/* 2. Tạo "lớp nền trượt" bằng pseudo-element ::before */
 #movie-pills-nav::before {
   content: "";
   position: absolute;
   top: 0;
-  left: var(--pill-left, 0); /* Sử dụng biến CSS để JS điều khiển vị trí */
-  width: var(--pill-width, 0); /* Sử dụng biến CSS để JS điều khiển độ rộng */
+  left: var(--pill-left, 0);
+  width: var(--pill-width, 0);
   height: 100%;
-  /* background-color:#F9CADB;  */
-  background-image: linear-gradient(#F9cadb,#FDA6C4);
-  border-radius: 15px; /* Bo tròn để khớp với tab */
-  transition: all 1s cubic-bezier(0.23, 0.8, 0.32, 1); /* Hiệu ứng chuyển động mượt mà */
-  z-index: 1; /* Nằm dưới chữ nhưng trên nền của nav */
+  border-radius: 15px;
+  transition: all 1s cubic-bezier(0.23, 0.8, 0.32, 1);
+  z-index: 1;
 }
 
-/* 3. Tùy chỉnh các nút nav-link */
 #movie-pills-nav .nav-link {
-  color: #a0a0a0; /* Màu chữ của tab không active */
-  background: none !important; /* Xóa nền mặc định của Bootstrap */
+  background: none;
   border: none;
-  z-index: 2; /* Đảm bảo chữ luôn nằm trên "lớp nền trượt" */
   position: relative;
+  z-index: 2;
   transition: color 0.3s ease;
-}
-
-/* 4. Định nghĩa lại style cho tab đang active */
-#movie-pills-nav .nav-link.active {
-  color: rgb(0, 0, 0) !important; /* Chữ của tab active luôn là màu trắng */
-  background-color: transparent !important; /* Quan trọng: làm trong suốt nền mặc định */
-}
-
-/* 5. Hiệu ứng hover cho các tab chưa active */
-#movie-pills-nav .nav-link:not(.active):hover {
-    color: #ffffff; /* Đổi màu chữ khi hover */
 }
