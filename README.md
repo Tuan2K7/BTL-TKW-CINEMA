@@ -1,5 +1,5 @@
 # Trường Đại học GTVT Hà Nội
-# Bài tập lơn môn thiết kế web
+# Bài tập lớn môn thiết kế web
 
 ## Chủ đề: Thiết kế website của Khoa đào tạo quốc tế của trường ĐH Giao thông vận tải
 
