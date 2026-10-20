@@ -2,6 +2,7 @@
 
 // Phải bọc trong DOMContentLoaded để đảm bảo các thẻ #trailerPopup, #trailerFrame... đã tồn tại
 document.addEventListener("DOMContentLoaded", () => {
+  // Lấy các phần tử điều khiển trailer; chỉ chạy tiếp nếu cả ba phần tử có trong trang.
   const trailerBtn = document.getElementById("trailer-btn"); // Dùng ID
   const trailerPopup = document.getElementById("trailerPopup");
   const trailerFrame = document.getElementById("trailerFrame");
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         trailerFrame.src = `${trailerLink}?autoplay=1`;
         trailerPopup.style.display = "flex";
       } else {
+        // Ghi lỗi vào console thay vì mở popup rỗng khi thiếu đường dẫn trailer.
         console.error("Không tìm thấy data-link của trailer");
       }
     });
@@ -35,13 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
   vì nó được gọi bằng "onclick="closeTrailer()"" trực tiếp từ HTML
 */
 function closeTrailer() {
+  // Hàm toàn cục để nút đóng trong HTML có thể gọi trực tiếp.
   const trailerPopup = document.getElementById("trailerPopup");
   const trailerFrame = document.getElementById("trailerFrame");
 
   if (trailerPopup && trailerFrame) {
+    // Ẩn popup và xóa URL khỏi iframe để video dừng phát ở chế độ nền.
     trailerPopup.style.display = "none";
     // Dừng video khi đóng (tránh chạy nền)
     trailerFrame.src = "";
   }
 }
-

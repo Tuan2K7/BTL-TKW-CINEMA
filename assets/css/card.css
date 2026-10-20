@@ -17,14 +17,14 @@ body {
     margin-bottom: 20px; /* Thêm khoảng cách dưới cho mỗi card */
 }
 
-/* --- Container chứa ảnh và nút Đặt Vé --- */
+/* Làm mốc định vị cho nút đặt vé; ảnh giữ tỉ lệ poster 2:3. */
 .custom-card-image-container {
     position: relative; 
     overflow: hidden; 
     aspect-ratio: 2 / 3; 
 }
 
-/* Poster phim */
+/* Ảnh chiếm toàn khung, object-fit: cover cắt phần thừa thay vì kéo méo. */
 .custom-card-image-container img {
     width: 100%;
     height: 100%; 
@@ -32,7 +32,7 @@ body {
     display: block; 
 }
 
-/* --- Nút "Đặt vé" (Custom Play Button) --- */
+/* Nút nằm chồng giữa ảnh; opacity bằng 0 để ẩn cho đến khi rê lên card. */
 .custom-play-button {
     /* Định vị tuyệt đối so với custom-card-image-container */
     position: absolute;
@@ -64,7 +64,7 @@ body {
     z-index: 10; /* Đảm bảo nút nằm trên ảnh */
 }
 
-/* Khi hover vào card, nút "Đặt vé" sẽ hiện ra */
+/* Chỉ hiện nút đặt vé khi con trỏ đang ở trên card phim. */
 .custom-movie-card:hover .custom-play-button {
     opacity: 1; /* Hiện nút "Đặt vé" */
 }
@@ -75,7 +75,7 @@ body {
     background-image: linear-gradient(#F9cadb,#FDA6C4);
 }
 
-/* --- Phần nội dung text --- */
+/* Căn giữa tiêu đề và thông tin nằm bên dưới poster. */
 .custom-card-content {
     padding: 16px;
     text-align: center; /* Căn giữa nội dung text */
@@ -92,8 +92,7 @@ body {
     color: #aaa; 
 }
 
-/* Điều chỉnh cho các cột Bootstrap */
-/* Thêm padding cho mỗi cột để các card không bị dính vào nhau */
+/* Tạo khoảng cách quanh mỗi cột Bootstrap để các card không dính nhau. */
 .list-container .col {
     padding: 10px; 
 }

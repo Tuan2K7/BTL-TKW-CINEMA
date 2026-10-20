@@ -1,24 +1,26 @@
 
 window.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Lấy ID phim từ URL
+    // Chờ HTML tải xong trước khi tìm phần tử sẽ được cập nhật.
+    // Đọc ID phim từ query string, ví dụ movie-detail.html?id=avenger.
     const urlParams = new URLSearchParams(window.location.search);
     const movieId = urlParams.get('id');
 
     if (!movieId) {
+        // Không có ID thì không thể biết cần hiển thị phim nào, nên báo lỗi và dừng.
         document.body.innerHTML = "<h1>Lỗi: Không tìm thấy ID phim.</h1>";
         return;
     }
 
-    // 2. Tìm phim trong CSDL
+    // Tìm object phim có id trùng trong danh sách dữ liệu tĩnh ALL_MOVIES.
     const movie = ALL_MOVIES.find(m => m.id === movieId);
 
     if (!movie) {
+        // ID có trên URL nhưng không tồn tại trong danh sách cũng là trường hợp lỗi.
         document.body.innerHTML = `<h1>Lỗi: Không tìm thấy phim với ID: ${movieId}</h1>`;
         return;
     }
 
-    // 3. Đổ dữ liệu PHIM vào HTML
+    // Đưa các trường dữ liệu phim vào đúng phần tử giao diện trang chi tiết.
     document.title = movie.title; // Cập nhật tiêu đề trang
     document.getElementById('movie-background-img').src = movie.background_img;
     document.getElementById('movie-poster').src = movie.poster;
@@ -31,12 +33,12 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('movie-description').textContent = movie.description;
     document.getElementById('movie-release-date').textContent = movie.release_date;
     
-    // Cập nhật link cho Trailer
+    // Lưu liên kết trailer vào nút và iframe để trình phát có thể sử dụng.
     document.getElementById('trailer-btn').setAttribute('data-link', movie.trailer_link);
     document.getElementById('trailerFrame').src = movie.trailer_link;
     
     
-    // ===== BẮT ĐẦU PHẦN 4: VẼ LỊCH CHIẾU =====
+    // Chuẩn bị các vùng giao diện lịch chiếu được dùng bên dưới.
     
     // Cập nhật tiêu đề lịch chiếu
     document.getElementById('schedule-title').textContent = `Lịch chiếu ${movie.title}`;
@@ -46,10 +48,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const timeSlots = document.getElementById('timeSlots');
     const scheduleContainer = document.querySelector('.schedule'); // Lấy cả container
 
-    // Kiểm tra xem phim có lịch chiếu không
+    // Chỉ tạo lựa chọn ngày/giờ nếu phim có ít nhất một lịch chiếu.
     if (movie.schedules && movie.schedules.length > 0) {
         
-        // "Vẽ" các nút ngày
+        // Tạo một nút cho mỗi ngày chiếu; data-index liên kết nút với phần tử schedules.
         movie.schedules.forEach((schedule, index) => {
             const dateBtn = document.createElement('button');
             dateBtn.className = 'date';
@@ -65,7 +67,7 @@ window.addEventListener('DOMContentLoaded', () => {
             dateSelector.appendChild(dateBtn);
         });
 
-        // Hàm để "vẽ" các suất chiếu
+        // Hiển thị các giờ của ngày được chọn và thay danh sách giờ cũ.
         function loadShowtimes(scheduleIndex) {
             const selectedSchedule = movie.schedules[scheduleIndex];
             
@@ -73,12 +75,12 @@ window.addEventListener('DOMContentLoaded', () => {
             
             showtimeFormat.textContent = selectedSchedule.format; // Cập nhật (2D, 3D...)
             
-            // "Vẽ" các nút giờ
+            // Tạo nút cho từng giờ chiếu.
             selectedSchedule.times.forEach(time => {
                 const timeBtn = document.createElement('button');
                 timeBtn.textContent = time;
                 
-                // Khi click vào giờ, chuyển sang trang seat.html
+                // Mã hóa giờ và truyền thông tin phim/ngày/giờ sang trang chọn ghế.
                 timeBtn.onclick = () => {
                     // Truyền cả 3 thông tin quan trọng
                     const url = `seat.html?id=${movie.id}&date=${selectedSchedule.date}&time=${encodeURIComponent(time)}`;
@@ -88,10 +90,10 @@ window.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Tải suất chiếu cho ngày đầu tiên (index 0)
+        // Mặc định hiện các suất của ngày đầu tiên trong lịch.
         loadShowtimes(0);
 
-        // Thêm sự kiện click cho các nút ngày
+        // Dùng một listener chung cho vùng ngày; closest hỗ trợ bấm cả phần tử con bên trong nút.
         dateSelector.addEventListener('click', (e) => {
             const clickedButton = e.target.closest('.date');
             if (!clickedButton) return;
@@ -104,10 +106,9 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
     } else {
-        // Nếu phim không có lịch chiếu, ẩn toàn bộ khu vực
+        // Không có suất chiếu thì ẩn lịch để tránh hiển thị một vùng trống.
         if (scheduleContainer) {
             scheduleContainer.style.display = 'none';
         }
     }
-    // ===== KẾT THÚC PHẦN 4 =====
 });

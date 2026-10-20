@@ -1,33 +1,43 @@
-const images = document.getElementsByClassName('img');
-let index = 0;
-let timeoutId;
-// hàm hiển thị hình ảnh
-function showImage(){ 
-    if (!images.length) return;
-    for(let i = 0; i < images.length; i++){
-        if(!images[i].classList.contains("hidden")){
-            images[i].classList.add("hidden");
-        }
-    }
-    images[index].classList.remove("hidden");
-    timeoutId = setTimeout(next, 10000);
-}
-function next(){
-    clearTimeout(timeoutId);
-    index++;
-    if(index >= images.length){
-        index = 0;
-    }
-    showImage();
-}
-// đệ quy 
-function prev(){
-    clearTimeout(timeoutId);
-    index--;   
-    if(index < 0){
-        index = images.length - 1;
-    }
-    showImage();
+const banners = document.getElementsByClassName('img');
+const autoSlideDelay = 10000;
+let currentBannerIndex = 0;
+let autoSlideTimeout;
+
+function showCurrentBanner() {
+  if (banners.length === 0) return;
+
+  // Ẩn tất cả banner, rồi chỉ hiện banner đang được chọn.
+  for (const banner of banners) {
+    banner.classList.add('hidden');
+  }
+  banners[currentBannerIndex].classList.remove('hidden');
+
+  // Tự chuyển banner sau 10 giây.
+  autoSlideTimeout = setTimeout(next, autoSlideDelay);
 }
 
-showImage();
+function next() {
+  clearTimeout(autoSlideTimeout);
+  currentBannerIndex++;
+
+  // Hết danh sách thì quay lại banner đầu tiên.
+  if (currentBannerIndex >= banners.length) {
+    currentBannerIndex = 0;
+  }
+
+  showCurrentBanner();
+}
+
+function prev() {
+  clearTimeout(autoSlideTimeout);
+  currentBannerIndex--;
+
+  // Đang ở banner đầu thì quay về banner cuối cùng.
+  if (currentBannerIndex < 0) {
+    currentBannerIndex = banners.length - 1;
+  }
+
+  showCurrentBanner();
+}
+
+showCurrentBanner();

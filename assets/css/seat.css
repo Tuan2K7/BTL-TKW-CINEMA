@@ -1,6 +1,7 @@
 /* ========== GIAO DIỆN ĐẶT GHẾ PHIM - PHONG CÁCH ĐIỆN ẢNH TỐI ========== */
 
 :root {
+  /* Biến màu dùng chung giúp đổi giao diện ghế và khu vực thanh toán tại một chỗ. */
   --bg: #0a0a0a;
   --panel: #161616;
   --text: #e6e6e6;
@@ -13,11 +14,12 @@
 }
 
 * {
+  /* Tính cả border và padding vào width/height để kích thước phần tử dễ dự đoán. */
   box-sizing: border-box;
 }
 
 body {
-
+  /* Nền tối và màu chữ sáng tạo độ tương phản theo phong cách rạp phim. */
   font-family: "Inter", "Segoe UI", Roboto, sans-serif;
   background: radial-gradient(circle at top, #111 0%, #000 100%);
   color: var(--text);
@@ -25,12 +27,14 @@ body {
 
 /* ======= LAYOUT CHÍNH ======= */
 .app {
+  /* Giới hạn chiều rộng ứng dụng và căn giữa; padding giữ nội dung khỏi sát mép. */
   max-width: 1500px;
   margin: 32px auto;
   padding: 0 16px;
 }
 
 .layout {
+  /* Đặt bản đồ ghế và thanh thông tin cạnh nhau trên màn hình lớn. */
   display: flex;
   gap: 32px;
 
@@ -39,11 +43,13 @@ body {
 
 /* ======= KHU VỰC GHẾ ======= */
 .cinema {
+  /* Khu vực ghế chiếm phần lớn không gian so với thanh bên. */
   flex: 2.4;
   text-align: center;
 }
 
 .screen {
+  /* Thanh màn hình được căn giữa phía trên sơ đồ ghế. */
   width: 90%;
   margin: 0 auto 20px;
   padding: 10px 0;
@@ -55,6 +61,7 @@ body {
 
 /* ======= GHẾ CINEMA MỚI ======= */
 .seat-map {
+  /* Xếp các hàng ghế theo chiều dọc và căn giữa trong khu vực rạp. */
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -62,6 +69,7 @@ body {
 }
 
 .row {
+  /* Ghế trong cùng một hàng xếp ngang; phối cảnh mô phỏng góc nhìn về màn hình. */
   display: flex;
   gap: 12px;
   justify-content: center;
@@ -70,6 +78,7 @@ body {
 }
 
 .seat {
+  /* Kích thước, màu và bóng tạo hình ghế; cursor báo ghế có thể được chọn. */
   width: 50px;
   height: 45px;
   border-radius: 14px 14px 4px 4px; /* bầu trên, vuông dưới */
@@ -90,23 +99,27 @@ body {
 
 /* Hover */
 .seat:hover {
+  /* Nhấc ghế nhẹ khi rê chuột để người dùng nhận biết ghế tương tác được. */
   transform: translateY(-6px) scale(1.05);
   box-shadow: 0 10px 18px rgba(255, 77, 109, 0.3);
 }
 
 /* VIP */
 .seat.vip {
+  /* Ghế VIP dùng màu hồng riêng để phân biệt loại ghế. */
   background-image: linear-gradient(#F9cadb,#FDA6C4);
   color: #000;
 }
 
 /* Thường */
 .seat.normal {
+  /* Ghế thường dùng tông xám trung tính. */
   background: linear-gradient(to bottom, #555 0%, #2e2e2e 100%);
 }
 
 /* Đã đặt */
 .seat.booked {
+  /* Ghế đã đặt tối màu và không cho chọn lại. */
   background: linear-gradient(to bottom, #222 0%, #111 100%);
   cursor: not-allowed;
   color: #666;
@@ -114,6 +127,7 @@ body {
 
 /* Đang chọn */
 .seat.selected {
+  /* Ghế người dùng vừa chọn được tô cam và làm nổi bật hơn. */
   background: linear-gradient(to bottom, #f19a37 0%, #d16a2f 100%);
   box-shadow: 0 8px 20px rgba(241, 154, 55, 0.4),
     0 0 8px rgba(241, 154, 55, 0.6);
@@ -123,6 +137,7 @@ body {
 
 /* ======= THANH BÊN THÔNG TIN ======= */
 .sidebar {
+  /* Bảng thông tin phim, ghế đã chọn và nút thanh toán. */
   width: 320px;
   background: var(--panel);
   border-radius: 12px;
@@ -149,6 +164,7 @@ body {
 }
 
 .summary {
+  /* Tách phần tổng kết số ghế/tiền vé khỏi thông tin phim. */
   margin-top: 18px;
   padding: 12px;
   background: rgba(255, 255, 255, 0.03);
@@ -161,6 +177,7 @@ body {
 }
 
 button#payBtn {
+  /* Nút mở bước thanh toán chiếm toàn chiều ngang của thanh bên. */
   width: 100%;
   margin-top: 10px;
   padding: 12px;
@@ -174,15 +191,18 @@ button#payBtn {
 }
 
 button#payBtn:disabled {
+  /* Làm mờ nút và đổi con trỏ khi chưa thể thanh toán. */
   opacity: 0.4;
   cursor: not-allowed;
 }
 
 button#payBtn:hover:not(:disabled) {
+  /* Chỉ phóng nút khi có thể bấm, không áp dụng cho trạng thái bị khóa. */
   transform: scale(1.02);
 }
 
 .legend {
+  /* Chú giải tự xuống dòng nếu không đủ chiều ngang. */
   margin-top: 16px;
   display: flex;
   flex-wrap: wrap;
@@ -192,13 +212,14 @@ button#payBtn:hover:not(:disabled) {
 }
 
 .legend .seat {
+  /* Thu nhỏ hình minh họa ghế trong phần chú giải. */
   width: 16px;
   height: 16px;
   border-radius: 4px;
   margin-right: 4px;
 }
 
-/* ======= HIỆU ỨNG FADE-IN (Thêm mới) ======= */
+/* Tạo hiệu ứng hộp thoại hiện dần từ trên xuống. */
 @keyframes fadeInModal {
   from {
     opacity: 0;
@@ -210,7 +231,7 @@ button#payBtn:hover:not(:disabled) {
   }
 }
 
-/* ======= OVERLAY THANH TOÁN (Tinh chỉnh) ======= */
+/* Lớp phủ che trang khi hộp thoại thanh toán mở. */
 .overlay {
   position: fixed;
   inset: 0;
@@ -223,10 +244,12 @@ button#payBtn:hover:not(:disabled) {
 }
 
 .overlay.hidden {
+  /* Lớp hidden do JavaScript thêm/bỏ để đóng hoặc mở hộp thoại. */
   display: none;
 }
 
 .modal {
+  /* Hộp nội dung thanh toán nằm giữa overlay, có giới hạn chiều rộng trên điện thoại. */
   display: block;
   width: 420px;
   max-width: 90vw;
@@ -247,6 +270,7 @@ button#payBtn:hover:not(:disabled) {
 }
 
 .close {
+  /* Nút đóng đặt ở góc trên bên phải hộp thoại. */
   position: absolute;
   top: 12px;
   right: 16px;
@@ -264,6 +288,7 @@ button#payBtn:hover:not(:disabled) {
 
 /* Danh sách ghế (Xếp hàng ngang) */
 .seat-list {
+  /* Danh sách ghế được xếp ngang và tự xuống dòng khi có nhiều ghế. */
   list-style: none;
   padding: 0;
   margin: 0 0 24px 0;
@@ -276,6 +301,7 @@ button#payBtn:hover:not(:disabled) {
 
 /* Từng mục ghế */
 .seat-list li {
+  /* Mỗi dòng giữ icon và mã ghế nằm cùng một hàng. */
   display: flex; /* Giữ icon và text trên cùng 1 hàng */
   align-items: center;
   font-weight: 600;
@@ -285,6 +311,7 @@ button#payBtn:hover:not(:disabled) {
 
 /* Icon ghế (Cập nhật icon mới) */
 .seat-list li::before {
+  /* Vẽ biểu tượng trước mã ghế bằng ký tự của Font Awesome. */
   font-family: "Font Awesome 6 Free";
   content: "\f192"; /* Mã unicode cho fa-circle-dot (giống ảnh bạn gửi) */
   font-weight: 900;
@@ -295,6 +322,7 @@ button#payBtn:hover:not(:disabled) {
 
 /* Tổng tiền (Tinh chỉnh) */
 .total {
+  /* Dòng tổng tiền căn nhãn và giá ở hai đầu, có đường phân cách phía trên. */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -315,6 +343,7 @@ button#payBtn:hover:not(:disabled) {
 
 /* Khu vực QR (Tinh chỉnh) */
 .qr {
+  /* Căn giữa mã QR trong phần thanh toán. */
   text-align: center;
   margin-top: 16px;
 }
@@ -335,6 +364,7 @@ button#payBtn:hover:not(:disabled) {
 
 /* Nút xác nhận (Tinh chỉnh) */
 button.confirm {
+  /* Nút xác nhận chiếm toàn bộ hộp thoại để dễ thao tác. */
   width: 100%;
   margin-top: 28px;
   padding: 14px;
@@ -349,11 +379,12 @@ button.confirm {
 }
 
 button.confirm:hover {
+  /* Nút xác nhận lớn nhẹ và có bóng khi rê chuột. */
   transform: scale(1.02);
   box-shadow: 0 4px 15px rgba(255, 77, 109, 0.2);
 }
 
-/* Responsive (Giữ nguyên) */
+/* Trên màn hình hẹp, đặt thanh bên dưới bản đồ ghế thay vì cạnh bên. */
 @media (max-width: 960px) {
   .layout {
     flex-direction: column;

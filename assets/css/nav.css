@@ -1,23 +1,19 @@
 #movie-pills-nav {
-  position: relative;
-}
-
-#movie-pills-nav::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: var(--pill-left, 0);
-  width: var(--pill-width, 0);
-  height: 100%;
-  border-radius: 15px;
-  transition: all 1s cubic-bezier(0.23, 0.8, 0.32, 1);
-  z-index: 1;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
 }
 
 #movie-pills-nav .nav-link {
-  background: none;
-  border: none;
-  position: relative;
-  z-index: 2;
-  transition: color 0.3s ease;
+  background: transparent;
+  
+  border-bottom: 4px solid transparent;
+
+  color: #000000;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#movie-pills-nav .nav-link.active {
+  border-bottom-color: #0872b9;
+  color: #0872b9;
 }
