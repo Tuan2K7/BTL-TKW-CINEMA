@@ -110,53 +110,6 @@ body {
   color: #fff;
 }
 
-#slide {
-  /* Khoảng cách quanh slideshow theo nhịp của giao diện chủ đề. */
-  margin: 20px 0 24px;
-  background: transparent;
-}
-
-#slide img {
-  /* Thu gọn chiều cao banner, bỏ viền cũ và thêm bóng mềm. */
-  width: 94%;
-  height: 460px;
-  border: none;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(10, 23, 48, 0.35);
-}
-
-#slide .slide-btn:hover {
-  color: var(--navy);
-  background: var(--gold);
-}
-
-#movie-pills-nav {
-  /* Đường ngang dưới dãy tab tạo ranh giới với danh sách phim. */
-  padding: 0.5rem 0;
-  margin-bottom: 15px;
-  background: transparent;
-  border-bottom: 2px solid #cfd6e4;
-}
-
-#movie-pills-nav::before {
-  /* Vạch trượt theo vị trí tab đang chọn do JavaScript tính toán. */
-  background: transparent;
-  border-bottom: 3px solid var(--gold);
-  border-radius: 0;
-  height: calc(100% + 2px);
-  top: 0;
-}
-
-#movie-pills-nav .nav-link {
-  /* Màu chữ tab mặc định dịu hơn màu của tab đang hoạt động. */
-  color: #6b7690;
-}
-
-#movie-pills-nav .nav-link.active,
-#movie-pills-nav .nav-link:not(.active):hover {
-  color: var(--navy);
-}
-
 .custom-movie-card {
   /* Card phim chuyển sang nền sáng và viền nhẹ để hợp bảng màu mới. */
   height: auto;
