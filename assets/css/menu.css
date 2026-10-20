@@ -1,11 +1,3 @@
-/* Header */
-.nav-logo .name {
-    color: #fff;
-    display: none;
-    margin: auto;
-    font-size: 13px;
-}
-
 .nav-logo {
     margin-top: 4px;
     width:20em;

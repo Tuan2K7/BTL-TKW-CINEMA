@@ -2,7 +2,7 @@ const banners = document.getElementsByClassName('img');
 const autoSlideDelay = 10000;
 let currentBannerIndex = 0;
 let autoSlideTimeout;
-
+// phần để yên sẽ tự chuyển banner sau 10s
 function showCurrentBanner() {
   if (banners.length === 0) return;
 
@@ -15,7 +15,7 @@ function showCurrentBanner() {
   // Tự chuyển banner sau 10 giây.
   autoSlideTimeout = setTimeout(next, autoSlideDelay);
 }
-
+// phần khi click vào mũi tên sẽ chuyển banner sang trái hoặc phải
 function next() {
   clearTimeout(autoSlideTimeout);
   currentBannerIndex++;
