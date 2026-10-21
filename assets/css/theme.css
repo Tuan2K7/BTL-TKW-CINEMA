@@ -1,5 +1,5 @@
+/* ===== Màu sắc và kiểu chữ toàn trang ===== */
 :root {
-  /* Màu thương hiệu dùng chung để giao diện có thể đổi tông nhất quán. */
   --navy: #01162e;
   --navy-2: #0a1730;
   --gold: #d4a52c;
@@ -10,19 +10,17 @@
 }
 
 body {
-  /* Áp dụng nền, màu chữ và font mặc định cho toàn trang. */
   background: var(--bg);
   color: var(--text);
   font-family: "Roboto", "Segoe UI", Arial, sans-serif;
 }
 
 .section {
-  /* Giữ màu nền section thống nhất với nền trang. */
   background: var(--bg);
 }
 
+/* ===== Header: màu sắc và nhận diện ===== */
 #header {
-  /* Header dính ở đầu cửa sổ khi cuộn; z-index giữ nó trên nội dung. */
   min-height: 84px;
   height: auto;
   padding: 6px 32px;
@@ -35,7 +33,6 @@ body {
 }
 
 .nav-logo {
-  /* Ghi đè kích thước logo cơ bản để hợp với header của giao diện mới. */
   width: auto;
   margin: 0;
 }
@@ -46,14 +43,7 @@ body {
   max-height: none;
 }
 
-.nav-layout {
-  /* Căn các mục menu bắt đầu từ trái và giảm khoảng cách giữa chúng. */
-  justify-content: flex-start;
-  gap: 12px;
-}
-
 .nav-layout a {
-  /* Chữ menu in hoa, đậm và sáng để dễ đọc trên nền xanh đậm. */
   color: #f3f3f3;
   font-weight: 700;
   font-size: 0.9rem;
@@ -62,25 +52,17 @@ body {
 }
 
 .nav-layout a:hover {
-  /* Màu vàng báo trạng thái rê chuột trên liên kết. */
   color: var(--gold);
 }
 
 .nav-layout .nav-link.active {
-  /* Đường gạch dưới đánh dấu trang/tab đang được chọn. */
   color: var(--gold);
   background: transparent;
   border-radius: 0;
   border-bottom: 3px solid var(--gold);
 }
 
-.nav-pills {
-  /* Dành phần không gian còn lại của header cho nhóm tab. */
-  flex: 1;
-}
-
 .nav-layout button {
-  /* Các nút header dùng viền vàng và chiều cao gọn. */
   width: auto;
   height: 36px;
   padding: 0 18px;
@@ -92,7 +74,6 @@ body {
 }
 
 .nav-layout .btn-login {
-  /* Nút đăng nhập được tô nền để phân biệt với nút phụ. */
   color: var(--navy);
   background: linear-gradient(#e8c15a, #c9971c);
 }
@@ -102,7 +83,6 @@ body {
 }
 
 .nav-layout .btn-register:hover {
-  /* Nền vàng trong suốt nhẹ khi rê lên nút đăng ký. */
   background: rgba(212, 165, 44, 0.15);
 }
 
@@ -110,8 +90,8 @@ body {
   color: #fff;
 }
 
+/* ===== Thẻ phim ===== */
 .custom-movie-card {
-  /* Card phim chuyển sang nền sáng và viền nhẹ để hợp bảng màu mới. */
   height: auto;
   color: var(--text);
   background: #fff;
@@ -121,13 +101,11 @@ body {
 }
 
 .custom-card-content {
-  /* Căn phần mô tả về trái và thu khoảng đệm của card. */
   padding: 12px;
   text-align: left;
 }
 
 .custom-card-content h3 {
-  /* Giới hạn tiêu đề ở hai dòng để các card có chiều cao đồng đều. */
   min-height: 2.6em;
   overflow: hidden;
   color: var(--navy);
@@ -140,13 +118,11 @@ body {
 }
 
 .custom-card-content p {
-  /* Thông tin phụ nhỏ và xám hơn tiêu đề phim. */
   color: #666;
   font-size: 0.82rem;
 }
 
 .custom-play-button {
-  /* Nút đặt vé màu vàng, đặt gần đáy poster trong theme mới. */
   top: auto;
   bottom: 12px;
   transform: translateX(-50%);
@@ -165,6 +141,7 @@ a {
   text-decoration: none;
 }
 
+/* ===== Footer ===== */
 .footer {
   /* Footer dùng xanh đậm thứ hai để phân biệt với header. */
   background: var(--navy-2);
@@ -176,13 +153,12 @@ a {
 }
 
 .footer-logo-img {
-  /* Thu logo footer để phù hợp bố cục các cột. */
   width: 170px;
 }
 
+/* ===== Popup đăng nhập và đăng ký ===== */
 .login-container,
 .register-container {
-  /* Popup xác thực dùng nền xanh và viền vàng của thương hiệu. */
   color: #fff;
   background: var(--navy);
   border: 1px solid var(--gold);
@@ -200,7 +176,6 @@ a {
 
 .login-body input,
 .register-body input {
-  /* Ô nhập tối hơn nền popup và có viền xanh để dễ nhận biết. */
   color: #fff;
   background: var(--navy-2);
   border: 1px solid #2c3b63;
@@ -209,7 +184,6 @@ a {
 
 .login-body button,
 .register-body button {
-  /* Nút gửi form chuyển sang màu vàng và bo tròn. */
   color: var(--navy);
   background: linear-gradient(#e8c15a, #c9971c);
   border-radius: 30px;
@@ -218,29 +192,27 @@ a {
 .login-body p,
 .login-footer a,
 .register-footer a {
-  /* Liên kết trong popup dùng màu vàng nổi bật trên nền tối. */
   color: var(--gold);
 }
 
+/* ===== Nút thao tác đặt vé ===== */
 .movie-details-page .btn,
 .movie-details-page button,
 .seat-page button,
 .btn-continue,
 .btn-confirm,
 #confirm-btn {
-  /* Đồng nhất màu chữ và nền các nút thao tác đặt vé. */
   color: var(--navy);
   background: linear-gradient(#e8c15a, #c9971c);
 }
 
+/* ===== Công cụ quản trị ===== */
 #cinemaAdminTools[hidden],
 #cinemaAdminDialog [hidden] {
-  /* Thuộc tính hidden phải luôn ẩn phần tử dù có rule display khác. */
   display: none !important;
 }
 
 #cinemaAdminTools {
-  /* Bảng công cụ admin cố định ở góc màn hình, chỉ hiện cho tài khoản admin. */
   position: fixed;
   right: 16px;
   bottom: 16px;
@@ -259,7 +231,6 @@ a {
 }
 
 #cinemaAdminTools span {
-  /* Nhãn quản lý nhỏ, đậm và dùng màu thương hiệu. */
   color: var(--brand);
   font-size: 12px;
   font-weight: 700;
@@ -267,7 +238,6 @@ a {
 
 #cinemaAdminTools button,
 #cinemaAdminDialog button {
-  /* Chuẩn hóa nút trong bảng công cụ và hộp thoại quản trị. */
   width: auto;
   height: auto;
   padding: 9px 12px;
@@ -283,12 +253,11 @@ a {
 
 #cinemaAdminTools button:hover,
 #cinemaAdminDialog button:hover {
-  /* Làm sáng nền nút khi rê chuột. */
   background: var(--brand-soft);
 }
 
+/* ===== Hộp thoại thống kê quản trị ===== */
 #cinemaAdminDialog {
-  /* Giới hạn kích thước hộp thống kê và cho phép cuộn khi nội dung dài. */
   width: min(1080px, calc(100vw - 32px));
   max-width: none;
   max-height: 90vh;
@@ -303,12 +272,10 @@ a {
 }
 
 #cinemaAdminDialog::backdrop {
-  /* Làm tối phần trang phía sau hộp thoại native. */
   background: #0009;
 }
 
 #cinemaAdminDialog .ca-heading {
-  /* Tiêu đề và nút đóng nằm về hai đầu hàng đầu tiên. */
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -316,26 +283,22 @@ a {
 }
 
 #cinemaAdminDialog h2 {
-  /* Tiêu đề chính của hộp thoại thống kê. */
   margin: 8px 0;
   color: var(--text);
   font-size: 25px;
 }
 
 #cinemaAdminDialog h3 {
-  /* Tiêu đề cho từng khu vực bên trong hộp thoại. */
   margin: 20px 0 12px;
   font-size: 19px;
 }
 
 #cinemaAdminDialog small {
-  /* Nhãn phụ CINEMA/ADMIN dùng màu thương hiệu. */
   color: var(--brand);
   font-weight: 700;
 }
 
 #cinemaAdminDialog .ca-note {
-  /* Ghi chú dùng chữ nhỏ và giãn dòng để đọc nội dung dài dễ hơn. */
   margin: 12px 0;
   color: #666;
   font-size: 13px;
@@ -343,7 +306,6 @@ a {
 }
 
 #cinemaAdminDialog .ca-tabs {
-  /* Các tab chuyển giữa thống kê vé và doanh thu tự xuống dòng khi hẹp. */
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -352,13 +314,11 @@ a {
 
 #cinemaAdminDialog button.ca-active,
 #cinemaAdminDialog button[type="submit"] {
-  /* Đánh dấu tab hiện tại và nút gửi bộ lọc bằng nền màu thương hiệu. */
   color: #fff;
   background: var(--brand);
 }
 
 #caFilters {
-  /* Bộ lọc gồm ngày, phim, suất chiếu và nút xem thống kê. */
   display: grid;
   grid-template-columns: 180px 1fr 1fr auto;
   align-items: end;
@@ -366,7 +326,6 @@ a {
 }
 
 #caFilters label {
-  /* Nhãn và trường nhập trong bộ lọc xếp dọc. */
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -377,7 +336,6 @@ a {
 
 #caFilters input,
 #caFilters select {
-  /* Trường lọc có cùng chiều cao, viền và khoảng đệm. */
   width: 100%;
   min-width: 0;
   height: 42px;
@@ -391,7 +349,6 @@ a {
 }
 
 #cinemaAdminDialog .ca-totals {
-  /* Ba ô tổng hợp đặt thành các cột đều nhau. */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
@@ -399,7 +356,6 @@ a {
 }
 
 #cinemaAdminDialog .ca-totals div {
-  /* Nền nhẹ bao quanh từng số liệu tổng. */
   padding: 18px;
   background: var(--brand-soft);
   border-radius: 6px;
@@ -407,7 +363,6 @@ a {
 
 #cinemaAdminDialog .ca-totals span,
 #cinemaAdminDialog .ca-totals strong {
-  /* Nhãn và giá trị tổng mỗi dòng chiếm riêng một hàng. */
   display: block;
 }
 
@@ -416,19 +371,16 @@ a {
 }
 
 #cinemaAdminDialog .ca-totals strong {
-  /* Số liệu tổng được phóng to và tô màu thương hiệu. */
   margin-top: 8px;
   color: var(--brand);
   font-size: 25px;
 }
 
 #cinemaAdminDialog .ca-table-wrap {
-  /* Cho phép bảng cuộn ngang nếu không vừa hộp thoại. */
   overflow: auto;
 }
 
 #cinemaAdminDialog table {
-  /* Bảng chiếm chiều ngang, gộp viền và giữ độ rộng tối thiểu. */
   width: 100%;
   min-width: 600px;
   border-collapse: collapse;
@@ -437,32 +389,28 @@ a {
 
 #cinemaAdminDialog th,
 #cinemaAdminDialog td {
-  /* Ô tiêu đề và dữ liệu có khoảng đệm và đường phân cách. */
   padding: 12px;
   border-bottom: 1px solid #ddd;
   text-align: left;
 }
 
 #cinemaAdminDialog th {
-  /* Nền riêng giúp phân biệt hàng tiêu đề bảng. */
   background: #f5f5f5;
 }
 
 #caError {
-  /* Thông báo lỗi màu đỏ trên nền hồng nhạt. */
   padding: 12px;
   color: #a00;
   background: #fff1f0;
 }
 
 #caEmpty {
-  /* Thông báo khi bộ lọc không tìm thấy giao dịch. */
   padding: 18px 0;
   color: #666;
 }
 
+/* ===== Điều chỉnh giao diện quản trị trên màn hình nhỏ ===== */
 @media (max-width: 700px) {
-  /* Trên điện thoại, xếp bộ lọc và số liệu thành một cột để dễ thao tác. */
   #cinemaAdminDialog {
     padding: 16px;
   }
