@@ -51,6 +51,15 @@ body {
   letter-spacing: 0.3px;
 }
 
+.nav-layout .nav-pills {
+  gap: 20px;
+}
+
+.nav-layout .nav-pills .nav-link {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .nav-layout a:hover {
   color: var(--gold);
 }
