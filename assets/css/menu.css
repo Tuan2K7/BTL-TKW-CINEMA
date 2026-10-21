@@ -1,60 +1,25 @@
-.nav-logo {
-    margin-top: 4px;
-    width:20em;
-    
-    display: flex;
-
-}
-
-.nav-logo img {
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-}
-/* --- Style chung --- */
-/* Thanh điều hướng chính: Flexbox đẩy logo và các mục về hai đầu. */
 #header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Xóa dấu đầu dòng mặc định trên danh sách liên kết điều hướng. */
-.nav-layout li {
-    list-style-type: none;
-}
-
-/* Biến mỗi liên kết thành vùng bấm có khoảng đệm, bỏ gạch chân mặc định. */
-.nav-layout a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 8px 16px;
-    display: block;
-}
-
-/* --- CSS cho màn hình lớn (Desktop) --- */
-/* Các mục điều hướng xếp theo hàng và phân bố đều theo chiều ngang. */
 .nav-layout {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Khoảng cách giữa các mục */
-    width: 100%; 
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
 }
 
-/* Các tab điều hướng cùng nằm trên một hàng và có khoảng cách nhỏ. */
 .nav-pills {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
 }
 
-/* .nav-actions button {
-    margin-left: 10px;
-} */
+.nav-layout li {
+  list-style: none;
+}

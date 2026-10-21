@@ -51,21 +51,14 @@ html {
     background-color: #10141B;
     border-radius: 30px;
     border: 2px solid #fff;
-    
 }
 .nav-layout .btn-login {
-    /* Nút đăng nhập dùng màu gradient và chuyển động nhẹ khi thay đổi kiểu. */
-    /* background-color: #F75154; */
-    /* border: 1px solid #F75154; */
-    /* background-color:#FDA6C4 ; */
     background-image: linear-gradient(#F9cadb,#FDA6C4);
     border: 1px solid #FDA6C4;
     transition: transform 0.3s;
 }
 .nav-layout button:hover {
-    /* Hiển thị con trỏ bàn tay để báo đây là vùng có thể bấm. */
     cursor: pointer;
-    /* transform: translateY(-2px); */
 }
 
 /* Keyframes dùng để hộp đăng nhập trượt vào vị trí đồng thời hiện ra. */
